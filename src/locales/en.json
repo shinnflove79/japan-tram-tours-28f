@@ -1,0 +1,650 @@
+{
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "about": "About"
+  },
+  "home": {
+    "heroTitle": "Discover Japan's Historic Sightseeing Trams",
+    "heroSubtitle": "Experience the charm and elegance of Japan's most iconic tram lines. From mountain railways to historic streetcars, each journey tells a story.",
+    "heroButton": "Explore Now",
+    "featuredTitle": "Featured Tram Lines",
+    "featuredDescription": "Explore our curated selection of Japan's most beautiful and historic sightseeing trams",
+    "galleryTitle": "Gallery Highlights",
+    "galleryDescription": "Beautiful moments captured from Japan's iconic tram lines",
+    "galleryButton": "View Full Gallery",
+    "byLocationTitle": "Explore by Region",
+    "byLocationDescription": "Browse tram lines grouped by areas such as Kanto, Kansai, and Kyushu.",
+    "tabLocation": "By Location",
+    "tabPopularity": "By Popularity",
+    "filters": {
+      "searchPlaceholder": "Search trains, locations, or keywords",
+      "allRegions": "All Regions",
+      "allCategories": "All Categories",
+      "reservationOnly": "Reservation required only",
+      "clearFilters": "Clear Filters",
+      "noResults": "No matching routes found",
+      "categories": {
+        "luxuryTrain": "Luxury Sightseeing Train",
+        "sightseeingTrain": "Sightseeing Train",
+        "streetcar": "Streetcar",
+        "themedTrain": "Themed Train",
+        "limitedExpress": "Limited Express"
+      }
+    },
+    "infoCard1Title": "Historic Heritage",
+    "infoCard1Desc": "Japan's sightseeing trams represent over a century of transportation heritage, from early 1900s streetcars to modern scenic railways.",
+    "infoCard2Title": "Scenic Routes",
+    "infoCard2Desc": "Experience breathtaking views of Mount Fuji, bamboo groves, temples, and traditional neighborhoods through carefully preserved tram routes.",
+    "infoCard3Title": "Cultural Experience",
+    "infoCard3Desc": "Every tram journey is a window into Japanese culture, connecting travelers with local communities and historical landmarks."
+  },
+  "tramCard": {
+    "learnMore": "Learn More →"
+  },
+  "tramDetails": {
+    "established": "Est.",
+    "established2": "Established",
+    "location": "Location",
+    "route": "Route",
+    "operatingHours": "Operating Hours",
+    "history": "History",
+    "highlights": "Highlights",
+    "gallery": "Photo Gallery",
+    "relatedTrams": "Explore Other Trams",
+    "planYourVisit": "Plan Your Visit",
+    "planYourVisitDesc": "Ready to experience the charm of this iconic tram line? Learn more about visiting.",
+    "exploreMore": "Explore More Trams",
+    "notFound": "Tram Not Found",
+    "notFoundDesc": "The tram you're looking for doesn't exist.",
+    "backToHome": "Back to Home",
+    "source": "Source"
+  },
+  "placeholder": {
+    "comingSoon": "Coming Soon",
+    "comingSoonDesc": "This page is currently being developed. We're working to bring you wonderful content about Japan's sightseeing trams.",
+    "suggestion": "Have a suggestion?",
+    "suggestionText": "Let us know what you'd like to see on this page!",
+    "backToHome": "Back to Home",
+    "exploreTrams": "Explore Trams"
+  },
+  "regions": {
+    "Kanto": "Kanto",
+    "Kansai": "Kansai",
+    "Kyushu": "Kyushu",
+    "Chugoku": "Chugoku",
+    "Chubu": "Chubu",
+    "Shikoku": "Shikoku",
+    "Hokuriku": "Hokuriku",
+    "Hokkaido": "Hokkaido",
+    "Other": "Other"
+  },
+  "footer": {
+    "brand": "Japan Trams",
+    "brandDesc": "Discover the charm and history of Japan's iconic sightseeing tram lines",
+    "quickLinks": "Quick Links",
+    "followUs": "Contact Us",
+    "followDesc": "shinnflove79@gmail.com",
+    "copyright": "© 2024 Japan Trams. All rights reserved. Celebrating Japan's sightseeing heritage."
+  },
+  "trams": {
+    "hakoneTozanRailway": {
+      "name": "Hakone Tozan Railway",
+      "location": "Hakone, Kanagawa Prefecture",
+      "description": "An iconic mountain railway featuring scenic views of Mount Fuji and Lake Ashi. The cable car and scenic train offer breathtaking views of the Hakone caldera throughout the year.",
+      "route": "Hakone-Yumoto to Gora",
+      "operatingHours": "8:00 AM - 7:00 PM (seasonal variations)",
+      "history": "The Hakone Tozan Railway was established in 1921 as a scenic mountain railway. It features a unique switchback railway system and cable car designed to navigate steep mountain terrain.",
+      "highlights": [
+        "Views of Mount Fuji on clear days",
+        "Lake Ashi aerial ropeway",
+        "Steaming sulfur vents",
+        "Alpine scenery",
+        "Traditional cable car experience"
+      ]
+    },
+    "arashiyamaTram": {
+      "name": "Arashiyama Tram",
+      "location": "Arashiyama, Kyoto",
+      "description": "A charming open-air tram line that winds through the scenic Arashiyama district, passing by bamboo groves, temples, and traditional tea houses.",
+      "route": "Randen-Gakuryo-Michi to Omiya-cho",
+      "operatingHours": "9:00 AM - 6:00 PM (varies by season)",
+      "history": "Operating since 1910, the Arashiyama tram is one of Kyoto's most romantic ways to explore the district. The open-air experience connects visitors with the natural beauty of this historic area.",
+      "highlights": [
+        "Bamboo grove views",
+        "Historic temples",
+        "Traditional architecture",
+        "Seasonal cherry blossoms",
+        "Traditional Japanese gardens"
+      ]
+    },
+    "nagasakiStreetcar": {
+      "name": "Nagasaki Streetcar",
+      "location": "Nagasaki City, Nagasaki Prefecture",
+      "description": "Historic streetcars that have served the city since the early 20th century, offering an authentic way to experience local life and wartime history sites.",
+      "route": "Multiple lines covering the city",
+      "operatingHours": "6:00 AM - 11:00 PM",
+      "history": "The Nagasaki streetcar system, established in 1912, is the oldest continuously operating tram system in Japan. It offers authentic vintage charm with fully restored cars.",
+      "highlights": [
+        "Historic streetcar design",
+        "Peace Memorial Park access",
+        "Local neighborhoods",
+        "Affordable transportation",
+        "Charming vintage atmosphere"
+      ]
+    },
+    "hiroshimaElectric": {
+      "name": "Hiroshima Electric Railway",
+      "location": "Hiroshima City, Hiroshima Prefecture",
+      "description": "A comprehensive tram network connecting the Peace Memorial Park, local neighborhoods, and historic sites throughout modern Hiroshima.",
+      "route": "Multiple lines across the city",
+      "operatingHours": "6:00 AM - 11:30 PM",
+      "history": "The Hiroshima Electric Railway has been serving the city since 1912, continuing its mission to connect communities and preserve the city's transportation heritage.",
+      "highlights": [
+        "Peace Memorial Park",
+        "Hiroshima Castle views",
+        "Historic neighborhoods",
+        "Modern city connections",
+        "Cultural landmarks"
+      ]
+    },
+    "matsumotoTram": {
+      "name": "Matsumoto City Tram",
+      "location": "Matsumoto, Nagano Prefecture",
+      "description": "A charming tram line in the castle town of Matsumoto, connecting the iconic Matsumoto Castle with the surrounding neighborhoods and traditional streets.",
+      "route": "Mizuho to Marunouchi",
+      "operatingHours": "6:30 AM - 10:30 PM",
+      "history": "The Matsumoto tram system, established in 1961, provides convenient access to the beautiful castle town and its historic neighborhoods.",
+      "highlights": [
+        "Matsumoto Castle views",
+        "Historic district",
+        "Traditional merchant streets",
+        "Local culture",
+        "Scenic surroundings"
+      ]
+    },
+    "jrEastViewTrain": {
+      "name": "JR East View Train",
+      "location": "Various scenic routes, primarily Kanto region",
+      "description": "A special tourist train operated by JR East featuring panoramic windows and dining services, offering unique views of the Japanese countryside.",
+      "route": "Rotating scenic routes",
+      "operatingHours": "Depends on schedule",
+      "history": "Launched in the early 2000s as part of JR East's Joyful Train fleet, the View Train highlights seasonal landscapes.",
+      "highlights": [
+        "Panoramic windows",
+        "Seasonal scenery",
+        "Onboard dining",
+        "Comfortable seating",
+        "Rotating routes"
+      ]
+    },
+    "jrEastHolidayExpress": {
+      "name": "JR East Holiday Express",
+      "location": "Various leisure destinations around Kanto",
+      "description": "A festive excursion train providing holiday-themed decorations and special events, aimed at family trips and seasonal celebrations.",
+      "route": "Special holiday itineraries",
+      "operatingHours": "Seasonal",
+      "history": "Part of JR East's Joyful Train series introduced to create cheerful travel experiences during holidays.",
+      "highlights": [
+        "Holiday decorations",
+        "Special onboard entertainment",
+        "Family-friendly"
+      ]
+    },
+    "enoden": {
+      "name": "Enoshima Electric Railway",
+      "location": "Enoshima to Kamakura",
+      "description": "A scenic coastal tram line famous for ocean views and access to historic temples.",
+      "route": "Enoshima – Kamakura",
+      "operatingHours": "5:00 AM - 11:00 PM",
+      "history": "Operating since 1902, Enoden has been a beloved symbol of the Shonan coast.",
+      "highlights": [
+        "Coastal scenery",
+        "Historic temple access",
+        "Colorful retro cars"
+      ]
+    },
+    "eizanRail": {
+      "name": "Eizan Electric Railway",
+      "location": "Kyoto northern hills",
+      "description": "A mountain tram providing access to sacred sites with lush forest scenery.",
+      "route": "Demachiyanagi – Kibune",
+      "operatingHours": "6:00 AM - 6:00 PM",
+      "history": "Since 1925, Eizan has connected Kyoto with its spiritual countryside.",
+      "highlights": [
+        "Forest landscapes",
+        "Spiritual temples",
+        "Classic tramcars"
+      ]
+    },
+    "izukyuResort21": {
+      "name": "Izukyu Resort 21",
+      "location": "Izu Peninsula",
+      "description": "A premium sightseeing train offering coastal views and luxury interiors.",
+      "route": "Atami – Shimoda",
+      "operatingHours": "Limited runs",
+      "history": "Introduced in 1985 to boost Izu tourism.",
+      "highlights": [
+        "Ocean vistas",
+        "Comfort seating",
+        "Onboard café"
+      ]
+    },
+    "kotoden": {
+      "name": "Kotoden",
+      "location": "Takamatsu city",
+      "description": "A local tram network noted for its retro livery and cultural routes.",
+      "route": "Multiple city lines",
+      "operatingHours": "5:00 AM - 12:00 AM",
+      "history": "Serving Shikoku since 1948, Kotoden is a regional icon.",
+      "highlights": [
+        "Retro traincolors",
+        "City sightseeing",
+        "Shikoku heritage"
+      ]
+    },
+    "toyamaChiho": {
+      "name": "Toyama Chiho Railway",
+      "location": "Toyama Prefecture",
+      "description": "A diverse railway system including mountain trams and scenic lines.",
+      "route": "Various local routes",
+      "operatingHours": "5:00 AM - 10:00 PM",
+      "history": "Founded in 1923, it serves as Toyama's transportation backbone.",
+      "highlights": [
+        "Mountain views",
+        "Regional access",
+        "Historic stations"
+      ]
+    },
+    "hakodateTram": {
+      "name": "Hakodate Tram",
+      "location": "Hakodate, Hokkaido",
+      "description": "A charming city tram system winding through historic Hakodate.",
+      "route": "Various city streets",
+      "operatingHours": "6:00 AM - 11:00 PM",
+      "history": "Operating since 1910, it's one of Hokkaido's oldest urban trams.",
+      "highlights": [
+        "Historic district",
+        "Night view cars",
+        "Seaside routes"
+      ]
+    },
+    "sapporoStreetcar": {
+      "name": "Sapporo Streetcar",
+      "location": "Sapporo, Hokkaido",
+      "description": "A modern streetcar loop running through central Sapporo.",
+      "route": "Circular city loop",
+      "operatingHours": "5:30 AM - 12:00 AM",
+      "history": "Opened in 1909 and later modernized to a low-floor network.",
+      "highlights": [
+        "City landmarks",
+        "Snow festival service",
+        "Urban convenience"
+      ]
+    },
+    "kagoshimaTram": {
+      "name": "Kagoshima City Tram",
+      "location": "Kagoshima, Kyushu",
+      "description": "A resilient tram network surviving through wars and volcanic eruptions.",
+      "route": "Five lines across the city",
+      "operatingHours": "5:30 AM - 11:30 PM",
+      "history": "Operating since 1912 and famed for its durability.",
+      "highlights": [
+        "Sakurajima views",
+        "Historic cars",
+        "City heart"
+      ]
+    },
+    "okayamaTram": {
+      "name": "Okayama Electric Tramway",
+      "location": "Okayama, Chugoku",
+      "description": "Known locally as 'Okaden', it serves as the backbone of Okayama city transport.",
+      "route": "Multiple urban lines",
+      "operatingHours": "5:00 AM - 12:00 AM",
+      "history": "Started in 1928 and still uses some classic vehicles.",
+      "highlights": [
+        "Castle views",
+        "Classic trams",
+        "Downtown access"
+      ]
+    },
+    "todenArakawa": {
+      "name": "Toden Arakawa Line",
+      "location": "Tokyo",
+      "description": "Tokyo's only remaining streetcar line, running through nostalgic neighborhoods.",
+      "route": "Waseda – Minowabashi",
+      "operatingHours": "6:00 AM - 11:00 PM",
+      "history": "Survived post-war cuts to remain the capital's last tram line.",
+      "highlights": [
+        "Retro scenery",
+        "Local atmosphere",
+        "Film locations"
+      ]
+    },
+    "kumamotoTram": {
+      "name": "Kumamoto City Tram",
+      "location": "Kumamoto, Kyushu",
+      "description": "A historic network serving Kumamoto with five lines and nostalgic cars.",
+      "route": "Citywide routes",
+      "operatingHours": "5:00 AM - 11:00 PM",
+      "history": "Opened in 1912 and known for its resilience through earthquakes.",
+      "highlights": [
+        "Castle city",
+        "Historic vehicles",
+        "Resilience"
+      ]
+    },
+    "toyohashiTram": {
+      "name": "Toyohashi Tram",
+      "location": "Toyohashi, Chubu",
+      "description": "Operated by Toyohashi Railroad, famous for its compact city loop.",
+      "route": "City center and port",
+      "operatingHours": "5:30 AM - 11:30 PM",
+      "history": "Started in 1925 as part of local urban expansion.",
+      "highlights": [
+        "Port views",
+        "Compact loop",
+        "Local charm"
+      ]
+    },
+    "izukyuSaphirOdoriko": {
+      "name": "Izukyu SAPHIR Odoriko",
+      "location": "Izu Peninsula, Shizuoka",
+      "description": "A luxury sightseeing train offering spectacular coastal and mountain views.",
+      "route": "Atami – Izukyu-Shimoda",
+      "operatingHours": "Limited daily service",
+      "history": "Redesigned in 2015, it combines vintage charm with modern comfort.",
+      "highlights": [
+        "Ocean vistas",
+        "Luxury seating",
+        "Photo opportunities"
+      ]
+    },
+    "kuramaRailway": {
+      "name": "Kurama Railway",
+      "location": "Kyoto, Kansai",
+      "description": "A scenic vintage railway through Kyoto's mountain temples and forests.",
+      "route": "Kurama – Kibune-Guchi",
+      "operatingHours": "8:00 AM - 5:00 PM",
+      "history": "Operating since 1927, it's a heritage railway beloved by tourists.",
+      "highlights": [
+        "Temple views",
+        "Vintage cars",
+        "Forest scenery"
+      ]
+    },
+    "tateyamaKurobe": {
+      "name": "Tateyama Kurobe Alpine Route",
+      "location": "Toyama/Nagano, Hokuriku",
+      "description": "A cable car, ropeway, and trolleybus system through the Japanese Alps.",
+      "route": "Tateyama – Kurobe",
+      "operatingHours": "Seasonal (typically April-November)",
+      "history": "Completed in 1971, it's one of Japan's most scenic mountain journeys.",
+      "highlights": [
+        "Alpine peaks",
+        "Snow walls",
+        "Multiple transport types"
+      ]
+    },
+    "asoRailway": {
+      "name": "Aso Railway",
+      "location": "Aso, Kumamoto, Kyushu",
+      "description": "A scenic mountain railway surrounding Mount Aso's caldera.",
+      "route": "Tateno – Takamori",
+      "operatingHours": "Limited daily service with scenic observation cars",
+      "history": "Founded in 1988, it offers nature tourism through volcanic landscape.",
+      "highlights": [
+        "Aso caldera",
+        "Mountain views",
+        "Observation cars"
+      ]
+    },
+    "sakurajimaRailway": {
+      "name": "Sakurajima Scenic Railway",
+      "location": "Kagoshima, Kyushu",
+      "description": "A railway offering pristine views of active volcano Sakurajima Island.",
+      "route": "Coastal scenic routes",
+      "operatingHours": "6:30 AM - 8:00 PM",
+      "history": "Established in 1974 to promote volcanic area tourism.",
+      "highlights": [
+        "Volcano views",
+        "Island scenery",
+        "Nature experience"
+      ]
+    },
+    "kochiTram": {
+      "name": "Kochi Tram (Tosaden)",
+      "location": "Kochi, Shikoku",
+      "description": "One of Japan's oldest electric tram networks, featuring charming vintage cars.",
+      "route": "Multiple city lines",
+      "operatingHours": "5:30 AM - 11:30 PM",
+      "history": "Operating since 1904, it has witnessed over a century of Kochi's development.",
+      "highlights": [
+        "Historic vehicles",
+        "Castle proximity",
+        "Local character"
+      ]
+    },
+    "tokushimaTram": {
+      "name": "Tokushima City Tram",
+      "location": "Tokushima, Shikoku",
+      "description": "A modern tram system serving Shikoku's eastern gateway city.",
+      "route": "City center network",
+      "operatingHours": "6:00 AM - 11:30 PM",
+      "history": "Modernized in 1999 as part of urban transportation improvements.",
+      "highlights": [
+        "Modern comfort",
+        "City exploration",
+        "Local convenience"
+      ]
+    },
+    "jrHitachiTokiwa": {
+      "name": "HITACHI & TOKIWA",
+      "location": "Tokyo ⇔ Mito, Sendai",
+      "description": "High-speed limited express trains connecting Tokyo with destinations in Ibaraki and Tohoku.",
+      "route": "Multiple routes to eastern regions",
+      "operatingHours": "Regular daytime and evening service",
+      "history": "Modern comfortable trains representing JR East's state-of-the-art service.",
+      "highlights": [
+        "High-speed comfort",
+        "Business travel",
+        "Regional connectivity"
+      ]
+    },
+    "jrAzusaKaijiFuji": {
+      "name": "Azusa, Kaiji & Fuji",
+      "location": "Tokyo/Shinjuku ⇔ Matsumoto, Kofu, Kawaguchiko",
+      "description": "Scenic limited express trains offering mountain and lake views.",
+      "route": "Central mountain routes",
+      "operatingHours": "Daily service with varying schedules",
+      "history": "Iconic trains serving Japan's central tourist destinations.",
+      "highlights": [
+        "Mountain scenery",
+        "Lake Kawaguchi views",
+        "Alpine access"
+      ]
+    },
+    "jrNikkoKinugawa": {
+      "name": "Nikko & Kinugawa",
+      "location": "Shinjuku ⇔ Tōbu-Nikkō, Kinugawa Onsen",
+      "description": "Scenic trains to Nikko's temples and mountain onsen (hot springs).",
+      "route": "Northern scenic routes",
+      "operatingHours": "Daily service with seasonal variations",
+      "history": "Popular trains for visiting UNESCO World Heritage sites.",
+      "highlights": [
+        "Temple access",
+        "Mountain scenery",
+        "Onsen resorts"
+      ]
+    },
+    "jrOdoriko": {
+      "name": "Odoriko",
+      "location": "Tokyo/Shinjuku ⇔ Izukyu-Shimoda, Shuzenji",
+      "description": "Scenic coastal express train with ocean and mountain views.",
+      "route": "Izu Peninsula routes",
+      "operatingHours": "Daily service",
+      "history": "A favorite train for beach and hot spring destinations.",
+      "highlights": [
+        "Coastal views",
+        "Beach access",
+        "Onsen gateways"
+      ]
+    },
+    "jrSazanamiWakashio": {
+      "name": "Sazanami, Wakashio & Shiosai",
+      "location": "Tokyo ⇔ Chiba coastal regions",
+      "description": "Scenic trains serving coastal Chiba with ocean views.",
+      "route": "Coastal express routes",
+      "operatingHours": "Regular service",
+      "history": "Trains connecting Tokyo to Chiba's scenic coastal areas.",
+      "highlights": [
+        "Coastal scenery",
+        "Beach resorts",
+        "Ocean access"
+      ]
+    },
+    "jrKusatsuShima": {
+      "name": "Kusatsu & Shima",
+      "location": "Tokyo/Ueno ⇔ Kusatsu, Karuizawa",
+      "description": "Mountain resort express trains offering hot spring and mountain leisure.",
+      "route": "Northern mountain routes",
+      "operatingHours": "Daily service with seasonal scheduling",
+      "history": "Premium trains for visiting Japan's famous mountain onsen.",
+      "highlights": [
+        "Hot spring resorts",
+        "Mountain atmosphere",
+        "Leisure travel"
+      ]
+    },
+    "jrInahoShirayuki": {
+      "name": "Inaho & Shirayuki",
+      "location": "Niigata ⇔ Sakata, Akita",
+      "description": "Limited express trains connecting Niigata with Akita region.",
+      "route": "Northern regional routes",
+      "operatingHours": "Daily service",
+      "history": "Important connections for Japan's northern regions.",
+      "highlights": [
+        "Regional connectivity",
+        "Mountain views",
+        "Local culture"
+      ]
+    },
+    "saganoRomanticTrain": {
+      "name": "Sagano Romantic Train",
+      "location": "Kyoto to Arashiyama",
+      "description": "A vintage-style sightseeing train traveling through scenic bamboo groves and valleys.",
+      "route": "Sagano Scenic Railway",
+      "operatingHours": "Limited daily service",
+      "history": "Opened in 2007 to showcase Kyoto's natural beauty.",
+      "highlights": [
+        "Bamboo forest views",
+        "Vintage charm",
+        "Nature scenery"
+      ]
+    },
+    "pandaKuroshio": {
+      "name": "Panda Kuroshio",
+      "location": "Kyoto ⇔ Wakayama, Shingu",
+      "description": "A limited express train with panda-themed design and decorations.",
+      "route": "Southern Wakayama routes",
+      "operatingHours": "Daily service",
+      "history": "Special themed train launched in 2017.",
+      "highlights": [
+        "Panda theme",
+        "Mountain scenery",
+        "Hot spring access"
+      ]
+    },
+    "slYamaguchi": {
+      "name": "SL Yamaguchi (Steam Locomotive)",
+      "location": "Shin-Yamaguchi to Tsuwano",
+      "description": "A nostalgic steam train journey through rural Yamaguchi.",
+      "route": "Mountain scenic route",
+      "operatingHours": "Seasonal weekend service",
+      "history": "Historic steam locomotive service operating since 1974.",
+      "highlights": [
+        "Steam locomotive",
+        "Rural scenery",
+        "Nostalgic experience"
+      ]
+    },
+    "detectiveConanTrain": {
+      "name": "Detective Conan Train",
+      "location": "Kyoto ⇔ Tottori, Kurayoshi",
+      "description": "A themed train decorated with Detective Conan characters for fans.",
+      "route": "Koe Line (Super Hakuto)",
+      "operatingHours": "Limited special service",
+      "history": "Anime-themed train launched in 2015.",
+      "highlights": [
+        "Anime characters",
+        "Mountain route",
+        "Fan favorite"
+      ]
+    },
+    "kitaroTrain": {
+      "name": "Kitaro Train",
+      "location": "Yonago to Kurayoshi",
+      "description": "A train themed with Gegege no Kitaro characters and folklore.",
+      "route": "Local scenic route",
+      "operatingHours": "Regular service",
+      "history": "Themed train celebrating local Yokai folklore.",
+      "highlights": [
+        "Yokai theme",
+        "Cultural heritage",
+        "Local art"
+      ]
+    },
+    "westExpressGinga": {
+      "name": "WEST EXPRESS GINGA",
+      "location": "Osaka ⇔ Izushi, Kinosaki",
+      "description": "A luxury sleeper express train with premium accommodations.",
+      "route": "Night express routes",
+      "operatingHours": "Limited night service",
+      "history": "Modern luxury sleeper train launched in 2017.",
+      "highlights": [
+        "Luxury sleeper",
+        "Night travel",
+        "Premium service"
+      ]
+    },
+    "twilightExpressMizukaze": {
+      "name": "Twilight Express MIZUKAZE",
+      "location": "Osaka ⇔ Aomori, Sapporo",
+      "description": "A premium overnight express train with elegant accommodations.",
+      "route": "Long-distance sleeper route",
+      "operatingHours": "Scheduled overnight service",
+      "history": "Modern successor to classic Twilight Express, launched 2021.",
+      "highlights": [
+        "Premium sleeper",
+        "Long-distance travel",
+        "Elegant design"
+      ]
+    },
+    "helloKittyHaruka": {
+      "name": "Hello Kitty HARUKA",
+      "location": "Kansai Airport ⇔ Kyoto",
+      "description": "A cute Hello Kitty-themed express train connecting airport to Kyoto.",
+      "route": "Airport express",
+      "operatingHours": "Regular daily service",
+      "history": "Kawaii-themed train launched in 2008.",
+      "highlights": [
+        "Character design",
+        "Airport access",
+        "Cute experience"
+      ]
+    },
+    "berumontaTrain": {
+      "name": "Belles montagnes et mer",
+      "location": "Toyama (North Alpine Region)",
+      "description": "A scenic luxury train showcasing Toyama's mountains and coastal views.",
+      "route": "Regional scenic route",
+      "operatingHours": "Seasonal limited service",
+      "history": "French-named luxury train launched in 2015.",
+      "highlights": [
+        "Luxury experience",
+        "Mountain scenery",
+        "Coastal views"
+      ]
+    }
+  }
+}

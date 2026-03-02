@@ -1,0 +1,99 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Components */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-accent text-primary-dark font-heading font-bold rounded-lg hover:bg-accent-light transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-primary text-white font-heading font-bold rounded-lg hover:bg-secondary transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-3xl shadow-md hover:shadow-lg transition-shadow;
+  }
+
+  .section-heading {
+    @apply font-heading text-4xl sm:text-5xl font-bold text-primary;
+  }
+
+  .section-subtitle {
+    @apply font-body text-lg text-gray-600 max-w-2xl mx-auto;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .animate-slideUp {
+    animation: slideUp 0.5s ease-in;
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+}

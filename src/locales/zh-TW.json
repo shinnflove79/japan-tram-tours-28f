@@ -1,0 +1,650 @@
+{
+  "nav": {
+    "home": "首頁",
+    "gallery": "相冊",
+    "about": "關於"
+  },
+  "home": {
+    "heroTitle": "發現日本歷史悠久的觀光電車",
+    "heroSubtitle": "體驗日本最具標誌性的電車線路的魅力和優雅。從山區鐵路到歷史悠久的街頭電車，每次旅程都訴說著一個故事。",
+    "heroButton": "立即探索",
+    "featuredTitle": "精選電車線路",
+    "featuredDescription": "探索我們精心挑選的日本最美麗和最歷史悠久的觀光電車",
+    "galleryTitle": "相冊亮點",
+    "galleryDescription": "從日本標誌性電車線路拍攝的美麗時刻",
+    "galleryButton": "查看完整相冊",
+    "byLocationTitle": "按地區瀏覽",
+    "byLocationDescription": "按關東、關西、九州等地區分類瀏覽電車路線。",
+    "tabLocation": "按地點",
+    "tabPopularity": "按人氣", 
+    "filters": {
+      "searchPlaceholder": "搜尋列車、地點或關鍵字",
+      "allRegions": "全部地區",
+      "allCategories": "全部類型",
+      "reservationOnly": "僅顯示需預約",
+      "clearFilters": "清除篩選",
+      "noResults": "沒有符合條件的路線",
+      "categories": {
+        "luxuryTrain": "豪華觀光列車",
+        "sightseeingTrain": "觀光列車",
+        "streetcar": "路面電車",
+        "themedTrain": "主題列車",
+        "limitedExpress": "特急列車"
+      }
+    },
+    "infoCard1Title": "歷史遺產",
+    "infoCard1Desc": "日本的觀光電車代表著一個多世紀的交通遺產，從早期的20世紀有軌電車到現代景觀鐵路。",
+    "infoCard2Title": "風景路線",
+    "infoCard2Desc": "通過精心保護的電車路線體驗富士山、竹林、寺廟和傳統街道的壯麗景色。",
+    "infoCard3Title": "文化體驗",
+    "infoCard3Desc": "每次電車之旅都是日本文化的一個窗口，將旅行者與當地社區和歷史地標相連。"
+  },
+  "tramCard": {
+    "learnMore": "了解更多 →"
+  },
+  "tramDetails": {
+    "established": "建於",
+    "established2": "建立",
+    "location": "位置",
+    "route": "路線",
+    "operatingHours": "營業時間",
+    "history": "歷史",
+    "highlights": "亮點",
+    "gallery": "照片相冊",
+    "relatedTrams": "探索其他電車",
+    "planYourVisit": "規劃您的訪問",
+    "planYourVisitDesc": "準備好體驗這條標誌性電車線路的魅力了嗎？了解更多關於訪問的信息。",
+    "exploreMore": "探索更多電車",
+    "notFound": "未找到電車",
+    "notFoundDesc": "找不到您要查找的電車。",
+    "backToHome": "返回首頁",
+    "source": "來源"
+  },
+  "placeholder": {
+    "comingSoon": "即將推出",
+    "comingSoonDesc": "此頁面目前正在開發中。我們正在努力為您提供有關日本觀光電車的精彩內容。",
+    "suggestion": "有建議嗎？",
+    "suggestionText": "讓我們知道您想在此頁面上看到什麼！",
+    "backToHome": "返回首頁",
+    "exploreTrams": "探索電車"
+  },
+  "regions": {
+    "Kanto": "關東",
+    "Kansai": "關西",
+    "Kyushu": "九州",
+    "Chugoku": "中國地方",
+    "Chubu": "中部",
+    "Shikoku": "四國",
+    "Hokuriku": "北陸",
+    "Hokkaido": "北海道",
+    "Other": "其他"
+  },
+  "footer": {
+    "brand": "日本電車",
+    "brandDesc": "發現日本標誌性電車線路的魅力和歷史",
+    "quickLinks": "快速鏈接",
+    "followUs": "聯絡我們",
+    "followDesc": "shinnflove79@gmail.com", 
+    "copyright": "©2024 日本電車。版權所有。慶祝日本觀光遺產。"
+  },
+  "trams": {
+    "hakoneTozanRailway": {
+      "name": "箱根登山鐵道",
+      "location": "箱根，神奈川縣",
+      "description": "一條標誌性的山區鐵路，提供富士山和蘆之湖的景色。纜車和景觀列車全年提供箱根火山口的壯麗景色。",
+      "route": "箱根湯本到強羅",
+      "operatingHours": "上午8:00 - 下午7:00（季節性變化）",
+      "history": "箱根登山鐵道成立於1921年，是一條景觀山區鐵路。它具有獨特的折返鐵路系統和纜車，設計用於在陡峭的山地上行駛。",
+      "highlights": [
+        "晴天時富士山的景色",
+        "蘆之湖空中纜車",
+        "冒著蒸汽的硫磺噴口",
+        "高山風景",
+        "傳統纜車體驗"
+      ]
+    },
+    "arashiyamaTram": {
+      "name": "嵐山電車",
+      "location": "京都嵐山",
+      "description": "一條迷人的露天電車線路，蜿蜒穿過嵐山風景區，經過竹林、寺廟和傳統茶館。",
+      "route": "蘭登楽卿道到大宮町",
+      "operatingHours": "上午9:00 - 下午6:00（根據季節變化）",
+      "history": "自1910年開始運營，嵐山電車是京都最具浪漫色彩的探索方式之一。露天體驗將遊客與這個歷史地區的自然美景相連。",
+      "highlights": [
+        "竹林景色",
+        "歷史悠久的寺廟",
+        "傳統建築",
+        "季節性櫻花",
+        "傳統日本花園"
+      ]
+    },
+    "nagasakiStreetcar": {
+      "name": "長崎路面電車",
+      "location": "長崎市，長崎縣",
+      "description": "自20世紀初以來一直為城市服務的歷史悠久的有軌電車，提供體驗當地生活和戰爭歷史遺跡的真正方式。",
+      "route": "多條線路覆蓋全市",
+      "operatingHours": "上午6:00 - 晚上11:00",
+      "history": "長崎路面電車系統成立於1912年，是日本最古老的持續運營的電車系統。它以完整修復的車輛提供真正的復古魅力。",
+      "highlights": [
+        "歷史悠久的有軌電車設計",
+        "和平紀念公園通道",
+        "當地社區",
+        "經濟實惠的交通",
+        "迷人的復古氛圍"
+      ]
+    },
+    "hiroshimaElectric": {
+      "name": "廣島電鐵",
+      "location": "廣島市，廣島縣",
+      "description": "一個全面的電車網絡，連接和平紀念公園、當地社區和整個現代廣島的歷史遺跡。",
+      "route": "多條線路遍及全市",
+      "operatingHours": "上午6:00 - 晚上11:30",
+      "history": "廣島電鐵自1912年以來一直為城市服務，繼續承擔著連接社區和保護城市運輸遺產的使命。",
+      "highlights": [
+        "和平紀念公園",
+        "廣島城堡景色",
+        "歷史社區",
+        "現代城市連接",
+        "文化地標"
+      ]
+    },
+    "matsumotoTram": {
+      "name": "松本市電",
+      "location": "松本，長野縣",
+      "description": "城堡城鎮松本的一條迷人電車線路，連接標誌性的松本城堡與周圍社區和傳統街道。",
+      "route": "瑞寶町到丸之內",
+      "operatingHours": "上午6:30 - 晚上10:30",
+      "history": "松本電車系統成立於1961年，提供方便進入美麗城堡城鎮及其歷史社區的便利。",
+      "highlights": [
+        "松本城堡景色",
+        "歷史區",
+        "傳統商人街",
+        "當地文化",
+        "風景優美的環境"
+      ]
+    },
+    "jrEastViewTrain": {
+      "name": "JR東日本景觀列車",
+      "location": "主要在關東地區的多條風景路線",
+      "description": "由JR東日本運營的特別觀光列車，擁有全景窗和餐飲服務，可從獨特視角欣賞日本鄉間景色。",
+      "route": "不定期變更的風景路線",
+      "operatingHours": "依班次而定",
+      "history": "作為JR東日本『Joyful Train』車隊的一部分，於2000年代初推出，強調季節性風景。",
+      "highlights": [
+        "全景窗",
+        "季節風景",
+        "車內餐飲",
+        "舒適座椅",
+        "變動路線"
+      ]
+    },
+    "jrEastHolidayExpress": {
+      "name": "JR東日本節日快車",
+      "location": "關東周邊的各個休閒目的地",
+      "description": "一列節日氛圍濃厚的觀光列車，提供假日裝飾和特別活動，適合家庭旅行和季節性慶祝活動。",
+      "route": "特別假期行程",
+      "operatingHours": "季節性運行",
+      "history": "作為JR東日本Joyful Train系列的一部分，旨在為假期期間創造愉快的旅行體驗。",
+      "highlights": [
+        "節日裝飾",
+        "車內特別娛樂",
+        "適合家庭"
+      ]
+    },
+    "enoden": {
+      "name": "江之島電鐵",
+      "location": "江之島－鎌倉",
+      "description": "以海景和古寺著稱的風光明媚路面電車。",
+      "route": "江之島到鎌倉",
+      "operatingHours": "上午5:00至晚上11:00",
+      "history": "自1902年以來一直是湘南地區的象徵。",
+      "highlights": [
+        "海岸風景",
+        "古寺參拜",
+        "復古列車"
+      ]
+    },
+    "eizanRail": {
+      "name": "叡山電鐵",
+      "location": "京都北部山區",
+      "description": "通往神聖地的森林電車。",
+      "route": "出町柳－貴船",
+      "operatingHours": "上午6:00至下午6:00",
+      "history": "1925年開業，連接京都與鄉間。",
+      "highlights": [
+        "森林景觀",
+        "寺廟",
+        "傳統車廂"
+      ]
+    },
+    "izukyuResort21": {
+      "name": "伊豆急觀光列車21",
+      "location": "伊豆半島",
+      "description": "提供海景和豪華內裝的高級觀光列車。",
+      "route": "熱海至下田",
+      "operatingHours": "限時運行",
+      "history": "1985年為促進伊豆觀光而引進。",
+      "highlights": [
+        "海景",
+        "舒適座椅",
+        "車內咖啡"
+      ]
+    },
+    "kotoden": {
+      "name": "琴電",
+      "location": "高松市內",
+      "description": "以復古塗裝聞名的市內電車網絡。",
+      "route": "市內多條路線",
+      "operatingHours": "上午5:00至午夜",
+      "history": "1948年在四國啟動，成為地方象徵。",
+      "highlights": [
+        "復古色彩",
+        "市內觀光",
+        "四國文化"
+      ]
+    },
+    "toyamaChiho": {
+      "name": "富山地方鐵道",
+      "location": "富山縣",
+      "description": "包括山區電車與風景線的多樣化鐵路系統。",
+      "route": "各地區域路線",
+      "operatingHours": "上午5:00至晚上10:00",
+      "history": "1923年成立，為富山交通要衝。",
+      "highlights": [
+        "山岳景觀",
+        "區域連結",
+        "歷史車站"
+      ]
+    },
+    "hakodateTram": {
+      "name": "函館市電",
+      "location": "北海道函館市",
+      "description": "穿梭於歷史城市的可愛市電。",
+      "route": "市內各條街道",
+      "operatingHours": "上午6:00至晚上11:00",
+      "history": "自1910年運行，是北海道最古老的城市電車之一。",
+      "highlights": [
+        "歷史區",
+        "夜景車廂",
+        "海邊路線"
+      ]
+    },
+    "sapporoStreetcar": {
+      "name": "札幌市電",
+      "location": "北海道札幌市",
+      "description": "環繞札幌市中心的現代路面電車。",
+      "route": "市內循環線",
+      "operatingHours": "上午5:30至午夜",
+      "history": "1909年開業，後來改為低地板車。",
+      "highlights": [
+        "市內地標",
+        "雪祭運行",
+        "都市便利"
+      ]
+    },
+    "kagoshimaTram": {
+      "name": "鹿兒島市電",
+      "location": "九州鹿兒島市",
+      "description": "經歷戰爭與火山噴發仍屹立不倒的電車網。",
+      "route": "市內五條線",
+      "operatingHours": "上午5:30至晚上11:30",
+      "history": "自1912年運行，以堅韌著稱。",
+      "highlights": [
+        "櫻島景觀",
+        "歷史車輛",
+        "市中心"
+      ]
+    },
+    "okayamaTram": {
+      "name": "岡山電氣軌道",
+      "location": "山口市，中國地方",
+      "description": "被稱為‘おかでん’，是岡山市交通的核心。",
+      "route": "市內多條路線",
+      "operatingHours": "上午5:00至午夜",
+      "history": "1928年開業，部分古董車仍在運行。",
+      "highlights": [
+        "城堡景觀",
+        "經典車輛",
+        "市中心通勤"
+      ]
+    },
+    "todenArakawa": {
+      "name": "都電荒川線",
+      "location": "東京",
+      "description": "東京唯一保留的路面電車，穿過懷舊街區。",
+      "route": "早稻田－三之輪橋",
+      "operatingHours": "上午6:00至晚上11:00",
+      "history": "在戰後路線縮減中倖存，成為首都最後的市電。",
+      "highlights": [
+        "復古景觀",
+        "下町氛圍",
+        "電影拍攝地"
+      ]
+    },
+    "kumamotoTram": {
+      "name": "熊本市電",
+      "location": "九州熊本市",
+      "description": "擁有五條路線及懷舊車輛的歷史電車網。",
+      "route": "市內全域路線",
+      "operatingHours": "上午5:00至晚上11:00",
+      "history": "1912年開業，以抗震能力著稱。",
+      "highlights": [
+        "城下町",
+        "歷史車輛",
+        "抗震堅韌"
+      ]
+    },
+    "toyohashiTram": {
+      "name": "豊橋鉄道",
+      "location": "愛知県豊橋市",
+      "description": "環繞市中心與港口的緊湊路面電車。",
+      "route": "市中心與港口",
+      "operatingHours": "上午5:30至晚上11:30",
+      "history": "1925年隨城市發展開通。",
+      "highlights": [
+        "港口景觀",
+        "緊湊環路",
+        "地方風情"
+      ]
+    },
+    "izukyuSaphirOdoriko": {
+      "name": "伊豆急行SAPHIR踊子號",
+      "location": "靜岡縣伊豆半島",
+      "description": "提供海岸與山巒絕景的高級觀光列車。",
+      "route": "熱海～伊豆急下田",
+      "operatingHours": "限定運行",
+      "history": "2015年翻新，融合懷舊與現代風格。",
+      "highlights": [
+        "海景觀光",
+        "豪華座椅",
+        "拍照景點"
+      ]
+    },
+    "kuramaRailway": {
+      "name": "鞍馬鐵道",
+      "location": "京都市北部、關西",
+      "description": "穿過京都寺院與山林的風情古鐵道。",
+      "route": "鞍馬～貴船口",
+      "operatingHours": "上午8:00至下午5:00",
+      "history": "1927年開業，深受遊客喜愛的古鐵道。",
+      "highlights": [
+        "寺院風景",
+        "復古車廂",
+        "森林景觀"
+      ]
+    },
+    "tateyamaKurobe": {
+      "name": "立山黑部阿爾卑斯路線",
+      "location": "富山/長野縣、北陸",
+      "description": "穿過日本阿爾卑斯的纜車、登山纜車、無軌電車系統。",
+      "route": "立山～黑部",
+      "operatingHours": "季節運行（通常4月～11月）",
+      "history": "1971年完成，日本最高的山岳路線。",
+      "highlights": [
+        "阿爾卑斯山峰",
+        "雪壁景觀",
+        "多種交通工具"
+      ]
+    },
+    "asoRailway": {
+      "name": "阿蘇火山鐵道",
+      "location": "熊本阿蘇地區、九州",
+      "description": "環繞阿蘇火山火山口的山岳鐵道。",
+      "route": "果名～高栗",
+      "operatingHours": "限定運行（配備觀光車廂）",
+      "history": "1988年創立，提供火山區域觀光。",
+      "highlights": [
+        "阿蘇火山口景觀",
+        "山岳風景",
+        "觀光車廂"
+      ]
+    },
+    "sakurajimaRailway": {
+      "name": "櫻島觀光列車",
+      "location": "鹿兒島、九州",
+      "description": "眺望活火山櫻島的觀光列車。",
+      "route": "港灣附近觀光路線",
+      "operatingHours": "上午6:30至下午8:00",
+      "history": "1974年建立，提供火山區域觀光。",
+      "highlights": [
+        "火山景觀",
+        "海島動態",
+        "自然體驗"
+      ]
+    },
+    "kochiTram": {
+      "name": "土佐電氣軌道",
+      "location": "土佐市、四國",
+      "description": "日本最古老的電氣軌道之一，擁有懷舊車廂。",
+      "route": "市內多條路線",
+      "operatingHours": "上午5:30至晚上11:30",
+      "history": "1904年開業，超過百年歷史。",
+      "highlights": [
+        "歷史車廂",
+        "城下町風情",
+        "下町特色"
+      ]
+    },
+    "tokushimaTram": {
+      "name": "德島市電",
+      "location": "德島市、四國",
+      "description": "穿過德島市中心的港灣電車網。",
+      "route": "市內港灣路線",
+      "operatingHours": "上午6:00至晚上11:30",
+      "history": "1999年現代化改造，部分車廂已更新。",
+      "highlights": [
+        "現代車廂",
+        "都市觀光",
+        "地方便利"
+      ]
+    },
+    "jrHitachiTokiwa": {
+      "name": "日立號 · 常磐號",
+      "location": "東京 ⇔ 水戶、磐城、仙台",
+      "description": "連接東京與茨城及東北方向的高速快車列車。",
+      "route": "東部地域多線路",
+      "operatingHours": "白天及夜間定期運行",
+      "history": "代表JR東日本最新式舒適列車的典範。",
+      "highlights": [
+        "高速舒適",
+        "商務出差",
+        "區域連結"
+      ]
+    },
+    "jrAzusaKaijiFuji": {
+      "name": "梓號 · 甲斐號 · 富士號",
+      "location": "東京·新宿 ⇔ 松本、甲府、河口湖",
+      "description": "享受山岳與湖景風光的優美快速列車。",
+      "route": "中央山岳路線",
+      "operatingHours": "全日運行（時間表變動）",
+      "history": "連接日本中部重要觀光景點的標誌列車。",
+      "highlights": [
+        "山岳風景",
+        "富士山遠眺",
+        "山腳區域"
+      ]
+    },
+    "jrNikkoKinugawa": {
+      "name": "日光號 · 鬼怒川號",
+      "location": "新宿 ⇔ 東武日光·鬼怒川溫泉",
+      "description": "前往日光寺院群與鬼怒川溫泉鄉的風光快車。",
+      "route": "北部觀光路線",
+      "operatingHours": "全日運行（季節性調整）",
+      "history": "前往世界遺產群與溫泉的人氣列車。",
+      "highlights": [
+        "寺院巡禮",
+        "山岳風景",
+        "溫泉存取"
+      ]
+    },
+    "jrOdoriko": {
+      "name": "舞女號",
+      "location": "東京·新宿 ⇔ 伊豆急下田、修善寺",
+      "description": "前往伊豆半島海濱與溫泉的風光快速列車。",
+      "route": "伊豆半島路線",
+      "operatingHours": "全日運行",
+      "history": "前往海灘與溫泉熱門目的地的標準列車。",
+      "highlights": [
+        "海灘眺望",
+        "海灘存取",
+        "溫泉入口"
+      ]
+    },
+    "jrSazanamiWakashio": {
+      "name": "漣號 · 若潮號",
+      "location": "東京 ⇔ 千葉沿岸地域",
+      "description": "享受太平洋藍色景觀的沿岸快速列車。",
+      "route": "沿岸快速路線",
+      "operatingHours": "定期運行",
+      "history": "連接東京與千葉優美海濱地區。",
+      "highlights": [
+        "沿岸風景",
+        "海濱度假村",
+        "海洋存取"
+      ]
+    },
+    "jrKusatsuShima": {
+      "name": "草津號 · 四萬號",
+      "location": "東京·上野 ⇔ 草津·輕井澤",
+      "description": "山岳溫泉地與高原度假的高級快車列車。",
+      "route": "北部山岳路線",
+      "operatingHours": "全日運行（季節時程）",
+      "history": "前往日本頂級溫泉地的高級列車。",
+      "highlights": [
+        "溫泉度假村",
+        "山岳氛圍",
+        "休閒旅遊"
+      ]
+    },
+    "jrInahoShirayuki": {
+      "name": "稻穗號 · 白雪號",
+      "location": "新潟 ⇔ 酒田、秋田",
+      "description": "連接新潟與秋田地方的快速列車。",
+      "route": "北部廣域路線",
+      "operatingHours": "全日運行",
+      "history": "承載日本北部重要地域運輸的列車。",
+      "highlights": [
+        "地域連結",
+        "山岳眺望",
+        "地方文化"
+      ]
+    },
+    "saganoRomanticTrain": {
+      "name": "嵯峨野浪漫列車",
+      "location": "京都至嵐山",
+      "description": "穿過竹林與峽谷景色的觀光列車。",
+      "route": "嵯峨野觀光鐵道",
+      "operatingHours": "每日限定運行",
+      "history": "2007年開業，展示京都自然之美。",
+      "highlights": [
+        "竹林景色",
+        "懷舊魅力",
+        "自然風景"
+      ]
+    },
+    "pandaKuroshio": {
+      "name": "熊貓黑潮號",
+      "location": "京都 ⇔ 和歌山、新宮",
+      "description": "以熊貓主題設計的特色快速列車。",
+      "route": "南紀和歌山路線",
+      "operatingHours": "全日運行",
+      "history": "2017年推出的主題列車。",
+      "highlights": [
+        "熊貓主題",
+        "山岳景色",
+        "溫泉交通"
+      ]
+    },
+    "slYamaguchi": {
+      "name": "SL山口號（蒸汽機車）",
+      "location": "新山口至津和野",
+      "description": "穿過山口鄉村的懷舊蒸汽列車之旅。",
+      "route": "山岳風景路線",
+      "operatingHours": "季節限定週末運行",
+      "history": "1974年迄今運行的歷史蒸汽機車。",
+      "highlights": [
+        "蒸汽機車",
+        "鄉村風景",
+        "懷舊體驗"
+      ]
+    },
+    "detectiveConanTrain": {
+      "name": "名偵探柯南列車",
+      "location": "京都 ⇔ 鳥取、倉吉",
+      "description": "以名偵探柯南角色裝飾的主題列車。",
+      "route": "交流線（超級白鳥號）",
+      "operatingHours": "限定特別運行",
+      "history": "2015年推出的動畫主題列車。",
+      "highlights": [
+        "動畫角色",
+        "山岳路線",
+        "粉絲最愛"
+      ]
+    },
+    "kitaroTrain": {
+      "name": "鬼太郎列車",
+      "location": "米子至倉吉",
+      "description": "以鬼太郎角色與民俗為主題的列車。",
+      "route": "地域風景路線",
+      "operatingHours": "常規運行",
+      "history": "慶祝當地妖怪民俗的主題列車。",
+      "highlights": [
+        "妖怪主題",
+        "文化遺產",
+        "地方藝術"
+      ]
+    },
+    "westExpressGinga": {
+      "name": "WEST EXPRESS GINGA",
+      "location": "大阪 ⇔ 出石、城崎",
+      "description": "配備高級客室的豪華夜間列車。",
+      "route": "夜間列車路線",
+      "operatingHours": "限定夜間運行",
+      "history": "2017年推出的現代豪華夜間列車。",
+      "highlights": [
+        "豪華夜間",
+        "夜間旅行",
+        "高級服務"
+      ]
+    },
+    "twilightExpressMizukaze": {
+      "name": "暮光特快瑞風號",
+      "location": "大阪 ⇔ 青森、札幌",
+      "description": "擁有優雅客室的頂級夜間列車。",
+      "route": "長距離夜間路線",
+      "operatingHours": "定時夜間運行",
+      "history": "經典暮光特快的現代繼承者，2021年開業。",
+      "highlights": [
+        "頂級夜間",
+        "長距離旅行",
+        "優雅設計"
+      ]
+    },
+    "helloKittyHaruka": {
+      "name": "Hello Kitty HARUKA",
+      "location": "關西空港 ⇔ 京都",
+      "description": "連接機場與京都的可愛Hello Kitty主題列車。",
+      "route": "機場快速",
+      "operatingHours": "全日常規運行",
+      "history": "2008年推出的可愛主題列車。",
+      "highlights": [
+        "角色設計",
+        "機場交通",
+        "可愛體驗"
+      ]
+    },
+    "berumontaTrain": {
+      "name": "美麗的山與海",
+      "location": "富山（北阿爾卑斯地區）",
+      "description": "展示富山山景與海岸景色的豪華觀光列車。",
+      "route": "地域風景路線",
+      "operatingHours": "季節限定運行",
+      "history": "法文名稱的豪華列車，2015年開業。",
+      "highlights": [
+        "豪華體驗",
+        "山岳景色",
+        "海岸景色"
+      ]
+    }
+  }
+}
