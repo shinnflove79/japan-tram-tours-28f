@@ -9,14 +9,14 @@
     "heroSubtitle": "體驗日本最具標誌性的電車線路的魅力和優雅。從山區鐵路到歷史悠久的街頭電車，每次旅程都訴說著一個故事。",
     "heroButton": "立即探索",
     "featuredTitle": "精選電車線路",
-    "featuredDescription": "探索我們精心挑選的日本最美麗和最歷史悠久的觀光電車",
+    "featuredDescription": "探索我們精心挑選的日本最美麗和最歷史悠久的觀光電車。",
     "galleryTitle": "相冊亮點",
     "galleryDescription": "從日本標誌性電車線路拍攝的美麗時刻",
     "galleryButton": "查看完整相冊",
-    "byLocationTitle": "按地區瀏覽",
-    "byLocationDescription": "按關東、關西、九州等地區分類瀏覽電車路線。",
-    "tabLocation": "按地點",
-    "tabPopularity": "按人氣", 
+    "byLocationTitle": "路線探索",
+    "byLocationDescription": "可切換「地區分類」與「推薦瀏覽」，更快找到想搭的路線。",
+    "tabLocation": "地區分類",
+    "tabPopularity": "推薦瀏覽",
     "filters": {
       "searchPlaceholder": "搜尋列車、地點或關鍵字",
       "allRegions": "全部地區",
@@ -37,7 +37,9 @@
     "infoCard2Title": "風景路線",
     "infoCard2Desc": "通過精心保護的電車路線體驗富士山、竹林、寺廟和傳統街道的壯麗景色。",
     "infoCard3Title": "文化體驗",
-    "infoCard3Desc": "每次電車之旅都是日本文化的一個窗口，將旅行者與當地社區和歷史地標相連。"
+    "infoCard3Desc": "每次電車之旅都是日本文化的一個窗口，將旅行者與當地社區和歷史地標相連。",
+    "tabLocationHint": "依關東、關西、九州等地區分類瀏覽路線。",
+    "tabPopularityHint": "目前為編輯精選推薦，協助你快速挑選值得體驗的電車路線。"
   },
   "tramCard": {
     "learnMore": "了解更多 →"
@@ -92,7 +94,7 @@
     "brandDesc": "發現日本標誌性電車線路的魅力和歷史",
     "quickLinks": "快速鏈接",
     "followUs": "聯絡我們",
-    "contactEmail": "shinnflove79@gmail.com", 
+    "contactEmail": "shinnflove79@gmail.com",
     "copyright": "©2024 日本電車。版權所有。慶祝日本觀光遺產。"
   },
   "trams": {

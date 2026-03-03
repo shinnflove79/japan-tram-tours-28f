@@ -9,14 +9,14 @@
     "heroSubtitle": "日本で最も象徴的な電車路線の魅力と優雅さを体験してください。山岳鉄道から歴史的な路面電車まで、各旅は物語を語っています。",
     "heroButton": "今すぐ探索",
     "featuredTitle": "おすすめの電車路線",
-    "featuredDescription": "日本で最も美しく、歴史的な観光電車を厳選しました",
+    "featuredDescription": "日本で最も美しく、歴史的な観光電車を厳選しました。",
     "galleryTitle": "ギャラリーハイライト",
     "galleryDescription": "日本の象徴的な電車路線から撮られた美しい瞬間",
     "galleryButton": "フルギャラリーを表示",
-    "byLocationTitle": "地域別に探す",
-    "byLocationDescription": "関東、関西、九州などのエリアごとに電車路線を表示します。",
-    "tabLocation": "場所別",
-    "tabPopularity": "人気順", 
+    "byLocationTitle": "ルート探索",
+    "byLocationDescription": "「地域別」と「おすすめ表示」を切り替えて、目的に合う路線を探せます。",
+    "tabLocation": "地域別",
+    "tabPopularity": "おすすめ",
     "filters": {
       "searchPlaceholder": "列車名・場所・キーワードで検索",
       "allRegions": "全地域",
@@ -37,7 +37,9 @@
     "infoCard2Title": "景観ルート",
     "infoCard2Desc": "富士山、竹林、寺社、伝統的な街並みの息を呑むような景色を、丁寧に保護された電車路線で体験してください。",
     "infoCard3Title": "文化体験",
-    "infoCard3Desc": "電車での旅はすべて日本文化への窓であり、旅行者を地域コミュニティと歴史的なランドマークに結びつけています。"
+    "infoCard3Desc": "電車での旅はすべて日本文化への窓であり、旅行者を地域コミュニティと歴史的なランドマークに結びつけています。",
+    "tabLocationHint": "関東・関西・九州など、エリア別に路線を探せます。",
+    "tabPopularityHint": "現在は編集部のおすすめ順で表示しています。"
   },
   "tramCard": {
     "learnMore": "詳しく知る →"
@@ -92,7 +94,7 @@
     "brandDesc": "日本の象徴的な電車路線の魅力と歴史を発見してください",
     "quickLinks": "クイックリンク",
     "followUs": "お問い合わせ",
-    "contactEmail": "shinnflove79@gmail.com", 
+    "contactEmail": "shinnflove79@gmail.com",
     "copyright": "©2024 日本の電車。著作権所有。日本の観光遺産を祝う。"
   },
   "trams": {

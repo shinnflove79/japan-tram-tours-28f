@@ -64,6 +64,13 @@
             {{ $t('home.tabPopularity') }}
           </button>
         </div>
+        <p class="mb-8 text-center font-body text-sm text-gray-500">
+          {{
+            currentView === 'location'
+              ? $t('home.tabLocationHint')
+              : $t('home.tabPopularityHint')
+          }}
+        </p>
 
         <!-- Search + Filters -->
         <div class="mb-8 grid grid-cols-1 gap-3 md:grid-cols-4">
