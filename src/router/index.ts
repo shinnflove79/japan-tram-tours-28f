@@ -3,6 +3,7 @@ import HomePage from '@/pages/HomePage.vue'
 import TramDetailsPage from '@/pages/TramDetailsPage.vue'
 import PlaceholderPage from '@/pages/PlaceholderPage.vue'
 import DisclaimerPage from '@/pages/DisclaimerPage.vue'
+import AboutPage from '@/pages/AboutPage.vue'
 
 const routes = [
   {
@@ -18,8 +19,7 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: PlaceholderPage,
-    props: { title: 'About Us', description: 'Learn more about Japanese sightseeing trams' },
+    component: AboutPage,
   },
   {
     path: '/gallery',
