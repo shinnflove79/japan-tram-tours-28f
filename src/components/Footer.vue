@@ -1,59 +1,51 @@
-<template>
-  <footer class="bg-secondary text-gray-300 border-t border-accent/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
-        <!-- Brand Section -->
+﻿<template>
+  <footer class="border-t border-accent/20 bg-secondary text-gray-300">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="mb-8 grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:text-left">
         <div>
-          <h3 class="font-heading text-lg font-bold text-white mb-2">{{ t('footer.brand') }}</h3>
-          <p class="font-body text-sm text-gray-400">
-            {{ t('footer.brandDesc') }}
-          </p>
+          <h3 class="mb-2 font-heading text-lg font-bold text-white">{{ brandText }}</h3>
+          <p class="font-body text-sm text-gray-400">{{ brandDescText }}</p>
         </div>
 
-        <!-- Quick Links -->
         <div>
-          <h4 class="font-heading font-bold text-white mb-4">{{ t('footer.quickLinks') }}</h4>
-          <nav :aria-label="t('footer.quickLinks')">
-            <ul class="font-body text-sm space-y-2 md:flex md:items-center md:gap-4 md:space-y-0">
+          <h4 class="mb-4 font-heading font-bold text-white">{{ quickLinksText }}</h4>
+          <nav :aria-label="quickLinksText">
+            <ul class="space-y-2 font-body text-sm md:flex md:items-center md:gap-4 md:space-y-0">
               <li>
                 <router-link
                   to="/"
-                  class="text-gray-400 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary rounded-sm transition-colors"
+                  class="rounded-sm text-gray-400 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
                 >
-                  {{ t('nav.home') }}
+                  {{ homeText }}
                 </router-link>
               </li>
               <li>
                 <router-link
                   to="/about"
-                  class="text-gray-400 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary rounded-sm transition-colors"
+                  class="rounded-sm text-gray-400 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
                 >
-                  {{ t('nav.about') }}
+                  {{ aboutText }}
                 </router-link>
               </li>
             </ul>
           </nav>
         </div>
 
-        <!-- Contact Info -->
         <div>
-          <h4 class="font-heading font-bold text-white mb-4">{{ t('footer.followUs') }}</h4>
-          <p class="font-body text-sm text-gray-400 break-words">
+          <h4 class="mb-4 font-heading font-bold text-white">{{ contactTitleText }}</h4>
+          <p class="break-words font-body text-sm text-gray-400">
             <a
               :href="mailtoLink"
-              class="hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary rounded-sm transition-colors"
+              class="rounded-sm transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
             >
-              {{ contactEmail }}
+              {{ contactEmailText }}
             </a>
           </p>
         </div>
       </div>
 
-      <!-- Divider -->
       <div class="border-t border-accent/20 pt-8">
-        <p class="font-body text-center text-sm text-gray-500">
-          {{ copyrightText }}
-        </p>
+        <p class="text-center font-body text-sm text-gray-500">{{ copyrightText }}</p>
       </div>
     </div>
   </footer>
@@ -68,11 +60,32 @@ defineOptions({
 })
 
 const { t } = useI18n()
-
-const contactEmail = computed(() => t('footer.contactEmail'))
-const mailtoLink = computed(() => `mailto:${contactEmail.value}`)
 const currentYear = new Date().getFullYear()
-const copyrightText = computed(() =>
-  t('footer.copyright', { year: currentYear }).replace(/\b20\d{2}\b/, String(currentYear)),
-)
+
+const asText = (value: unknown, fallback = ''): string => {
+  if (typeof value === 'string') return value
+  if (value == null) return fallback
+  return String(value)
+}
+
+const brandText = computed(() => asText(t('footer.brand'), 'Japan Trams'))
+const brandDescText = computed(() => asText(t('footer.brandDesc')))
+const quickLinksText = computed(() => asText(t('footer.quickLinks'), 'Quick Links'))
+const contactTitleText = computed(() => asText(t('footer.followUs'), 'Contact Us'))
+const homeText = computed(() => asText(t('nav.home'), 'Home'))
+const aboutText = computed(() => asText(t('nav.about'), 'About'))
+
+const contactEmailText = computed(() => asText(t('footer.contactEmail'), 'shinnflove79@gmail.com'))
+const mailtoLink = computed(() => `mailto:${contactEmailText.value}`)
+
+const copyrightText = computed(() => {
+  const raw = asText(t('footer.copyright'), `© ${currentYear} Japan Trams. All rights reserved.`)
+
+  if (raw.includes('{year}')) {
+    return raw.replace('{year}', String(currentYear))
+  }
+
+  const replaced = raw.replace(/\b20\d{2}\b/, String(currentYear))
+  return replaced || `© ${currentYear} Japan Trams. All rights reserved.`
+})
 </script>
