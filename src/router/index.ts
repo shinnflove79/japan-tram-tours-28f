@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+﻿import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/pages/HomePage.vue'
 import TramDetailsPage from '@/pages/TramDetailsPage.vue'
 import PlaceholderPage from '@/pages/PlaceholderPage.vue'
@@ -31,6 +31,13 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior(_to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    return { top: 0, left: 0, behavior: 'auto' }
+  },
 })
 
 export default router

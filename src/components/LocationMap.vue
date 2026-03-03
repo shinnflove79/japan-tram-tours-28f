@@ -1,39 +1,48 @@
-<template>
-  <div class="relative w-full max-w-3xl mx-auto">
-    <!-- use an SVG map of Japan as background -->
+﻿<template>
+  <div class="relative mx-auto w-full max-w-3xl">
     <img
-      src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Japan_blank_map.svg"
+      src="/images/japan-map-placeholder.svg"
       alt="Map of Japan"
-      class="w-full h-auto"
+      class="h-auto w-full"
+      @error="handleMapImageError"
     />
 
-    <!-- markers positioned by percentage coords -->
     <button
       v-for="tram in trams"
       :key="tram.id"
+      type="button"
+      :aria-label="tram.name"
       @click="select(tram)"
       :style="markerStyle(tram)"
       class="absolute text-red-500 hover:text-red-700"
     >
-      📍
+      •
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { Tram } from '@/types/tram'
-import { defineProps, defineEmits } from 'vue'
 
-const props = defineProps<{ trams: Tram[] }>()
+defineProps<{ trams: Tram[] }>()
 const emits = defineEmits<{ (e: 'select', tram: Tram): void }>()
 
-// approximate coordinates (percentages) for each region/prefecture
 const regionCoords: Record<string, { x: number; y: number }> = {
   'Kanagawa Prefecture': { x: 60, y: 75 },
   Kyoto: { x: 55, y: 60 },
   'Nagasaki Prefecture': { x: 15, y: 85 },
   'Hiroshima Prefecture': { x: 30, y: 75 },
   'Nagano Prefecture': { x: 50, y: 55 },
+}
+
+const handleMapImageError = (event: Event) => {
+  const img = event.target as HTMLImageElement
+  if (img.dataset.fallbackApplied === 'true') {
+    return
+  }
+
+  img.dataset.fallbackApplied = 'true'
+  img.src = '/images/japan-map-placeholder.svg'
 }
 
 function markerStyle(tram: Tram) {

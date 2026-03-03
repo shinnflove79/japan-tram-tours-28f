@@ -4,30 +4,47 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
         <!-- Brand Section -->
         <div>
-          <h3 class="font-heading text-lg font-bold text-white mb-2">{{ $t('footer.brand') }}</h3>
+          <h3 class="font-heading text-lg font-bold text-white mb-2">{{ t('footer.brand') }}</h3>
           <p class="font-body text-sm text-gray-400">
-            {{ $t('footer.brandDesc') }}
+            {{ t('footer.brandDesc') }}
           </p>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h4 class="font-heading font-bold text-white mb-4">{{ $t('footer.quickLinks') }}</h4>
-          <ul class="space-y-2 font-body text-sm md:space-y-2 md:flex md:justify-center md:justify-start md:space-x-4">
-            <li>
-              <router-link to="/" class="text-gray-400 hover:text-accent transition-colors">{{ $t('nav.home') }}</router-link>
-            </li>
-            <li>
-              <router-link to="/about" class="text-gray-400 hover:text-accent transition-colors">{{ $t('nav.about') }}</router-link>
-            </li>
-          </ul>
+          <h4 class="font-heading font-bold text-white mb-4">{{ t('footer.quickLinks') }}</h4>
+          <nav :aria-label="t('footer.quickLinks')">
+            <ul class="font-body text-sm space-y-2 md:flex md:items-center md:gap-4 md:space-y-0">
+              <li>
+                <router-link
+                  to="/"
+                  class="text-gray-400 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary rounded-sm transition-colors"
+                >
+                  {{ t('nav.home') }}
+                </router-link>
+              </li>
+              <li>
+                <router-link
+                  to="/about"
+                  class="text-gray-400 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary rounded-sm transition-colors"
+                >
+                  {{ t('nav.about') }}
+                </router-link>
+              </li>
+            </ul>
+          </nav>
         </div>
 
         <!-- Contact Info -->
         <div>
-          <h4 class="font-heading font-bold text-white mb-4">{{ $t('footer.followUs') }}</h4>
+          <h4 class="font-heading font-bold text-white mb-4">{{ t('footer.followUs') }}</h4>
           <p class="font-body text-sm text-gray-400 break-words">
-            <a :href="`mailto:${$t('footer.followDesc')}`" class="hover:text-accent">{{ $t('footer.followDesc') }}</a>
+            <a
+              :href="mailtoLink"
+              class="hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary rounded-sm transition-colors"
+            >
+              {{ contactEmail }}
+            </a>
           </p>
         </div>
       </div>
@@ -35,7 +52,7 @@
       <!-- Divider -->
       <div class="border-t border-accent/20 pt-8">
         <p class="font-body text-center text-sm text-gray-500">
-          {{ $t('footer.copyright') }}
+          {{ copyrightText }}
         </p>
       </div>
     </div>
@@ -43,9 +60,19 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-useI18n()
-</script>
+defineOptions({
+  name: 'AppFooter',
+})
 
-<style scoped></style>
+const { t } = useI18n()
+
+const contactEmail = computed(() => t('footer.contactEmail'))
+const mailtoLink = computed(() => `mailto:${contactEmail.value}`)
+const currentYear = new Date().getFullYear()
+const copyrightText = computed(() =>
+  t('footer.copyright', { year: currentYear }).replace(/\b20\d{2}\b/, String(currentYear)),
+)
+</script>

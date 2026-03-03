@@ -7,15 +7,15 @@
             🚊
           </span>
           <span class="hidden sm:block text-xl font-heading font-semibold text-white group-hover:text-accent-light transition-colors">
-            Japan Trams
+            {{ t('footer.brand') }}
           </span>
         </router-link>
 
         <ul class="flex gap-4 sm:gap-8 items-center">
           <li>
             <router-link
-              :to="localizedPath('/')"
-              class="font-body text-sm sm:text-base hover:text-accent transition-colors duration-200"
+              to="/"
+              class="font-body text-sm sm:text-base hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm transition-colors duration-200"
               :class="{ 'text-accent': isActive('/') }"
             >
               {{ $t('nav.home') }}
@@ -23,8 +23,8 @@
           </li>
           <li>
             <router-link
-              :to="localizedPath('/about')"
-              class="font-body text-sm sm:text-base hover:text-accent transition-colors duration-200"
+              to="/about"
+              class="font-body text-sm sm:text-base hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm transition-colors duration-200"
               :class="{ 'text-accent': isActive('/about') }"
             >
               {{ $t('nav.about') }}
@@ -41,18 +41,18 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 
+defineOptions({
+  name: 'AppHeader',
+})
+
+const { t } = useI18n()
 const route = useRoute()
 
 const isActive = (path: string) => {
   return route.path === path
 }
 
-const localizedPath = (path: string) => {
-  return path
-}
 </script>
-
-<style scoped></style>

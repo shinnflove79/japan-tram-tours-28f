@@ -58,7 +58,15 @@
     "notFound": "Tram Not Found",
     "notFoundDesc": "The tram you're looking for doesn't exist.",
     "backToHome": "Back to Home",
-    "source": "Source"
+    "source": "Source",
+    "bookingLink": "Official booking page",
+    "bookingTypes": {
+      "officialSite": "Official site",
+      "jrSite": "JR booking",
+      "travelAgency": "Travel agency",
+      "localOperator": "Local operator",
+      "notRequired": "No reservation required"
+    }
   },
   "placeholder": {
     "comingSoon": "Coming Soon",
@@ -84,7 +92,7 @@
     "brandDesc": "Discover the charm and history of Japan's iconic sightseeing tram lines",
     "quickLinks": "Quick Links",
     "followUs": "Contact Us",
-    "followDesc": "shinnflove79@gmail.com",
+    "contactEmail": "shinnflove79@gmail.com",
     "copyright": "© 2024 Japan Trams. All rights reserved. Celebrating Japan's sightseeing heritage."
   },
   "trams": {

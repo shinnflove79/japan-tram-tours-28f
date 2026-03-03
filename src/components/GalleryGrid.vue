@@ -40,5 +40,3 @@ const getGridClass = (index: number) => {
   return classes[index % classes.length]
 }
 </script>
-
-<style scoped></style>

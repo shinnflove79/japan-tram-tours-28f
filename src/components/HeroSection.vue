@@ -1,21 +1,16 @@
-<template>
-  <section
-    class="relative w-full h-96 sm:h-500 lg:h-600 bg-cover bg-center overflow-hidden"
-    :style="{
-      backgroundImage: `linear-gradient(rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.6)), url('${imageUrl}')`,
-    }"
-  >
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-      <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+﻿<template>
+  <section class="relative h-96 w-full overflow-hidden bg-cover bg-center sm:h-500 lg:h-600" :style="heroBackgroundStyle">
+    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+      <h1 class="mb-4 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
         {{ title }}
       </h1>
-      <p v-if="subtitle" class="font-body text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl">
+      <p v-if="subtitle" class="mb-8 max-w-2xl font-body text-lg text-gray-200 sm:text-xl">
         {{ subtitle }}
       </p>
       <button
         v-if="ctaText && ctaLink"
         @click="navigateTo"
-        class="px-6 sm:px-8 py-3 sm:py-4 bg-accent text-primary-dark font-heading font-bold rounded-lg hover:bg-accent-light transition-colors duration-200 text-sm sm:text-base"
+        class="rounded-lg bg-accent px-6 py-3 font-heading text-sm font-bold text-primary-dark transition-colors duration-200 hover:bg-accent-light sm:px-8 sm:py-4 sm:text-base"
       >
         {{ ctaText }}
       </button>
@@ -24,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 
 interface Props {
@@ -40,6 +36,15 @@ const props = withDefaults(defineProps<Props>(), {
   ctaLink: undefined,
 })
 
+const fallbackHeroImage = '/images/hero-placeholder.svg'
+
+const heroBackgroundStyle = computed(() => ({
+  backgroundImage:
+    `linear-gradient(rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.6)), ` +
+    `url('${props.imageUrl}'), ` +
+    `url('${fallbackHeroImage}')`,
+}))
+
 const router = useRouter()
 
 const navigateTo = () => {
@@ -48,5 +53,3 @@ const navigateTo = () => {
   }
 }
 </script>
-
-<style scoped></style>

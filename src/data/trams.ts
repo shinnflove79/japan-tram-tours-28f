@@ -1,4 +1,4 @@
-import type { BookingType, TramCategory } from '@/types/tram'
+﻿import type { BookingType, TramCategory } from '@/types/tram'
 
 export const tramIds = [
   'hakone-tozan',
@@ -167,7 +167,7 @@ export const trams: TramBasic[] = [
   {
     id: 'hakone-tozan',
     yearEstablished: 1921,
-    imageUrl: 'https://images.unsplash.com/photo-1552345386-bbeb15ef7d4b?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/hakone-tozan.jpg',
     region: 'Kanto',
     company: 'Hakone Tozan Railway',
     sourceUrl: 'https://www.hakone-tozan.co.jp/',
@@ -175,7 +175,7 @@ export const trams: TramBasic[] = [
   {
     id: 'arashiyama-tram',
     yearEstablished: 1910,
-    imageUrl: 'https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/arashiyama-tram.jpg',
     region: 'Kansai',
     company: 'Keifuku Electric Railroad',
     sourceUrl: 'https://randen.keifuku.co.jp/',
@@ -183,7 +183,7 @@ export const trams: TramBasic[] = [
   {
     id: 'nagasaki-streetcar',
     yearEstablished: 1912,
-    imageUrl: 'https://images.unsplash.com/photo-1518172519437-3ebb8ea48d45?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/nagasaki-streetcar.jpg',
     region: 'Kyushu',
     company: 'Nagasaki Electric Tramway',
     sourceUrl: 'https://nagasaki-dentetu.com/',
@@ -191,7 +191,7 @@ export const trams: TramBasic[] = [
   {
     id: 'hiroshima-electric',
     yearEstablished: 1912,
-    imageUrl: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/hiroshima-electric.jpg',
     region: 'Chugoku',
     company: 'Hiroshima Electric Railway',
     sourceUrl: 'https://www.hiroden.co.jp/',
@@ -199,7 +199,7 @@ export const trams: TramBasic[] = [
   {
     id: 'matsumoto-tram',
     yearEstablished: 1961,
-    imageUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/matsumoto-tram.jpg',
     region: 'Chubu',
     company: 'Matsumoto Electric Railway',
     sourceUrl: 'https://www.alpico.co.jp/traffic/rail/matsumoto_city/',
@@ -207,7 +207,7 @@ export const trams: TramBasic[] = [
   {
     id: 'jr-east-view-train',
     yearEstablished: 2002,
-    imageUrl: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/jr-east-view-train.jpg',
     region: 'Kanto',
     company: 'JR East',
     sourceUrl: 'https://www.jreast.co.jp/joyful/',
@@ -215,7 +215,7 @@ export const trams: TramBasic[] = [
   {
     id: 'jr-east-holiday-express',
     yearEstablished: 2015,
-    imageUrl: 'https://picsum.photos/800/600?random=3',
+    imageUrl: '/images/trams/jr-east-holiday-express.jpg',
     region: 'Kanto',
     company: 'JR East',
     sourceUrl: 'https://www.jreast.co.jp/joyful/',
@@ -223,7 +223,7 @@ export const trams: TramBasic[] = [
   {
     id: 'enoden',
     yearEstablished: 1902,
-    imageUrl: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/enoden.jpg',
     region: 'Kanto',
     company: 'Enoshima Electric Railway',
     sourceUrl: 'https://www.enoden.co.jp/',
@@ -231,7 +231,7 @@ export const trams: TramBasic[] = [
   {
     id: 'eizan-rail',
     yearEstablished: 1925,
-    imageUrl: 'https://images.unsplash.com/photo-1469022563149-aa64dbd37dae?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/eizan-rail.jpg',
     region: 'Kansai',
     company: 'Eizan Electric Railway',
     sourceUrl: 'https://eizandensha.co.jp/',
@@ -239,7 +239,7 @@ export const trams: TramBasic[] = [
   {
     id: 'izukyu-resort21',
     yearEstablished: 1985,
-    imageUrl: 'https://picsum.photos/800/600?random=9',
+    imageUrl: '/images/trams/izukyu-resort21.jpg',
     region: 'Kanto',
     company: 'Izukyu Corporation',
     sourceUrl: 'https://www.izukyu.co.jp/',
@@ -247,7 +247,7 @@ export const trams: TramBasic[] = [
   {
     id: 'kotoden',
     yearEstablished: 1948,
-    imageUrl: 'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/kotoden.jpg',
     region: 'Shikoku',
     company: 'Takamatsu-Kotohira Electric Railroad',
     sourceUrl: 'https://www.kotoden.co.jp/',
@@ -255,7 +255,7 @@ export const trams: TramBasic[] = [
   {
     id: 'toyama-chiho',
     yearEstablished: 1923,
-    imageUrl: 'https://images.unsplash.com/photo-1527156388235-090b73579b29?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/toyama-chiho.jpg',
     region: 'Hokuriku',
     company: 'Toyama Chiho Railway',
     sourceUrl: 'https://www.chitetsu.co.jp/',
@@ -263,7 +263,7 @@ export const trams: TramBasic[] = [
   {
     id: 'hakodate-tram',
     yearEstablished: 1910,
-    imageUrl: 'https://picsum.photos/800/600?random=5',
+    imageUrl: '/images/trams/hakodate-tram.jpg',
     region: 'Hokkaido',
     company: 'Hakodate City Transportation Bureau',
     sourceUrl: 'https://www.city.hakodate.hokkaido.jp/transportation/',
@@ -271,7 +271,7 @@ export const trams: TramBasic[] = [
   {
     id: 'sapporo-streetcar',
     yearEstablished: 1909,
-    imageUrl: 'https://images.unsplash.com/photo-1486299713070-2ff3f4b901a7?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/sapporo-streetcar.jpg',
     region: 'Hokkaido',
     company: 'Sapporo City Transportation Bureau',
     sourceUrl: 'https://www.city.sapporo.jp/st/',
@@ -279,7 +279,7 @@ export const trams: TramBasic[] = [
   {
     id: 'kagoshima-tram',
     yearEstablished: 1912,
-    imageUrl: 'https://images.unsplash.com/photo-1493857990943-2d71dc32c94f?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/kagoshima-tram.jpg',
     region: 'Kyushu',
     company: 'Kagoshima City Transportation Bureau',
     sourceUrl: 'https://www.city.kagoshima.lg.jp/kakuka/shimin/shisaku/10494.html',
@@ -287,7 +287,7 @@ export const trams: TramBasic[] = [
   {
     id: 'okayama-tram',
     yearEstablished: 1928,
-    imageUrl: 'https://images.unsplash.com/photo-1497633959500-2f3f1ecb3ffe?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/okayama-tram.jpg',
     region: 'Chugoku',
     company: 'Okayama Electric Tramway',
     sourceUrl: 'https://www.okayama-kido.co.jp/',
@@ -295,7 +295,7 @@ export const trams: TramBasic[] = [
   {
     id: 'toden-arakawa',
     yearEstablished: 1913,
-    imageUrl: 'https://images.unsplash.com/photo-1495631579057-5b6b3b3b5b7f?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/toden-arakawa.jpg',
     region: 'Kanto',
     company: 'Tokyo Metropolitan Bureau of Transportation',
     sourceUrl: 'https://www.kotsu.metro.tokyo.jp/eng/services/rail/arakawa.html',
@@ -303,7 +303,7 @@ export const trams: TramBasic[] = [
   {
     id: 'kumamoto-tram',
     yearEstablished: 1912,
-    imageUrl: 'https://images.unsplash.com/photo-1494783367193-149034c05e41?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/kumamoto-tram.jpg',
     region: 'Kyushu',
     company: 'Kumamoto City Transportation Bureau',
     sourceUrl: 'https://www.city.kumamoto.jp/common/UploadFileDsp.aspx?c_id=5&id=14495',
@@ -311,7 +311,7 @@ export const trams: TramBasic[] = [
   {
     id: 'toyohashi-tram',
     yearEstablished: 1925,
-    imageUrl: 'https://images.unsplash.com/photo-1514955131778-430e63602c4b?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/toyohashi-tram.jpg',
     region: 'Chubu',
     company: 'Toyohashi Railroad',
     sourceUrl: 'https://www.toyotetsu.com/railway/',
@@ -319,7 +319,7 @@ export const trams: TramBasic[] = [
   {
     id: 'izukyu-saphir-odoriko',
     yearEstablished: 2015,
-    imageUrl: 'https://images.unsplash.com/photo-1511576661531-b34c7a5d248e?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/izukyu-saphir-odoriko.jpg',
     region: 'Kanto',
     company: 'Izukyu Corporation',
     sourceUrl: 'https://www.izukyu.co.jp/',
@@ -327,7 +327,7 @@ export const trams: TramBasic[] = [
   {
     id: 'kurama-railway',
     yearEstablished: 1927,
-    imageUrl: 'https://images.unsplash.com/photo-1479839672679-a464822900b9?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/kurama-railway.jpg',
     region: 'Kansai',
     company: 'Kurama Railway',
     sourceUrl: 'https://www.kurama-railway.co.jp/',
@@ -335,7 +335,7 @@ export const trams: TramBasic[] = [
   {
     id: 'tateyama-kurobe',
     yearEstablished: 1971,
-    imageUrl: 'https://picsum.photos/800/600?random=7',
+    imageUrl: '/images/trams/tateyama-kurobe.jpg',
     region: 'Hokuriku',
     company: 'Tateyama Kurobe Alpine Route',
     sourceUrl: 'https://www.alpen-route.com/en/',
@@ -343,7 +343,7 @@ export const trams: TramBasic[] = [
   {
     id: 'aso-railway',
     yearEstablished: 1988,
-    imageUrl: 'https://images.unsplash.com/photo-1500485046384-f59f8d4e6d84?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/aso-railway.jpg',
     region: 'Kyushu',
     company: 'Aso Railway',
     sourceUrl: 'https://www.aso123.co.jp/',
@@ -351,7 +351,7 @@ export const trams: TramBasic[] = [
   {
     id: 'sakurajima-railway',
     yearEstablished: 1974,
-    imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/sakurajima-railway.jpg',
     region: 'Kyushu',
     company: 'Sakurajima Scenic Railway',
     sourceUrl: 'https://www.sakurajima-railway.co.jp/',
@@ -359,7 +359,7 @@ export const trams: TramBasic[] = [
   {
     id: 'kochi-tram',
     yearEstablished: 1904,
-    imageUrl: 'https://picsum.photos/800/600?random=6',
+    imageUrl: '/images/trams/kochi-tram.jpg',
     region: 'Shikoku',
     company: 'Tosaden (Kochi Transportation)',
     sourceUrl: 'https://www.tosaden.com/',
@@ -367,7 +367,7 @@ export const trams: TramBasic[] = [
   {
     id: 'tokushima-tram',
     yearEstablished: 1999,
-    imageUrl: 'https://images.unsplash.com/photo-1497206365907-3916b6fdf72a?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/tokushima-tram.jpg',
     region: 'Shikoku',
     company: 'Tokushima City Transportation',
     sourceUrl: 'https://www.city.tokushima.lg.jp/',
@@ -375,7 +375,7 @@ export const trams: TramBasic[] = [
   {
     id: 'jr-hitachi-tokiwa',
     yearEstablished: 1986,
-    imageUrl: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/jr-hitachi-tokiwa.jpg',
     region: 'Kanto',
     company: 'JR East',
     sourceUrl: 'https://www.jreast.co.jp/en/multi/traininformation/hitachi/',
@@ -383,7 +383,7 @@ export const trams: TramBasic[] = [
   {
     id: 'jr-azusa-kaiji-fuji',
     yearEstablished: 1988,
-    imageUrl: 'https://images.unsplash.com/photo-1517639697866-1f46a7e4dbb7?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/jr-azusa-kaiji-fuji.jpg',
     region: 'Chubu',
     company: 'JR East',
     sourceUrl: 'https://www.jreast.co.jp/en/multi/traininformation/azusa_kaiji/',
@@ -391,7 +391,7 @@ export const trams: TramBasic[] = [
   {
     id: 'jr-nikko-kinugawa',
     yearEstablished: 1992,
-    imageUrl: 'https://picsum.photos/800/600?random=1',
+    imageUrl: '/images/trams/jr-nikko-kinugawa.jpg',
     region: 'Kanto',
     company: 'JR East',
     sourceUrl: 'https://www.jreast.co.jp/en/multi/traininformation/nikko_kinugawa/',
@@ -399,7 +399,7 @@ export const trams: TramBasic[] = [
   {
     id: 'jr-odoriko',
     yearEstablished: 1995,
-    imageUrl: 'https://images.unsplash.com/photo-1460603572013-d70a84a573da?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/jr-odoriko.jpg',
     region: 'Kanto',
     company: 'JR East',
     sourceUrl: 'https://www.jreast.co.jp/en/multi/traininformation/odoriko/',
@@ -407,7 +407,7 @@ export const trams: TramBasic[] = [
   {
     id: 'jr-sazanami-wakashio',
     yearEstablished: 2001,
-    imageUrl: 'https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/jr-sazanami-wakashio.jpg',
     region: 'Kanto',
     company: 'JR East',
     sourceUrl: 'https://www.jreast.co.jp/en/multi/traininformation/sazanami_wakashio/',
@@ -415,7 +415,7 @@ export const trams: TramBasic[] = [
   {
     id: 'jr-kusatsu-shima',
     yearEstablished: 1999,
-    imageUrl: 'https://images.unsplash.com/photo-1579516025804-a15cd7ffa7da?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/jr-kusatsu-shima.jpg',
     region: 'Chubu',
     company: 'JR East',
     sourceUrl: 'https://www.jreast.co.jp/en/multi/traininformation/kusatsu_shima/',
@@ -423,7 +423,7 @@ export const trams: TramBasic[] = [
   {
     id: 'jr-inaho-shirayuki',
     yearEstablished: 1988,
-    imageUrl: 'https://images.unsplash.com/photo-1504681869696-d977bccbaad5?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/jr-inaho-shirayuki.jpg',
     region: 'Hokuriku',
     company: 'JR East',
     sourceUrl: 'https://www.jreast.co.jp/en/multi/traininformation/inaho/',
@@ -431,7 +431,7 @@ export const trams: TramBasic[] = [
   {
     id: 'sagano-romantic-train',
     yearEstablished: 2007,
-    imageUrl: 'https://images.unsplash.com/photo-1522383507920-a63b84ace60?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/sagano-romantic-train.jpg',
     region: 'Kansai',
     company: 'Sagano Scenic Railway',
     sourceUrl: 'https://www.sagano-kanko.co.jp/en/',
@@ -439,7 +439,7 @@ export const trams: TramBasic[] = [
   {
     id: 'panda-kuroshio',
     yearEstablished: 2017,
-    imageUrl: 'https://images.unsplash.com/photo-1459262838948-3e2de6c003bf?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/panda-kuroshio.jpg',
     region: 'Kansai',
     company: 'JR West',
     sourceUrl: 'https://www.jr-odekake.net/railroad/kuroshio/pandakuroshio/',
@@ -447,7 +447,7 @@ export const trams: TramBasic[] = [
   {
     id: 'sl-yamaguchi',
     yearEstablished: 1974,
-    imageUrl: 'https://images.unsplash.com/photo-1455849318169-411cb94a8eab?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/sl-yamaguchi.jpg',
     region: 'Chugoku',
     company: 'SL YAMAGUCHI',
     sourceUrl: 'https://www.c571.jp/render/index.html',
@@ -455,7 +455,7 @@ export const trams: TramBasic[] = [
   {
     id: 'detective-conan-train',
     yearEstablished: 2015,
-    imageUrl: 'https://images.unsplash.com/photo-1544546095-97930e20c825?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/detective-conan-train.jpg',
     region: 'Chugoku',
     company: 'JR West',
     sourceUrl: 'https://www.jr-odekake.net/railroad/konanhakuto/',
@@ -463,7 +463,7 @@ export const trams: TramBasic[] = [
   {
     id: 'kitaro-train',
     yearEstablished: 2008,
-    imageUrl: 'https://images.unsplash.com/photo-1528127269029-c163815266e1?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/kitaro-train.jpg',
     region: 'Chugoku',
     company: 'JR West',
     sourceUrl: 'https://www.westjr.co.jp/travel-information/tc/train-usage-guide/trains/',
@@ -471,7 +471,7 @@ export const trams: TramBasic[] = [
   {
     id: 'west-express-ginga',
     yearEstablished: 2017,
-    imageUrl: 'https://images.unsplash.com/photo-1516477228182-90e232b24ee5?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/west-express-ginga.jpg',
     region: 'Chugoku',
     company: 'JR West',
     sourceUrl: 'https://www.jr-odekake.net/railroad/westexginga/',
@@ -479,7 +479,7 @@ export const trams: TramBasic[] = [
   {
     id: 'twilight-express-mizukaze',
     yearEstablished: 2021,
-    imageUrl: 'https://images.unsplash.com/photo-1514306688772-cfb6c67f34e9?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/twilight-express-mizukaze.jpg',
     region: 'Chugoku',
     company: 'JR West',
     sourceUrl: 'https://www.twilightexpress-mizukaze.jp/en/',
@@ -487,7 +487,7 @@ export const trams: TramBasic[] = [
   {
     id: 'hello-kitty-haruka',
     yearEstablished: 2008,
-    imageUrl: 'https://images.unsplash.com/photo-1547471080-7898c3ad8ef6?w=800&h=600&fit=crop',
+    imageUrl: '/images/trams/hello-kitty-haruka.jpg',
     region: 'Kansai',
     company: 'JR West',
     sourceUrl: 'https://www.jr-hellokittyharuka.jp/',
@@ -495,7 +495,7 @@ export const trams: TramBasic[] = [
   {
     id: 'berumonta-train',
     yearEstablished: 2015,
-    imageUrl: 'https://picsum.photos/800/600?random=8',
+    imageUrl: '/images/trams/berumonta-train.jpg',
     region: 'Hokuriku',
     company: 'JR West',
     sourceUrl: 'https://www.westjr.co.jp/global/tc/train/berumonta/',
@@ -505,3 +505,4 @@ export const trams: TramBasic[] = [
 export const getTramById = (id: string): TramBasic | undefined => {
   return trams.find((tram) => tram.id === id)
 }
+

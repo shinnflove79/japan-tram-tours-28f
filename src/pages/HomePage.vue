@@ -1,10 +1,10 @@
-<template>
+﻿<template>
   <div class="min-h-screen flex flex-col bg-background">
     <!-- Hero Section -->
     <HeroSection
       :title="$t('home.heroTitle')"
       :subtitle="$t('home.heroSubtitle')"
-      imageUrl="https://images.unsplash.com/photo-1552345386-bbeb15ef7d4b?w=1200&h=800&fit=crop"
+      imageUrl="/images/hero-home.jpg"
       :ctaText="$t('home.heroButton')"
       ctaLink="/gallery"
     />
@@ -38,8 +38,10 @@
         </div>
 
         <!-- tabs -->
-        <div class="flex justify-center mb-8 space-x-4">
+        <div class="flex justify-center mb-8 space-x-4" role="tablist" :aria-label="$t('home.byLocationTitle')">
           <button
+            role="tab"
+            :aria-selected="currentView === 'location'"
             :class="[
               'whitespace-nowrap px-6 py-2 transition-colors',
               currentView === 'location'
@@ -51,6 +53,8 @@
             {{ $t('home.tabLocation') }}
           </button>
           <button
+            role="tab"
+            :aria-selected="currentView === 'popularity'"
             :class="[
               'whitespace-nowrap px-6 py-2 transition-colors',
               currentView === 'popularity'
@@ -186,8 +190,6 @@ const regionOptions = computed(() => {
 })
 
 const categoryOptions = computed(() => {
-  // tie to locale so labels update immediately on language switch
-  locale.value
   const labels: Record<TramCategory, string> = {
     luxury_train: t('home.filters.categories.luxuryTrain'),
     sightseeing_train: t('home.filters.categories.sightseeingTrain'),
@@ -245,4 +247,5 @@ const resetFilters = () => {
 
 </script>
 
-<style scoped></style>
+
+

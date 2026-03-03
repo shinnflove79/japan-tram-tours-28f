@@ -58,7 +58,15 @@
     "notFound": "電車が見つかりません",
     "notFoundDesc": "お探しの電車は見つかりません。",
     "backToHome": "ホームに戻る",
-    "source": "出典"
+    "source": "出典",
+    "bookingLink": "公式予約ページ",
+    "bookingTypes": {
+      "officialSite": "公式サイト",
+      "jrSite": "JR予約",
+      "travelAgency": "旅行代理店",
+      "localOperator": "運営会社",
+      "notRequired": "予約不要"
+    }
   },
   "placeholder": {
     "comingSoon": "近日公開予定",
@@ -84,7 +92,7 @@
     "brandDesc": "日本の象徴的な電車路線の魅力と歴史を発見してください",
     "quickLinks": "クイックリンク",
     "followUs": "お問い合わせ",
-    "followDesc": "shinnflove79@gmail.com", 
+    "contactEmail": "shinnflove79@gmail.com", 
     "copyright": "©2024 日本の電車。著作権所有。日本の観光遺産を祝う。"
   },
   "trams": {

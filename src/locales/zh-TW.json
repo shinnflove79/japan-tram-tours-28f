@@ -58,7 +58,15 @@
     "notFound": "未找到電車",
     "notFoundDesc": "找不到您要查找的電車。",
     "backToHome": "返回首頁",
-    "source": "來源"
+    "source": "來源",
+    "bookingLink": "官方訂票頁面",
+    "bookingTypes": {
+      "officialSite": "官方網站",
+      "jrSite": "JR 訂票",
+      "travelAgency": "旅行社",
+      "localOperator": "營運公司",
+      "notRequired": "無需預約"
+    }
   },
   "placeholder": {
     "comingSoon": "即將推出",
@@ -84,7 +92,7 @@
     "brandDesc": "發現日本標誌性電車線路的魅力和歷史",
     "quickLinks": "快速鏈接",
     "followUs": "聯絡我們",
-    "followDesc": "shinnflove79@gmail.com", 
+    "contactEmail": "shinnflove79@gmail.com", 
     "copyright": "©2024 日本電車。版權所有。慶祝日本觀光遺產。"
   },
   "trams": {

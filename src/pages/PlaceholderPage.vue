@@ -49,19 +49,13 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
 interface Props {
   title?: string
   description?: string
 }
-
-const { t } = useI18n()
 
 withDefaults(defineProps<Props>(), {
   title: 'Coming Soon',
   description: 'This page is being developed. Check back soon!',
 })
 </script>
-
-<style scoped></style>
