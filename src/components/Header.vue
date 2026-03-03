@@ -2,10 +2,12 @@
   <header class="bg-primary-dark text-white shadow-lg">
     <nav class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between">
-        <router-link to="/" class="group flex items-center gap-2">
-          <span class="text-2xl font-heading font-bold text-accent transition-colors group-hover:text-accent-light">
-            🚊
-          </span>
+        <router-link to="/" class="group flex items-center gap-3">
+          <img
+            src="/images/jlt-logo-mark.svg"
+            alt="Japan Lux Train logo"
+            class="h-8 w-8 rounded-lg transition-opacity group-hover:opacity-90"
+          />
           <span
             class="hidden text-xl font-heading font-semibold text-white transition-colors group-hover:text-accent-light sm:block"
           >

@@ -3,7 +3,10 @@
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="mb-8 grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:text-left">
         <div>
-          <h3 class="mb-2 font-heading text-lg font-bold text-white">{{ brandText }}</h3>
+          <div class="mb-2 inline-flex items-center gap-2">
+            <img src="/images/jlt-logo-mark.svg" alt="Japan Lux Train logo" class="h-6 w-6 rounded-md" />
+            <h3 class="font-heading text-lg font-bold text-white">{{ brandText }}</h3>
+          </div>
           <p class="font-body text-sm text-gray-400">{{ brandDescText }}</p>
         </div>
 
