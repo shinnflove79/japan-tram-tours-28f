@@ -17,22 +17,18 @@
           </div>
 
           <div class="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-accent">
-            <span>📍</span>
             <span class="font-body font-semibold">{{ tram.location }}</span>
           </div>
           <div
             v-if="tram.company"
             class="ml-4 inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-accent"
           >
-            <span>🏢</span>
             <span class="font-body font-semibold">{{ tram.company }}</span>
           </div>
           <div class="ml-4 mt-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-primary sm:mt-0">
-            <span>🚆</span>
             <span class="font-body font-semibold">{{ categoryLabel }}</span>
           </div>
           <div class="ml-4 mt-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-primary sm:mt-0">
-            <span>🎫</span>
             <span class="font-body font-semibold">{{ bookingTypeLabel }}</span>
           </div>
           <div v-if="tram.bookingUrl" class="mt-4">
@@ -40,10 +36,6 @@
               {{ t('tramDetails.bookingLink') }}
             </a>
           </div>
-        </div>
-
-        <div class="mb-12 border-b border-gray-200 pb-12">
-          <p class="text-xl font-body leading-relaxed text-gray-700">{{ tram.description }}</p>
         </div>
 
         <div class="mb-12 grid grid-cols-1 gap-8 border-b border-gray-200 pb-12 md:grid-cols-2">
@@ -57,28 +49,16 @@
           </div>
         </div>
 
-        <div v-if="tram.sourceUrl" class="mb-4 text-right">
+        <div class="mb-12 rounded-2xl border border-primary/20 bg-primary/5 p-6">
+          <h2 class="mb-3 font-heading text-2xl font-bold text-primary">{{ safeCopy.noticeTitle }}</h2>
+          <p class="mb-3 font-body leading-7 text-gray-700">{{ safeCopy.noticeBody }}</p>
+          <p class="font-body leading-7 text-gray-700">{{ safeCopy.noticeBody2 }}</p>
+        </div>
+
+        <div v-if="tram.sourceUrl" class="mb-12 text-right">
           <a :href="tram.sourceUrl" target="_blank" rel="noopener noreferrer" class="text-sm text-primary underline">
             {{ t('tramDetails.source') }}
           </a>
-        </div>
-        <div class="mb-12 border-b border-gray-200 pb-12">
-          <h2 class="mb-6 font-heading text-3xl font-bold text-primary">{{ t('tramDetails.history') }}</h2>
-          <p class="text-lg font-body leading-relaxed text-gray-700">{{ tram.history }}</p>
-        </div>
-
-        <div class="mb-12">
-          <h2 class="mb-6 font-heading text-3xl font-bold text-primary">{{ t('tramDetails.highlights') }}</h2>
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <div
-              v-for="(highlight, index) in tram.highlights"
-              :key="index"
-              class="flex items-start gap-3 rounded-xl border border-gray-100 bg-white p-4"
-            >
-              <span class="flex-shrink-0 text-2xl">✓</span>
-              <p class="font-body text-gray-700">{{ highlight }}</p>
-            </div>
-          </div>
         </div>
 
         <div class="mb-12">
@@ -157,4 +137,38 @@ const bookingTypeKeyMap: Record<BookingType, string> = {
 
 const categoryLabel = computed(() => (tram.value ? t(categoryKeyMap[tram.value.category]) : ''))
 const bookingTypeLabel = computed(() => (tram.value ? t(bookingTypeKeyMap[tram.value.bookingType]) : ''))
+
+interface SafeCopy {
+  noticeTitle: string
+  noticeBody: string
+  noticeBody2: string
+}
+
+const safeCopyByLocale: Record<'en' | 'ja' | 'zh-TW', SafeCopy> = {
+  en: {
+    noticeTitle: 'Information Notice',
+    noticeBody:
+      'This page provides general travel reference information and may not reflect the latest operational changes.',
+    noticeBody2:
+      'For official and most up-to-date details (schedule, fares, service status, and booking rules), please check the operator website via the source and booking links.',
+  },
+  ja: {
+    noticeTitle: '情報に関するご案内',
+    noticeBody:
+      '本ページは旅行参考情報をまとめたものであり、最新の運行変更を反映していない場合があります。',
+    noticeBody2:
+      '時刻・運賃・運休情報・予約条件などの最新情報は、出典リンクおよび予約リンク先の公式情報をご確認ください。',
+  },
+  'zh-TW': {
+    noticeTitle: '資訊聲明',
+    noticeBody: '本頁內容僅供旅遊參考，可能無法即時反映最新營運異動。',
+    noticeBody2: '時刻、票價、停駛資訊與訂位規則，請以出處連結與訂票連結所指向之官方公告為準。',
+  },
+}
+
+const safeCopy = computed(() => {
+  if (locale.value === 'ja') return safeCopyByLocale.ja
+  if (locale.value === 'zh-TW') return safeCopyByLocale['zh-TW']
+  return safeCopyByLocale.en
+})
 </script>
