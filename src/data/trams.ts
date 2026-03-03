@@ -156,7 +156,7 @@ const bookingUrlById: Partial<Record<string, string>> = {
   'jr-kusatsu-shima': 'https://www.eki-net.com/',
   'jr-inaho-shirayuki': 'https://www.eki-net.com/',
   'west-express-ginga': 'https://www.jr-odekake.net/',
-  'twilight-express-mizukaze': 'https://www.twilightexpress-mizukaze.jp/en/reservation/',
+  'twilight-express-mizukaze': 'https://www.twilightexpress-mizukaze.jp/en/',
 }
 
 export const getTramBookingUrl = (id: string, sourceUrl?: string): string | undefined => {
@@ -178,7 +178,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/arashiyama-tram.jpg',
     region: 'Kansai',
     company: 'Keifuku Electric Railroad',
-    sourceUrl: 'https://randen.keifuku.co.jp/',
+    sourceUrl: 'https://www.keifuku.co.jp/',
   },
   {
     id: 'nagasaki-streetcar',
@@ -186,7 +186,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/nagasaki-streetcar.jpg',
     region: 'Kyushu',
     company: 'Nagasaki Electric Tramway',
-    sourceUrl: 'https://nagasaki-dentetu.com/',
+    sourceUrl: 'https://www.naga-den.com/',
   },
   {
     id: 'hiroshima-electric',
@@ -202,7 +202,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/matsumoto-tram.jpg',
     region: 'Chubu',
     company: 'Matsumoto Electric Railway',
-    sourceUrl: 'https://www.alpico.co.jp/traffic/rail/matsumoto_city/',
+    sourceUrl: 'https://www.alpico.co.jp/',
   },
   {
     id: 'jr-east-view-train',
@@ -266,7 +266,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/hakodate-tram.jpg',
     region: 'Hokkaido',
     company: 'Hakodate City Transportation Bureau',
-    sourceUrl: 'https://www.city.hakodate.hokkaido.jp/transportation/',
+    sourceUrl: 'https://www.city.hakodate.hokkaido.jp/',
   },
   {
     id: 'sapporo-streetcar',
@@ -282,7 +282,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/kagoshima-tram.jpg',
     region: 'Kyushu',
     company: 'Kagoshima City Transportation Bureau',
-    sourceUrl: 'https://www.city.kagoshima.lg.jp/kakuka/shimin/shisaku/10494.html',
+    sourceUrl: 'https://www.city.kagoshima.lg.jp/',
   },
   {
     id: 'okayama-tram',
@@ -314,7 +314,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/toyohashi-tram.jpg',
     region: 'Chubu',
     company: 'Toyohashi Railroad',
-    sourceUrl: 'https://www.toyotetsu.com/railway/',
+    sourceUrl: 'https://www.toyotetsu.com/',
   },
   {
     id: 'izukyu-saphir-odoriko',
@@ -330,7 +330,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/kurama-railway.jpg',
     region: 'Kansai',
     company: 'Kurama Railway',
-    sourceUrl: 'https://www.kurama-railway.co.jp/',
+    sourceUrl: 'https://eizandensha.co.jp/',
   },
   {
     id: 'tateyama-kurobe',
@@ -346,7 +346,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/aso-railway.jpg',
     region: 'Kyushu',
     company: 'Aso Railway',
-    sourceUrl: 'https://www.aso123.co.jp/',
+    sourceUrl: 'https://www.mt-torokko.com/',
   },
   {
     id: 'sakurajima-railway',
@@ -354,7 +354,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/sakurajima-railway.jpg',
     region: 'Kyushu',
     company: 'Sakurajima Scenic Railway',
-    sourceUrl: 'https://www.sakurajima-railway.co.jp/',
+    sourceUrl: 'https://www.city.kagoshima.lg.jp/',
   },
   {
     id: 'kochi-tram',
@@ -370,7 +370,7 @@ export const trams: TramBasic[] = [
     imageUrl: '/images/trams/tokushima-tram.jpg',
     region: 'Shikoku',
     company: 'Tokushima City Transportation',
-    sourceUrl: 'https://www.city.tokushima.lg.jp/',
+    sourceUrl: 'https://www.city.tokushima.tokushima.jp/',
   },
   {
     id: 'jr-hitachi-tokiwa',
