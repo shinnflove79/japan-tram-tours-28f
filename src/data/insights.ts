@@ -145,6 +145,69 @@ export const insights: InsightArticle[] = [
       },
     },
   },
+  {
+    slug: 'tram-etiquette-in-japan',
+    publishedAt: '2026-03-03',
+    content: {
+      en: {
+        title: 'Tram Etiquette in Japan: Practical Rules for Visitors',
+        excerpt:
+          'A clear etiquette guide for riding trams in Japan smoothly and respectfully, especially during busy hours.',
+        intro:
+          'Most tram systems in Japan are calm and efficient. Following a few local etiquette rules makes your trip easier and more comfortable for everyone.',
+        sec1Title: 'Before Boarding',
+        sec1Body:
+          'Line up in the marked waiting area, let passengers get off first, and prepare your IC card or fare in advance to avoid blocking the entrance.',
+        sec2Title: 'Onboard Manners',
+        sec2Items: [
+          'Keep phone calls to a minimum and use silent mode whenever possible.',
+          'Backpacks should be carried low or held in front during crowded periods.',
+          'Offer priority seats to elderly passengers, people with disabilities, and parents with small children.',
+        ],
+        sec3Title: 'Getting Off and Paying',
+        sec3Body:
+          'Check the payment method (front exit or rear exit differs by operator), move toward the door before your stop, and avoid rushing at the last second.',
+      },
+      ja: {
+        title: '日本で電車に乗るときのマナー: 旅行者向け実用ガイド',
+        excerpt:
+          '混雑時でも安心して乗れるように、日本の路面電車で押さえておきたい基本マナーを整理します。',
+        intro:
+          '日本の電車は静かで効率的に運行されています。基本的なマナーを守ることで、自分も周囲も快適に移動できます。',
+        sec1Title: '乗車前のポイント',
+        sec1Body:
+          '乗車位置の表示に沿って整列し、降車客を先に通しましょう。ICカードや運賃は事前に準備しておくとスムーズです。',
+        sec2Title: '車内での配慮',
+        sec2Items: [
+          '通話は控え、可能な限りマナーモードを利用する。',
+          '混雑時はリュックを前に抱えるか、低い位置で持つ。',
+          '優先席付近では高齢者・障がいのある方・小さな子ども連れに配慮する。',
+        ],
+        sec3Title: '降車と支払い',
+        sec3Body:
+          '支払い位置や降車ドアは事業者で異なるため、案内表示を確認してください。降りる駅の少し前から出口付近へ移動すると安全です。',
+      },
+      'zh-TW': {
+        title: '日本搭乘電車禮儀: 旅客實用指南',
+        excerpt:
+          '整理日本搭乘路面電車時最常見的禮儀重點，讓你在尖峰時段也能從容搭乘。',
+        intro:
+          '日本電車整體節奏安靜且有效率。只要掌握幾個基本禮儀，就能讓自己與其他乘客都更舒適。',
+        sec1Title: '上車前要點',
+        sec1Body:
+          '依地面標示排隊、先讓下車乘客通過，並提前準備好 IC 卡或車資，避免在車門口停留過久。',
+        sec2Title: '車內禮儀',
+        sec2Items: [
+          '盡量避免通話，建議將手機調為靜音模式。',
+          '尖峰時段背包改為前背或手提，減少佔用空間。',
+          '在博愛座附近留意高齡者、行動不便者與帶小孩乘客的需求。',
+        ],
+        sec3Title: '下車與付款',
+        sec3Body:
+          '不同路線的上下車門與付款方式可能不同，請依車內指示操作。接近目的站時提前移動到出口，避免臨停急衝。',
+      },
+    },
+  },
 ]
 
 const localeFallbackOrder: InsightsLocale[] = ['zh-TW', 'ja', 'en']
