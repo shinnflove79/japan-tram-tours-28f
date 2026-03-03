@@ -1,5 +1,5 @@
 ﻿<template>
-  <div class="min-h-screen flex flex-col bg-background">
+  <div class="flex flex-col bg-background">
     <!-- Hero Section -->
     <HeroSection
       :title="$t('home.heroTitle')"
@@ -246,6 +246,7 @@ const resetFilters = () => {
 }
 
 </script>
+
 
 
 
