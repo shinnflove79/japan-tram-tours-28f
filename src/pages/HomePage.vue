@@ -5,8 +5,6 @@
       :title="$t('home.heroTitle')"
       :subtitle="$t('home.heroSubtitle')"
       imageUrl="/images/hero-home.jpg"
-      :ctaText="$t('home.heroButton')"
-      ctaLink="/gallery"
     />
 
     <!-- Featured Trams Section -->
