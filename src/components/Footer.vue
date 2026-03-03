@@ -75,7 +75,8 @@ const contactTitleText = computed(() => asText(t('footer.followUs'), 'Contact Us
 const homeText = computed(() => asText(t('nav.home'), 'Home'))
 const aboutText = computed(() => asText(t('nav.about'), 'About'))
 
-const contactEmailText = computed(() => asText(t('footer.contactEmail'), 'shinnflove79@gmail.com'))
+const CONTACT_EMAIL = 'shinnflove79@gmail.com'
+const contactEmailText = computed(() => CONTACT_EMAIL)
 const mailtoLink = computed(() => `mailto:${contactEmailText.value}`)
 
 const copyrightText = computed(() => {
@@ -89,3 +90,4 @@ const copyrightText = computed(() => {
   return replaced || `© ${currentYear} Japan Trams. All rights reserved.`
 })
 </script>
+
