@@ -27,6 +27,14 @@
                   {{ aboutText }}
                 </router-link>
               </li>
+              <li>
+                <router-link
+                  to="/disclaimer"
+                  class="rounded-sm text-gray-400 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
+                >
+                  {{ disclaimerText }}
+                </router-link>
+              </li>
             </ul>
           </nav>
         </div>
@@ -59,7 +67,7 @@ defineOptions({
   name: 'AppFooter',
 })
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const currentYear = new Date().getFullYear()
 
 const asText = (value: unknown, fallback = ''): string => {
@@ -74,6 +82,11 @@ const quickLinksText = computed(() => asText(t('footer.quickLinks'), 'Quick Link
 const contactTitleText = computed(() => asText(t('footer.followUs'), 'Contact Us'))
 const homeText = computed(() => asText(t('nav.home'), 'Home'))
 const aboutText = computed(() => asText(t('nav.about'), 'About'))
+const disclaimerText = computed(() => {
+  if (locale.value === 'ja') return '著作権・免責事項'
+  if (locale.value === 'zh-TW') return '版權與免責聲明'
+  return 'Copyright & Disclaimer'
+})
 
 const CONTACT_EMAIL = 'shinnflove79@gmail.com'
 const contactEmailText = computed(() => CONTACT_EMAIL)

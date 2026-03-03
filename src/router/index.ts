@@ -2,6 +2,7 @@
 import HomePage from '@/pages/HomePage.vue'
 import TramDetailsPage from '@/pages/TramDetailsPage.vue'
 import PlaceholderPage from '@/pages/PlaceholderPage.vue'
+import DisclaimerPage from '@/pages/DisclaimerPage.vue'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     name: 'Gallery',
     component: PlaceholderPage,
     props: { title: 'Gallery', description: 'Explore our complete photo collection' },
+  },
+  {
+    path: '/disclaimer',
+    name: 'Disclaimer',
+    component: DisclaimerPage,
   },
 ]
 
