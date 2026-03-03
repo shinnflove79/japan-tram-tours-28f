@@ -76,6 +76,10 @@ watchEffect(() => {
   } else if (route.name === 'Gallery') {
     title = `${t('nav.gallery')} | ${SITE_NAME}`
     description = t('home.galleryDescription')
+  } else if (route.name === 'Insights') {
+    title = `Rail Insights | ${SITE_NAME}`
+    description =
+      "Read practical and historical knowledge about Japan's trams and sightseeing trains, including route context and travel planning tips."
   }
 
   document.title = title

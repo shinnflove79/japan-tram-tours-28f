@@ -4,6 +4,7 @@ import TramDetailsPage from '@/pages/TramDetailsPage.vue'
 import PlaceholderPage from '@/pages/PlaceholderPage.vue'
 import DisclaimerPage from '@/pages/DisclaimerPage.vue'
 import AboutPage from '@/pages/AboutPage.vue'
+import InsightsPage from '@/pages/InsightsPage.vue'
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     name: 'Gallery',
     component: PlaceholderPage,
     props: { title: 'Gallery', description: 'Explore our complete photo collection' },
+  },
+  {
+    path: '/insights',
+    name: 'Insights',
+    component: InsightsPage,
   },
   {
     path: '/disclaimer',

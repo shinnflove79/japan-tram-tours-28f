@@ -31,6 +31,15 @@
             </router-link>
           </li>
           <li>
+            <router-link
+              to="/insights"
+              class="font-body text-sm sm:text-base hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm transition-colors duration-200"
+              :class="{ 'text-accent': isActive('/insights') }"
+            >
+              {{ insightsText }}
+            </router-link>
+          </li>
+          <li>
             <LanguageSwitcher />
           </li>
         </ul>
@@ -40,6 +49,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import LanguageSwitcher from './LanguageSwitcher.vue'
@@ -48,8 +58,14 @@ defineOptions({
   name: 'AppHeader',
 })
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const route = useRoute()
+
+const insightsText = computed(() => {
+  if (locale.value === 'ja') return '知識'
+  if (locale.value === 'zh-TW') return '知識'
+  return 'Insights'
+})
 
 const isActive = (path: string) => {
   return route.path === path

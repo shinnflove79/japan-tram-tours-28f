@@ -14,7 +14,7 @@ if (!idsBlockMatch?.groups?.ids) {
 }
 
 const tramIds = Array.from(idsBlockMatch.groups.ids.matchAll(/'([^']+)'/g)).map((match) => match[1])
-const staticPaths = ['/', '/about', '/gallery']
+const staticPaths = ['/', '/about', '/gallery', '/insights', '/disclaimer']
 const tramPaths = tramIds.map((id) => `/tram/${id}`)
 const allPaths = [...staticPaths, ...tramPaths]
 

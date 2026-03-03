@@ -29,6 +29,14 @@
               </li>
               <li>
                 <router-link
+                  to="/insights"
+                  class="rounded-sm text-gray-400 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
+                >
+                  {{ insightsText }}
+                </router-link>
+              </li>
+              <li>
+                <router-link
                   to="/disclaimer"
                   class="rounded-sm text-gray-400 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
                 >
@@ -82,6 +90,11 @@ const quickLinksText = computed(() => asText(t('footer.quickLinks'), 'Quick Link
 const contactTitleText = computed(() => asText(t('footer.followUs'), 'Contact Us'))
 const homeText = computed(() => asText(t('nav.home'), 'Home'))
 const aboutText = computed(() => asText(t('nav.about'), 'About'))
+const insightsText = computed(() => {
+  if (locale.value === 'ja') return '知識'
+  if (locale.value === 'zh-TW') return '知識'
+  return 'Insights'
+})
 const disclaimerText = computed(() => {
   if (locale.value === 'ja') return '著作権・免責事項'
   if (locale.value === 'zh-TW') return '版權與免責聲明'
