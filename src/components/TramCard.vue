@@ -1,5 +1,5 @@
 ﻿<template>
-  <router-link :to="`/tram/${tram.id}`" class="group block h-full">
+  <router-link :to="`/tram/${tram.id}`" class="group block h-full" @click="trackTramDetailClick">
     <div
       class="flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
     >
@@ -50,7 +50,7 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const fallbackCardImage = '/images/tram-placeholder.svg'
 
@@ -73,4 +73,18 @@ const categoryKeyMap: Record<Tram['category'], string> = {
 }
 
 const categoryLabel = computed(() => t(categoryKeyMap[props.tram.category]))
+
+const trackTramDetailClick = () => {
+  const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag
+  if (!gtag) return
+
+  gtag('event', 'view_tram_detail', {
+    tram_id: props.tram.id,
+    tram_name: props.tram.name,
+    tram_name_ja: props.tram.nameJa,
+    tram_category: props.tram.category,
+    locale: locale.value,
+    target_path: `/tram/${props.tram.id}`,
+  })
+}
 </script>
