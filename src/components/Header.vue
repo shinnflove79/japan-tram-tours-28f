@@ -1,21 +1,23 @@
 <template>
   <header class="bg-primary-dark text-white shadow-lg">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div class="flex justify-between items-center">
-        <router-link to="/" class="flex items-center gap-2 group">
-          <span class="text-2xl font-heading font-bold text-accent group-hover:text-accent-light transition-colors">
+    <nav class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <router-link to="/" class="group flex items-center gap-2">
+          <span class="text-2xl font-heading font-bold text-accent transition-colors group-hover:text-accent-light">
             🚊
           </span>
-          <span class="hidden sm:block text-xl font-heading font-semibold text-white group-hover:text-accent-light transition-colors">
+          <span
+            class="hidden text-xl font-heading font-semibold text-white transition-colors group-hover:text-accent-light sm:block"
+          >
             {{ t('footer.brand') }}
           </span>
         </router-link>
 
-        <ul class="flex gap-4 sm:gap-8 items-center">
+        <ul class="flex items-center gap-4 sm:gap-8">
           <li>
             <router-link
               to="/"
-              class="font-body text-sm sm:text-base hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm transition-colors duration-200"
+              class="rounded-sm font-body text-sm transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark sm:text-base"
               :class="{ 'text-accent': isActive('/') }"
             >
               {{ $t('nav.home') }}
@@ -24,7 +26,7 @@
           <li>
             <router-link
               to="/about"
-              class="font-body text-sm sm:text-base hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm transition-colors duration-200"
+              class="rounded-sm font-body text-sm transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark sm:text-base"
               :class="{ 'text-accent': isActive('/about') }"
             >
               {{ $t('nav.about') }}
@@ -33,7 +35,7 @@
           <li>
             <router-link
               to="/insights"
-              class="font-body text-sm sm:text-base hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark rounded-sm transition-colors duration-200"
+              class="rounded-sm font-body text-sm transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark sm:text-base"
               :class="{ 'text-accent': isActive('/insights') }"
             >
               {{ insightsText }}
@@ -68,7 +70,9 @@ const insightsText = computed(() => {
 })
 
 const isActive = (path: string) => {
+  if (path === '/insights') {
+    return route.path === '/insights' || route.path.startsWith('/insights/')
+  }
   return route.path === path
 }
-
 </script>

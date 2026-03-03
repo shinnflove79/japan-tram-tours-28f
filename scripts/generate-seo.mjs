@@ -4,6 +4,7 @@ import { resolve } from 'node:path'
 const SITE_URL = 'https://japanluxtrain.com'
 const root = process.cwd()
 const tramsFile = resolve(root, 'src/data/trams.ts')
+const insightsFile = resolve(root, 'src/data/insights.ts')
 const publicDir = resolve(root, 'public')
 
 const source = readFileSync(tramsFile, 'utf8')
@@ -14,9 +15,12 @@ if (!idsBlockMatch?.groups?.ids) {
 }
 
 const tramIds = Array.from(idsBlockMatch.groups.ids.matchAll(/'([^']+)'/g)).map((match) => match[1])
+const insightsSource = readFileSync(insightsFile, 'utf8')
+const insightSlugs = Array.from(insightsSource.matchAll(/slug:\s*'([^']+)'/g)).map((match) => match[1])
 const staticPaths = ['/', '/about', '/gallery', '/insights', '/disclaimer']
 const tramPaths = tramIds.map((id) => `/tram/${id}`)
-const allPaths = [...staticPaths, ...tramPaths]
+const insightPaths = insightSlugs.map((slug) => `/insights/${slug}`)
+const allPaths = [...staticPaths, ...insightPaths, ...tramPaths]
 
 const now = new Date().toISOString()
 const sitemapEntries = allPaths

@@ -5,6 +5,7 @@ import { useI18n } from 'vue-i18n'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import { getTramWithTranslations } from '@/utils/tramHelper'
+import { getInsightBySlug } from '@/data/insights'
 
 const SITE_NAME = 'Japan Lux Train'
 const SITE_URL = 'https://japanluxtrain.com'
@@ -80,6 +81,18 @@ watchEffect(() => {
     title = `Rail Insights | ${SITE_NAME}`
     description =
       "Read practical and historical knowledge about Japan's trams and sightseeing trains, including route context and travel planning tips."
+  } else if (route.name === 'InsightDetail') {
+    const slug = typeof route.params.slug === 'string' ? route.params.slug : ''
+    const article = slug ? getInsightBySlug(slug, locale.value) : undefined
+
+    if (article) {
+      title = `${article.content.title} | ${SITE_NAME}`
+      description = article.content.excerpt
+    } else {
+      title = `Rail Insights | ${SITE_NAME}`
+      description =
+        "Read practical and historical knowledge about Japan's trams and sightseeing trains, including route context and travel planning tips."
+    }
   }
 
   document.title = title

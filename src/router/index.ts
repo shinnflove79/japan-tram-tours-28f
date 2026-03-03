@@ -5,6 +5,7 @@ import PlaceholderPage from '@/pages/PlaceholderPage.vue'
 import DisclaimerPage from '@/pages/DisclaimerPage.vue'
 import AboutPage from '@/pages/AboutPage.vue'
 import InsightsPage from '@/pages/InsightsPage.vue'
+import InsightDetailPage from '@/pages/InsightDetailPage.vue'
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     path: '/insights',
     name: 'Insights',
     component: InsightsPage,
+  },
+  {
+    path: '/insights/:slug',
+    name: 'InsightDetail',
+    component: InsightDetailPage,
   },
   {
     path: '/disclaimer',
