@@ -40,4 +40,15 @@ const router = createRouter({
   },
 })
 
+router.afterEach((to) => {
+  const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag
+  if (!gtag) return
+
+  gtag('event', 'page_view', {
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: to.fullPath,
+  })
+})
+
 export default router
