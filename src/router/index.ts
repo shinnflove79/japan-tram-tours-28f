@@ -7,6 +7,19 @@ import AboutPage from '@/pages/AboutPage.vue'
 import InsightsPage from '@/pages/InsightsPage.vue'
 import InsightDetailPage from '@/pages/InsightDetailPage.vue'
 
+const SUPPORTED_LOCALES = ['en', 'ja', 'zh-TW'] as const
+type SupportedLocale = (typeof SUPPORTED_LOCALES)[number]
+
+const asLocale = (value: unknown): SupportedLocale | null => {
+  if (typeof value !== 'string') return null
+  return (SUPPORTED_LOCALES as readonly string[]).includes(value) ? (value as SupportedLocale) : null
+}
+
+const getStoredLocale = (): SupportedLocale => {
+  if (typeof window === 'undefined') return 'en'
+  return asLocale(localStorage.getItem('app-language')) || 'en'
+}
+
 const routes = [
   {
     path: '/',
@@ -56,6 +69,23 @@ const router = createRouter({
 
     return { top: 0, left: 0, behavior: 'auto' }
   },
+})
+
+router.beforeEach((to, from) => {
+  if (asLocale(to.query.lang)) return true
+
+  const fallbackLocale =
+    asLocale(Array.isArray(from.query.lang) ? from.query.lang[0] : from.query.lang) || getStoredLocale()
+
+  return {
+    path: to.path,
+    query: {
+      ...to.query,
+      lang: fallbackLocale,
+    },
+    hash: to.hash,
+    replace: true,
+  }
 })
 
 router.afterEach((to) => {

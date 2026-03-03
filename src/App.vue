@@ -1,6 +1,6 @@
-﻿<script setup lang="ts">
-import { watchEffect } from 'vue'
-import { useRoute } from 'vue-router'
+<script setup lang="ts">
+import { watch, watchEffect } from 'vue'
+import { useRoute, useRouter, type LocationQueryRaw } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
@@ -10,14 +10,23 @@ import { getInsightBySlug } from '@/data/insights'
 const SITE_NAME = 'Japan Lux Train'
 const SITE_URL = 'https://japanluxtrain.com'
 const DEFAULT_IMAGE = `${SITE_URL}/images/hero-home.jpg`
+const SUPPORTED_LOCALES = ['en', 'ja', 'zh-TW'] as const
+type SupportedLocale = (typeof SUPPORTED_LOCALES)[number]
 
 const route = useRoute()
+const router = useRouter()
 const { locale, t } = useI18n()
 
 const localeToHtmlLang: Record<string, string> = {
   en: 'en',
   'zh-TW': 'zh-Hant',
   ja: 'ja',
+}
+
+const localeToHrefLang: Record<SupportedLocale, string> = {
+  en: 'en',
+  ja: 'ja',
+  'zh-TW': 'zh-Hant',
 }
 
 const ensureMeta = (key: 'name' | 'property', value: string, content: string) => {
@@ -40,6 +49,49 @@ const ensureCanonical = (href: string) => {
   element.setAttribute('href', href)
 }
 
+const ensureAltLink = (hreflang: string, href: string) => {
+  let element = document.head.querySelector(
+    `link[rel="alternate"][hreflang="${hreflang}"][data-managed="hreflang"]`,
+  ) as HTMLLinkElement | null
+
+  if (!element) {
+    element = document.createElement('link')
+    element.setAttribute('rel', 'alternate')
+    element.setAttribute('data-managed', 'hreflang')
+    element.setAttribute('hreflang', hreflang)
+    document.head.appendChild(element)
+  }
+
+  element.setAttribute('href', href)
+}
+
+const toSingleQueryValue = (value: unknown) => {
+  if (Array.isArray(value)) return value[0]
+  return value
+}
+
+const toSupportedLocale = (value: unknown): SupportedLocale | null => {
+  const raw = toSingleQueryValue(value)
+  if (typeof raw !== 'string') return null
+  return (SUPPORTED_LOCALES as readonly string[]).includes(raw) ? (raw as SupportedLocale) : null
+}
+
+const buildLocalizedUrl = (path: string, query: LocationQueryRaw, lang: SupportedLocale) => {
+  const url = new URL(path, SITE_URL)
+  Object.entries(query).forEach(([key, value]) => {
+    if (key === 'lang' || value == null) return
+    if (Array.isArray(value)) {
+      value.forEach((entry) => {
+        if (entry != null) url.searchParams.append(key, String(entry))
+      })
+      return
+    }
+    url.searchParams.set(key, String(value))
+  })
+  url.searchParams.set('lang', lang)
+  return url.toString()
+}
+
 const toAbsoluteUrl = (value: string) => {
   if (value.startsWith('http://') || value.startsWith('https://')) {
     return value
@@ -48,8 +100,32 @@ const toAbsoluteUrl = (value: string) => {
 }
 
 watchEffect(() => {
+  const queryLocale = toSupportedLocale(route.query.lang)
+  if (queryLocale && locale.value !== queryLocale) {
+    locale.value = queryLocale
+  }
+})
+
+watch(
+  () => locale.value,
+  (nextLocale) => {
+    if (!(SUPPORTED_LOCALES as readonly string[]).includes(nextLocale)) return
+    const queryLocale = toSupportedLocale(route.query.lang)
+    if (queryLocale === nextLocale) return
+
+    void router.replace({
+      path: route.path,
+      query: { ...route.query, lang: nextLocale },
+      hash: route.hash,
+    })
+  },
+  { immediate: true },
+)
+
+watchEffect(() => {
   const currentPath = route.path || '/'
-  const pageUrl = `${SITE_URL}${currentPath}`
+  const currentLocale = toSupportedLocale(locale.value) || 'en'
+  const pageUrl = buildLocalizedUrl(currentPath, route.query, currentLocale)
 
   let title = `${SITE_NAME} | Discover Scenic Trams in Japan`
   let description =
@@ -99,6 +175,10 @@ watchEffect(() => {
   document.documentElement.lang = localeToHtmlLang[locale.value] || 'en'
 
   ensureCanonical(pageUrl)
+  ;(SUPPORTED_LOCALES as readonly SupportedLocale[]).forEach((lang) => {
+    ensureAltLink(localeToHrefLang[lang], buildLocalizedUrl(currentPath, route.query, lang))
+  })
+  ensureAltLink('x-default', buildLocalizedUrl(currentPath, route.query, 'en'))
 
   ensureMeta('name', 'description', description)
   ensureMeta('name', 'robots', 'index, follow')
