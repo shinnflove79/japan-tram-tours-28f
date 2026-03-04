@@ -309,7 +309,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watchEffect } from 'vue'
 import { useI18n } from 'vue-i18n'
 import HeroSection from '@/components/HeroSection.vue'
 import TramCard from '@/components/TramCard.vue'
@@ -446,6 +446,19 @@ const faqItems = computed(() => [
   { question: t('home.seo.faqQ5'), answer: t('home.seo.faqA5') },
 ])
 
+const faqSchema = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.value.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}))
+
 const resetFilters = () => {
   searchKeyword.value = ''
   selectedRegion.value = 'all'
@@ -468,6 +481,23 @@ const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
+watchEffect(() => {
+  if (typeof document === 'undefined') return
+
+  const scriptId = 'home-faq-jsonld'
+  let script = document.getElementById(scriptId) as HTMLScriptElement | null
+
+  if (!script) {
+    script = document.createElement('script')
+    script.id = scriptId
+    script.type = 'application/ld+json'
+    script.setAttribute('data-managed', 'faq-jsonld')
+    document.head.appendChild(script)
+  }
+
+  script.textContent = JSON.stringify(faqSchema.value)
+})
+
 onMounted(() => {
   updateViewport()
   updateBackToTopVisibility()
@@ -478,5 +508,10 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('resize', updateViewport)
   window.removeEventListener('scroll', updateBackToTopVisibility)
+
+  const script = document.getElementById('home-faq-jsonld')
+  if (script) {
+    script.remove()
+  }
 })
 </script>
