@@ -12,7 +12,6 @@
                     "type-check":  "vue-tsc --build",
                     "lint":  "eslint . --fix",
                     "format":  "prettier --write src/",
-                    "deploy":  "gh-pages -d dist",
                     "seo:generate":  "node scripts/generate-seo.mjs",
                     "prebuild":  "npm run seo:generate"
                 },
