@@ -21,22 +21,27 @@ const staticPaths = ['/', '/about', '/gallery', '/insights', '/disclaimer']
 const tramPaths = tramIds.map((id) => `/tram/${id}`)
 const insightPaths = insightSlugs.map((slug) => `/insights/${slug}`)
 const allPaths = [...staticPaths, ...insightPaths, ...tramPaths]
+const supportedLocales = ['en', 'ja', 'zh-TW']
 
 const now = new Date().toISOString()
 const sitemapEntries = allPaths
-  .map((path) => {
-    const url = `${SITE_URL}${path === '/' ? '' : path}`
-    const priority = path === '/' ? '1.0' : path.startsWith('/tram/') ? '0.8' : '0.6'
+  .flatMap((path) =>
+    supportedLocales.map((lang) => {
+      const pagePath = path === '/' ? '/' : path
+      const url = new URL(pagePath, SITE_URL)
+      url.searchParams.set('lang', lang)
+      const priority = path === '/' ? '1.0' : path.startsWith('/tram/') ? '0.8' : '0.6'
 
-    return [
-      '  <url>',
-      `    <loc>${url}</loc>`,
-      `    <lastmod>${now}</lastmod>`,
-      '    <changefreq>weekly</changefreq>',
-      `    <priority>${priority}</priority>`,
-      '  </url>',
-    ].join('\n')
-  })
+      return [
+        '  <url>',
+        `    <loc>${url.toString()}</loc>`,
+        `    <lastmod>${now}</lastmod>`,
+        '    <changefreq>weekly</changefreq>',
+        `    <priority>${priority}</priority>`,
+        '  </url>',
+      ].join('\n')
+    }),
+  )
   .join('\n')
 
 const sitemap = [
@@ -53,4 +58,4 @@ mkdirSync(publicDir, { recursive: true })
 writeFileSync(resolve(publicDir, 'sitemap.xml'), sitemap, 'utf8')
 writeFileSync(resolve(publicDir, 'robots.txt'), robots, 'utf8')
 
-console.log(`Generated sitemap.xml (${allPaths.length} URLs) and robots.txt`)
+console.log(`Generated sitemap.xml (${allPaths.length * supportedLocales.length} URLs) and robots.txt`)

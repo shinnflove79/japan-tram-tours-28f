@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { watch, watchEffect } from 'vue'
-import { useRoute, useRouter, type LocationQueryRaw } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
@@ -76,18 +76,8 @@ const toSupportedLocale = (value: unknown): SupportedLocale | null => {
   return (SUPPORTED_LOCALES as readonly string[]).includes(raw) ? (raw as SupportedLocale) : null
 }
 
-const buildLocalizedUrl = (path: string, query: LocationQueryRaw, lang: SupportedLocale) => {
+const buildLocalizedUrl = (path: string, lang: SupportedLocale) => {
   const url = new URL(path, SITE_URL)
-  Object.entries(query).forEach(([key, value]) => {
-    if (key === 'lang' || value == null) return
-    if (Array.isArray(value)) {
-      value.forEach((entry) => {
-        if (entry != null) url.searchParams.append(key, String(entry))
-      })
-      return
-    }
-    url.searchParams.set(key, String(value))
-  })
   url.searchParams.set('lang', lang)
   return url.toString()
 }
@@ -125,7 +115,7 @@ watch(
 watchEffect(() => {
   const currentPath = route.path || '/'
   const currentLocale = toSupportedLocale(locale.value) || 'en'
-  const pageUrl = buildLocalizedUrl(currentPath, route.query, currentLocale)
+  const pageUrl = buildLocalizedUrl(currentPath, currentLocale)
 
   let title = `${SITE_NAME} | Discover Scenic Trams in Japan`
   let description =
@@ -157,6 +147,10 @@ watchEffect(() => {
     title = `Rail Insights | ${SITE_NAME}`
     description =
       "Read practical and historical knowledge about Japan's trams and sightseeing trains, including route context and travel planning tips."
+  } else if (route.name === 'Disclaimer') {
+    title = `Disclaimer | ${SITE_NAME}`
+    description =
+      'Read the legal and content disclaimer for Japan Lux Train, including information usage limits and policy notes.'
   } else if (route.name === 'InsightDetail') {
     const slug = typeof route.params.slug === 'string' ? route.params.slug : ''
     const article = slug ? getInsightBySlug(slug, locale.value) : undefined
@@ -176,9 +170,9 @@ watchEffect(() => {
 
   ensureCanonical(pageUrl)
   ;(SUPPORTED_LOCALES as readonly SupportedLocale[]).forEach((lang) => {
-    ensureAltLink(localeToHrefLang[lang], buildLocalizedUrl(currentPath, route.query, lang))
+    ensureAltLink(localeToHrefLang[lang], buildLocalizedUrl(currentPath, lang))
   })
-  ensureAltLink('x-default', buildLocalizedUrl(currentPath, route.query, 'en'))
+  ensureAltLink('x-default', buildLocalizedUrl(currentPath, 'en'))
 
   ensureMeta('name', 'description', description)
   ensureMeta('name', 'robots', 'index, follow')
