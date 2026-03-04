@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="80" y="390" width="640" height="90" rx="16" fill="#334155" opacity="0.92"/>
+  <rect x="120" y="330" width="480" height="50" rx="10" fill="#475569"/>
+  <circle cx="170" cy="495" r="26" fill="#0f172a"/>
+  <circle cx="600" cy="495" r="26" fill="#0f172a"/>
+  <circle cx="175" cy="498" r="10" fill="#94a3b8"/>
+  <circle cx="605" cy="498" r="10" fill="#94a3b8"/>
+  <text x="400" y="120" text-anchor="middle" fill="#0f172a" font-size="44" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Tram Image</text>
+  <text x="400" y="170" text-anchor="middle" fill="#334155" font-size="26" font-family="Segoe UI, Arial, sans-serif">Placeholder</text>
+</svg>

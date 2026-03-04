@@ -1,0 +1,5 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#f8fafc"/>
+  <path d="M650 80L760 140L790 220L720 300L740 390L680 500L560 560L460 540L390 600L300 560L260 470L200 420L220 320L160 250L220 180L290 190L350 120L470 90L560 110Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="8"/>
+  <text x="500" y="650" text-anchor="middle" fill="#475569" font-size="30" font-family="Segoe UI, Arial, sans-serif">Japan map placeholder</text>
+</svg>
