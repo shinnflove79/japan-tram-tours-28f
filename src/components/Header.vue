@@ -56,7 +56,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { buildLocalizedRoute } from '@/utils/localeRouting'
+import { buildLocalizedRoute, stripLocalePrefix } from '@/utils/localeRouting'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 
 defineOptions({
@@ -73,9 +73,12 @@ const insightsText = computed(() => {
 })
 
 const isActive = (path: string) => {
+  const currentPath = stripLocalePrefix(route.path).basePath
+
   if (path === '/insights') {
-    return route.path === '/insights' || route.path.startsWith('/insights/')
+    return currentPath === '/insights' || currentPath.startsWith('/insights/')
   }
-  return route.path === path
+
+  return currentPath === path
 }
 </script>

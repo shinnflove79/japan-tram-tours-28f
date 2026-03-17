@@ -27,11 +27,19 @@ const localeToHrefLang = {
   ja: 'ja',
   'zh-TW': 'zh-Hant',
 }
+const localeToPathSegment = {
+  en: '',
+  ja: 'ja',
+  'zh-TW': 'zh-tw',
+}
 
 const now = new Date().toISOString()
 const buildLocalizedUrl = (path, lang) => {
-  const url = new URL(path === '/' ? '/' : path, SITE_URL)
-  url.searchParams.set('lang', lang)
+  const normalizedPath = path === '/' ? '/' : path
+  const segment = localeToPathSegment[lang]
+  const localizedPath =
+    !segment ? normalizedPath : normalizedPath === '/' ? `/${segment}` : `/${segment}${normalizedPath}`
+  const url = new URL(localizedPath, SITE_URL)
   return url.toString()
 }
 

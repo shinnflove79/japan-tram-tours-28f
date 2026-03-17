@@ -33,7 +33,7 @@
             </p>
             <router-link
               v-if="item.path"
-              :to="{ path: item.path, query: { lang: locale } }"
+              :to="buildLocalizedRoute(item.path, locale)"
               class="mt-5 inline-block font-body text-sm font-semibold text-primary hover:underline"
             >
               {{ $t('home.seo.openSection') }}
@@ -68,7 +68,7 @@
             <ul class="mt-4 space-y-2">
               <li v-for="tram in regionGroup.trams" :key="tram.id">
                 <router-link
-                  :to="{ path: `/tram/${tram.id}`, query: { lang: locale } }"
+                  :to="buildLocalizedRoute(`/tram/${tram.id}`, locale)"
                   class="font-body text-sm text-gray-700 hover:text-primary hover:underline"
                 >
                   {{ tram.name }}
@@ -214,7 +214,7 @@
             </p>
           </div>
           <router-link
-            :to="{ path: '/insights', query: { lang: locale } }"
+            :to="buildLocalizedRoute('/insights', locale)"
             class="hidden text-sm font-semibold text-primary hover:underline sm:inline"
           >
             {{ $t('home.seo.viewAllArticles') }}
@@ -233,7 +233,7 @@
               {{ article.content.excerpt }}
             </p>
             <router-link
-              :to="{ path: `/insights/${article.slug}`, query: { lang: locale } }"
+              :to="buildLocalizedRoute(`/insights/${article.slug}`, locale)"
               class="mt-5 inline-block text-sm font-semibold text-primary hover:underline"
             >
               {{ $t('home.seo.readArticle') }}
@@ -316,6 +316,7 @@ import TramCard from '@/components/TramCard.vue'
 import type { Tram, TramCategory } from '@/types/tram'
 import { getAllTramsWithTranslations } from '@/utils/tramHelper'
 import { getInsightsForLocale } from '@/data/insights'
+import { buildLocalizedRoute } from '@/utils/localeRouting'
 
 interface QuickAccessItem {
   title: string

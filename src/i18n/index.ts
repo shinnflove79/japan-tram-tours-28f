@@ -2,27 +2,28 @@ import { createI18n } from 'vue-i18n'
 import enMessages from '@/locales/en.json'
 import zhTWMessages from '@/locales/zh-TW.json'
 import jaMessages from '@/locales/ja.json'
+import { DEFAULT_LOCALE, asSupportedLocale, type SupportedLocale } from '@/utils/localeRouting'
 
 export type MessageSchema = typeof enMessages
-type Locale = 'en' | 'zh-TW' | 'ja'
 
 // message records use language codes we support (not forced to en-US)
-const messages: Record<Locale, MessageSchema> = {
+const messages: Record<SupportedLocale, MessageSchema> = {
   en: enMessages,
   'zh-TW': zhTWMessages,
   ja: jaMessages,
 }
 
 // Get saved language from localStorage or default to English
-const getSavedLanguage = (): Locale => {
+const getSavedLanguage = (): SupportedLocale => {
+  if (typeof window === 'undefined') return DEFAULT_LOCALE
   const saved = localStorage.getItem('app-language')
-  return saved === 'en' || saved === 'zh-TW' || saved === 'ja' ? saved : 'en'
+  return asSupportedLocale(saved) || DEFAULT_LOCALE
 }
 
-const i18n = createI18n<[MessageSchema], Locale>({
+const i18n = createI18n<[MessageSchema], SupportedLocale>({
   legacy: false,
   locale: getSavedLanguage(),
-  fallbackLocale: 'en',
+  fallbackLocale: DEFAULT_LOCALE,
   messages,
 })
 

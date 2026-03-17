@@ -39,30 +39,39 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-
-type Locale = 'en' | 'zh-TW' | 'ja'
+import {
+  buildLocalizedPath,
+  stripLocalePrefix,
+  type SupportedLocale,
+} from '@/utils/localeRouting'
 
 const { locale } = useI18n()
+const route = useRoute()
+const router = useRouter()
 const showDropdown = ref(false)
 
-const languages: Array<{ code: Locale; name: string }> = [
+const languages: Array<{ code: SupportedLocale; name: string }> = [
   { code: 'en', name: 'English' },
   { code: 'zh-TW', name: '繁體中文' },
   { code: 'ja', name: '日本語' },
 ]
 
-const currentLocale = computed(() => locale.value as Locale)
+const currentLocale = computed(() => locale.value as SupportedLocale)
 
 const currentLanguageName = computed(() => {
   const current = languages.find((entry) => entry.code === currentLocale.value)
   return current?.name ?? 'English'
 })
 
-const setLanguage = (code: Locale) => {
-  locale.value = code
+const setLanguage = (code: SupportedLocale) => {
   localStorage.setItem('app-language', code)
+  void router.push({
+    path: buildLocalizedPath(stripLocalePrefix(route.path).basePath, code),
+    query: route.query,
+    hash: route.hash,
+  })
   showDropdown.value = false
 }
 </script>
-
