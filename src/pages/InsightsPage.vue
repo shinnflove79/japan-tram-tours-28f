@@ -15,7 +15,7 @@
           <h2 class="mb-3 font-heading text-2xl font-bold text-primary">{{ article.content.title }}</h2>
           <p class="mb-5 font-body leading-7 text-gray-700">{{ article.content.excerpt }}</p>
           <router-link
-            :to="`/insights/${article.slug}`"
+            :to="buildLocalizedRoute(`/insights/${article.slug}`, locale)"
             class="inline-flex items-center font-body font-semibold text-accent transition-colors hover:text-accent-dark"
           >
             {{ pageText.readMore }}
@@ -30,6 +30,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { getInsightsForLocale } from '@/data/insights'
+import { buildLocalizedRoute } from '@/utils/localeRouting'
 
 const { locale } = useI18n()
 

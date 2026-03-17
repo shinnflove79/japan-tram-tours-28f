@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { watch, watchEffect } from 'vue'
+import { computed, watch, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import { getTramWithTranslations } from '@/utils/tramHelper'
 import { getInsightBySlug } from '@/data/insights'
+import { SUPPORTED_LOCALES, asSupportedLocale, type SupportedLocale } from '@/utils/localeRouting'
 
 const SITE_NAME = 'Japan Lux Train'
 const SITE_URL = 'https://japanluxtrain.com'
 const DEFAULT_IMAGE = `${SITE_URL}/images/hero-home.jpg`
-const SUPPORTED_LOCALES = ['en', 'ja', 'zh-TW'] as const
-type SupportedLocale = (typeof SUPPORTED_LOCALES)[number]
 
 const route = useRoute()
 const router = useRouter()
@@ -65,17 +64,6 @@ const ensureAltLink = (hreflang: string, href: string) => {
   element.setAttribute('href', href)
 }
 
-const toSingleQueryValue = (value: unknown) => {
-  if (Array.isArray(value)) return value[0]
-  return value
-}
-
-const toSupportedLocale = (value: unknown): SupportedLocale | null => {
-  const raw = toSingleQueryValue(value)
-  if (typeof raw !== 'string') return null
-  return (SUPPORTED_LOCALES as readonly string[]).includes(raw) ? (raw as SupportedLocale) : null
-}
-
 const buildLocalizedUrl = (path: string, lang: SupportedLocale) => {
   const url = new URL(path, SITE_URL)
   url.searchParams.set('lang', lang)
@@ -89,18 +77,23 @@ const toAbsoluteUrl = (value: string) => {
   return `${SITE_URL}${value.startsWith('/') ? value : `/${value}`}`
 }
 
-watchEffect(() => {
-  const queryLocale = toSupportedLocale(route.query.lang)
-  if (queryLocale && locale.value !== queryLocale) {
-    locale.value = queryLocale
-  }
-})
+const routeLocale = computed(() => asSupportedLocale(route.query.lang))
+
+watch(
+  routeLocale,
+  (nextLocale) => {
+    if (nextLocale && locale.value !== nextLocale) {
+      locale.value = nextLocale
+    }
+  },
+  { immediate: true },
+)
 
 watch(
   () => locale.value,
   (nextLocale) => {
     if (!(SUPPORTED_LOCALES as readonly string[]).includes(nextLocale)) return
-    const queryLocale = toSupportedLocale(route.query.lang)
+    const queryLocale = routeLocale.value
     if (queryLocale === nextLocale) return
 
     void router.replace({
@@ -114,7 +107,7 @@ watch(
 
 watchEffect(() => {
   const currentPath = route.path || '/'
-  const currentLocale = toSupportedLocale(locale.value) || 'en'
+  const currentLocale = asSupportedLocale(locale.value) || 'en'
   const pageUrl = buildLocalizedUrl(currentPath, currentLocale)
 
   let title = `${SITE_NAME} | Discover Scenic Trams in Japan`

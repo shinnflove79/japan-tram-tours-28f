@@ -74,7 +74,7 @@
             {{ t('tramDetails.planYourVisitDesc') }}
           </p>
           <router-link
-            to="/"
+            :to="buildLocalizedRoute('/', locale)"
             class="inline-block rounded-lg bg-accent px-8 py-3 font-heading font-bold text-primary-dark transition-colors hover:bg-accent-light"
           >
             {{ t('tramDetails.exploreMore') }}
@@ -88,7 +88,7 @@
     <h1 class="mb-4 font-heading text-4xl font-bold text-primary">{{ t('tramDetails.notFound') }}</h1>
     <p class="mb-8 text-lg font-body text-gray-600">{{ t('tramDetails.notFoundDesc') }}</p>
     <router-link
-      to="/"
+      :to="buildLocalizedRoute('/', locale)"
       class="rounded-lg bg-accent px-8 py-3 font-heading font-bold text-primary-dark transition-colors hover:bg-accent-light"
     >
       {{ t('tramDetails.backToHome') }}
@@ -104,6 +104,7 @@ import TramCard from '@/components/TramCard.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import type { BookingType, TramCategory } from '@/types/tram'
 import { getAllTramsWithTranslations, getTramWithTranslations } from '@/utils/tramHelper'
+import { buildLocalizedRoute } from '@/utils/localeRouting'
 
 const { locale, t } = useI18n()
 const route = useRoute()

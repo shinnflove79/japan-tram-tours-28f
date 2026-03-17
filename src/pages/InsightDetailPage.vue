@@ -3,7 +3,10 @@
     <div class="mx-auto max-w-4xl">
       <template v-if="article">
         <header class="mb-10">
-          <router-link to="/insights" class="mb-4 inline-block font-body text-sm text-accent hover:text-accent-dark">
+          <router-link
+            :to="buildLocalizedRoute('/insights', locale)"
+            class="mb-4 inline-block font-body text-sm text-accent hover:text-accent-dark"
+          >
             {{ pageText.backToList }}
           </router-link>
           <h1 class="mb-4 font-heading text-4xl font-bold text-primary">{{ article.content.title }}</h1>
@@ -34,7 +37,7 @@
         <section class="rounded-2xl border border-gray-200 bg-white p-8 text-center">
           <h1 class="mb-3 font-heading text-3xl font-bold text-primary">{{ pageText.notFoundTitle }}</h1>
           <p class="mb-6 font-body text-gray-700">{{ pageText.notFoundDesc }}</p>
-          <router-link to="/insights" class="font-body font-semibold text-accent hover:text-accent-dark">
+          <router-link :to="buildLocalizedRoute('/insights', locale)" class="font-body font-semibold text-accent hover:text-accent-dark">
             {{ pageText.backToList }}
           </router-link>
         </section>
@@ -48,6 +51,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { getInsightBySlug } from '@/data/insights'
+import { buildLocalizedRoute } from '@/utils/localeRouting'
 
 const route = useRoute()
 const { locale } = useI18n()

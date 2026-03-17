@@ -30,14 +30,14 @@
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <router-link
-            to="/"
+            :to="buildLocalizedRoute('/', locale)"
             class="px-8 py-3 bg-accent text-primary-dark font-heading font-bold rounded-lg hover:bg-accent-light transition-colors inline-block"
           >
             {{ $t('placeholder.backToHome') }}
           </router-link>
 
           <router-link
-            to="/gallery"
+            :to="buildLocalizedRoute('/gallery', locale)"
             class="px-8 py-3 bg-primary text-white font-heading font-bold rounded-lg hover:bg-secondary transition-colors inline-block"
           >
             {{ $t('placeholder.exploreTrams') }}
@@ -49,10 +49,15 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import { buildLocalizedRoute } from '@/utils/localeRouting'
+
 interface Props {
   title?: string
   description?: string
 }
+
+const { locale } = useI18n()
 
 withDefaults(defineProps<Props>(), {
   title: 'Coming Soon',

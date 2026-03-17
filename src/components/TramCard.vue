@@ -1,5 +1,5 @@
 ﻿<template>
-  <router-link :to="`/tram/${tram.id}`" class="group block h-full" @click="trackTramDetailClick">
+  <router-link :to="buildLocalizedRoute(`/tram/${tram.id}`, locale)" class="group block h-full" @click="trackTramDetailClick">
     <div
       class="flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
     >
@@ -44,6 +44,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Tram } from '@/types/tram'
+import { buildLocalizedRoute } from '@/utils/localeRouting'
 
 interface Props {
   tram: Tram

@@ -22,31 +22,49 @@ const tramPaths = tramIds.map((id) => `/tram/${id}`)
 const insightPaths = insightSlugs.map((slug) => `/insights/${slug}`)
 const allPaths = [...staticPaths, ...insightPaths, ...tramPaths]
 const supportedLocales = ['en', 'ja', 'zh-TW']
+const localeToHrefLang = {
+  en: 'en',
+  ja: 'ja',
+  'zh-TW': 'zh-Hant',
+}
 
 const now = new Date().toISOString()
-const sitemapEntries = allPaths
-  .flatMap((path) =>
-    supportedLocales.map((lang) => {
-      const pagePath = path === '/' ? '/' : path
-      const url = new URL(pagePath, SITE_URL)
-      url.searchParams.set('lang', lang)
-      const priority = path === '/' ? '1.0' : path.startsWith('/tram/') ? '0.8' : '0.6'
+const buildLocalizedUrl = (path, lang) => {
+  const url = new URL(path === '/' ? '/' : path, SITE_URL)
+  url.searchParams.set('lang', lang)
+  return url.toString()
+}
 
-      return [
+const sitemapEntries = allPaths
+  .flatMap((path) => {
+    const priority = path === '/' ? '1.0' : path.startsWith('/tram/') ? '0.8' : '0.6'
+    const localizedUrls = supportedLocales.map((lang) => ({
+      lang,
+      hrefLang: localeToHrefLang[lang],
+      url: buildLocalizedUrl(path, lang),
+    }))
+
+    return localizedUrls.map(({ url }) =>
+      [
         '  <url>',
-        `    <loc>${url.toString()}</loc>`,
+        `    <loc>${url}</loc>`,
+        ...localizedUrls.map(
+          ({ hrefLang, url: alternateUrl }) =>
+            `    <xhtml:link rel="alternate" hreflang="${hrefLang}" href="${alternateUrl}" />`,
+        ),
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${localizedUrls[0].url}" />`,
         `    <lastmod>${now}</lastmod>`,
         '    <changefreq>weekly</changefreq>',
         `    <priority>${priority}</priority>`,
         '  </url>',
-      ].join('\n')
-    }),
-  )
+      ].join('\n'),
+    )
+  })
   .join('\n')
 
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
   sitemapEntries,
   '</urlset>',
   '',

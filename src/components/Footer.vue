@@ -16,7 +16,7 @@
             <ul class="space-y-2 font-body text-sm md:flex md:items-center md:gap-4 md:space-y-0">
               <li>
                 <router-link
-                  to="/"
+                  :to="buildLocalizedRoute('/', locale)"
                   class="rounded-sm text-gray-400 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
                 >
                   {{ homeText }}
@@ -24,7 +24,7 @@
               </li>
               <li>
                 <router-link
-                  to="/about"
+                  :to="buildLocalizedRoute('/about', locale)"
                   class="rounded-sm text-gray-400 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
                 >
                   {{ aboutText }}
@@ -32,7 +32,7 @@
               </li>
               <li>
                 <router-link
-                  to="/insights"
+                  :to="buildLocalizedRoute('/insights', locale)"
                   class="rounded-sm text-gray-400 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
                 >
                   {{ insightsText }}
@@ -40,7 +40,7 @@
               </li>
               <li>
                 <router-link
-                  to="/disclaimer"
+                  :to="buildLocalizedRoute('/disclaimer', locale)"
                   class="rounded-sm text-gray-400 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
                 >
                   {{ disclaimerText }}
@@ -73,6 +73,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { buildLocalizedRoute } from '@/utils/localeRouting'
 
 defineOptions({
   name: 'AppFooter',

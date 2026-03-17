@@ -2,7 +2,7 @@
   <header class="bg-primary-dark text-white shadow-lg">
     <nav class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between">
-        <router-link to="/" class="group flex items-center gap-3">
+        <router-link :to="buildLocalizedRoute('/', locale)" class="group flex items-center gap-3">
           <img
             src="/images/jlt-logo-mark.svg"
             alt="Japan Lux Train logo"
@@ -18,7 +18,7 @@
         <ul class="flex items-center gap-4 sm:gap-8">
           <li>
             <router-link
-              to="/"
+              :to="buildLocalizedRoute('/', locale)"
               class="rounded-sm font-body text-sm transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark sm:text-base"
               :class="{ 'text-accent': isActive('/') }"
             >
@@ -27,7 +27,7 @@
           </li>
           <li>
             <router-link
-              to="/about"
+              :to="buildLocalizedRoute('/about', locale)"
               class="rounded-sm font-body text-sm transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark sm:text-base"
               :class="{ 'text-accent': isActive('/about') }"
             >
@@ -36,7 +36,7 @@
           </li>
           <li>
             <router-link
-              to="/insights"
+              :to="buildLocalizedRoute('/insights', locale)"
               class="rounded-sm font-body text-sm transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark sm:text-base"
               :class="{ 'text-accent': isActive('/insights') }"
             >
@@ -56,6 +56,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { buildLocalizedRoute } from '@/utils/localeRouting'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 
 defineOptions({
