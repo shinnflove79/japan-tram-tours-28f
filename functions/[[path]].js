@@ -21,9 +21,10 @@ const buildLocalizedPath = (pathname, locale) => {
   const basePath = stripLocalePrefix(pathname)
   const segment = LOCALE_QUERY_TO_PATH[locale] || ''
 
-  if (!segment) return basePath
-  if (basePath === '/') return `/${segment}`
-  return `/${segment}${basePath}`
+  const localizedPath = !segment ? basePath : basePath === '/' ? `/${segment}` : `/${segment}${basePath}`
+
+  if (localizedPath === '/') return localizedPath
+  return `${localizedPath}/`
 }
 
 export async function onRequest(context) {

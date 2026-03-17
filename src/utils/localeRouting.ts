@@ -71,9 +71,11 @@ export const buildLocalizedPath = (path: string, locale: unknown) => {
   const supportedLocale = asSupportedLocale(locale) || DEFAULT_LOCALE
   const segment = localeToPathSegment(supportedLocale)
 
-  if (!segment) return normalizedPath
-  if (normalizedPath === '/') return `/${segment}`
-  return `/${segment}${normalizedPath}`
+  const localizedPath =
+    !segment ? normalizedPath : normalizedPath === '/' ? `/${segment}` : `/${segment}${normalizedPath}`
+
+  if (localizedPath === '/') return localizedPath
+  return `${localizedPath}/`
 }
 
 export const buildLocalizedRoute = (path: string, locale: unknown) => ({
