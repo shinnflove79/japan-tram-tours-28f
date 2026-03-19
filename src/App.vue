@@ -5,7 +5,7 @@ import { useI18n } from 'vue-i18n'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import { getTramWithTranslations } from '@/utils/tramHelper'
-import { getInsightBySlug } from '@/data/insights'
+import { getInsightBySlug, type InsightsLocale } from '@/data/insights'
 import {
   DEFAULT_LOCALE,
   SUPPORTED_LOCALES,
@@ -142,7 +142,7 @@ watch(
         'Read the legal and content disclaimer for Japan Lux Train, including information usage limits and policy notes.'
     } else if (pageName === 'InsightDetail') {
       const slug = typeof route.params.slug === 'string' ? route.params.slug : ''
-      const article = slug ? getInsightBySlug(slug, locale.value) : undefined
+      const article = slug ? getInsightBySlug(slug, locale.value as InsightsLocale) : undefined
 
       if (article) {
         title = `${article.content.title} | ${SITE_NAME}`

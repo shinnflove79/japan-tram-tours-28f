@@ -68,6 +68,44 @@
           </div>
         </div>
 
+        <div v-if="relatedGuides.length" class="mb-12 rounded-2xl border border-gray-200 bg-white p-6">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 class="font-heading text-3xl font-bold text-primary">{{ guideSectionText.title }}</h2>
+              <p class="font-body text-sm leading-7 text-gray-600">
+                {{ guideSectionText.subtitle }}
+              </p>
+            </div>
+            <router-link
+              :to="buildLocalizedRoute('/insights', locale)"
+              class="text-sm font-semibold text-primary hover:underline"
+            >
+              {{ guideSectionText.viewAll }}
+            </router-link>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <article
+              v-for="guide in relatedGuides"
+              :key="guide.slug"
+              class="rounded-2xl border border-gray-200 bg-slate-50 p-5"
+            >
+              <h3 class="font-heading text-xl font-semibold text-primary">
+                {{ guide.title }}
+              </h3>
+              <p class="mt-2 font-body text-sm leading-7 text-gray-600">
+                {{ guide.excerpt }}
+              </p>
+              <router-link
+                :to="buildLocalizedRoute(`/insights/${guide.slug}`, locale)"
+                class="mt-4 inline-block text-sm font-semibold text-primary hover:underline"
+              >
+                {{ guideSectionText.readGuide }}
+              </router-link>
+            </article>
+          </div>
+        </div>
+
         <div class="rounded-3xl border border-accent bg-accent/10 p-8 text-center">
           <h3 class="mb-4 font-heading text-2xl font-bold text-primary">{{ t('tramDetails.planYourVisit') }}</h3>
           <p class="mb-6 font-body text-gray-700">
@@ -102,6 +140,7 @@ import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import TramCard from '@/components/TramCard.vue'
 import HeroSection from '@/components/HeroSection.vue'
+import { getInsightBySlug, type InsightsLocale } from '@/data/insights'
 import type { BookingType, TramCategory } from '@/types/tram'
 import { getAllTramsWithTranslations, getTramWithTranslations } from '@/utils/tramHelper'
 import { buildLocalizedRoute } from '@/utils/localeRouting'
@@ -155,15 +194,13 @@ const safeCopyByLocale: Record<'en' | 'ja' | 'zh-TW', SafeCopy> = {
   },
   ja: {
     noticeTitle: '情報に関するご案内',
-    noticeBody:
-      '本ページは旅行参考情報をまとめたものであり、最新の運行変更を反映していない場合があります。',
-    noticeBody2:
-      '時刻・運賃・運休情報・予約条件などの最新情報は、出典リンクおよび予約リンク先の公式情報をご確認ください。',
+    noticeBody: '本ページは旅行時の参考情報をまとめたものであり、最新の運行変更を反映していない場合があります。',
+    noticeBody2: '時刻、運賃、運休情報、予約条件などの最新情報は、出典リンクまたは予約先の公式案内をご確認ください。',
   },
   'zh-TW': {
-    noticeTitle: '資訊聲明',
-    noticeBody: '本頁內容僅供旅遊參考，可能無法即時反映最新營運異動。',
-    noticeBody2: '時刻、票價、停駛資訊與訂位規則，請以出處連結與訂票連結所指向之官方公告為準。',
+    noticeTitle: '資訊說明',
+    noticeBody: '本頁內容僅供旅遊參考，可能無法即時反映最新的營運變動。',
+    noticeBody2: '時刻、票價、停駛資訊與預約規則，請以來源連結或訂票頁面指向的官方公告為準。',
   },
 }
 
@@ -171,5 +208,57 @@ const safeCopy = computed(() => {
   if (locale.value === 'ja') return safeCopyByLocale.ja
   if (locale.value === 'zh-TW') return safeCopyByLocale['zh-TW']
   return safeCopyByLocale.en
+})
+
+const guideSectionText = computed(() => {
+  if (locale.value === 'ja') {
+    return {
+      title: '関連ガイド',
+      subtitle: 'この路線を比較したり、近い体験を探したりするときに役立つ記事です。',
+      viewAll: '記事一覧を見る',
+      readGuide: 'ガイドを読む',
+    }
+  }
+
+  if (locale.value === 'zh-TW') {
+    return {
+      title: '相關指南',
+      subtitle: '這些文章適合用來比較相近路線，或延伸規劃下一段鐵道行程。',
+      viewAll: '查看全部文章',
+      readGuide: '閱讀指南',
+    }
+  }
+
+  return {
+    title: 'Related Guides',
+    subtitle: 'Use these articles to compare similar routes and plan your next rail experience.',
+    viewAll: 'View all articles',
+    readGuide: 'Read guide',
+  }
+})
+
+const guideSlugMap: Record<TramCategory, string[]> = {
+  luxury_train: ['best-luxury-trains-in-japan', 'best-sightseeing-trains-in-japan'],
+  sightseeing_train: ['best-sightseeing-trains-in-japan', 'best-luxury-trains-in-japan'],
+  streetcar: ['best-tram-rides-in-japan', 'best-sightseeing-trains-in-japan'],
+  themed_train: ['best-sightseeing-trains-in-japan', 'best-tram-rides-in-japan'],
+  limited_express: ['best-luxury-trains-in-japan', 'best-sightseeing-trains-in-japan'],
+}
+
+const relatedGuides = computed(() => {
+  if (!tram.value) return []
+
+  return guideSlugMap[tram.value.category]
+    .map((slug) => {
+      const article = getInsightBySlug(slug, locale.value as InsightsLocale)
+      if (!article) return null
+
+      return {
+        slug,
+        title: article.content.title,
+        excerpt: article.content.excerpt,
+      }
+    })
+    .filter((guide): guide is { slug: string; title: string; excerpt: string } => Boolean(guide))
 })
 </script>

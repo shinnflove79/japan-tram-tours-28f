@@ -53,7 +53,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { getInsightBySlug } from '@/data/insights'
+import { getInsightBySlug, type InsightsLocale } from '@/data/insights'
 import { buildLocalizedRoute } from '@/utils/localeRouting'
 
 const route = useRoute()
@@ -62,7 +62,7 @@ const { locale } = useI18n()
 const pageText = computed(() => {
   if (locale.value === 'ja') {
     return {
-      backToList: '記事一覧へ戻る',
+      backToList: '記事一覧に戻る',
       notFoundTitle: '記事が見つかりません',
       notFoundDesc: '指定された記事は存在しないか、削除された可能性があります。',
     }
@@ -84,5 +84,5 @@ const pageText = computed(() => {
 })
 
 const slug = computed(() => (typeof route.params.slug === 'string' ? route.params.slug : ''))
-const article = computed(() => (slug.value ? getInsightBySlug(slug.value, locale.value) : undefined))
+const article = computed(() => (slug.value ? getInsightBySlug(slug.value, locale.value as InsightsLocale) : undefined))
 </script>

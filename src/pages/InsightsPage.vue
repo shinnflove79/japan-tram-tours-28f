@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { getInsightsForLocale } from '@/data/insights'
+import { getInsightsForLocale, type InsightsLocale } from '@/data/insights'
 import { buildLocalizedRoute } from '@/utils/localeRouting'
 
 const { locale } = useI18n()
@@ -38,7 +38,7 @@ const pageText = computed(() => {
   if (locale.value === 'ja') {
     return {
       title: 'Rail Insights',
-      subtitle: '日本の路面電車、観光列車、鉄道文化に関する実用記事と基礎知識。',
+      subtitle: '日本の路面電車、観光列車、鉄道文化に関する実用記事と基礎ガイドをまとめています。',
       readMore: '記事を読む',
     }
   }
@@ -46,7 +46,7 @@ const pageText = computed(() => {
   if (locale.value === 'zh-TW') {
     return {
       title: 'Rail Insights',
-      subtitle: '關於日本路面電車、觀光列車與鐵道文化的實用文章與入門知識。',
+      subtitle: '整理日本路面電車、觀光列車與鐵道文化的實用文章與入門指南。',
       readMore: '閱讀文章',
     }
   }
@@ -58,5 +58,5 @@ const pageText = computed(() => {
   }
 })
 
-const localizedInsights = computed(() => getInsightsForLocale(locale.value))
+const localizedInsights = computed(() => getInsightsForLocale(locale.value as InsightsLocale))
 </script>

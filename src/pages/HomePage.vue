@@ -52,6 +52,46 @@
 
     <section class="bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 class="font-heading text-3xl font-bold text-primary sm:text-4xl">{{ guideSectionText.title }}</h2>
+            <p class="font-body text-gray-600">
+              {{ guideSectionText.subtitle }}
+            </p>
+          </div>
+          <router-link
+            :to="buildLocalizedRoute('/insights', locale)"
+            class="text-sm font-semibold text-primary hover:underline"
+          >
+            {{ guideSectionText.viewAll }}
+          </router-link>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article
+            v-for="guide in featuredGuides"
+            :key="guide.slug"
+            class="rounded-2xl border border-gray-200 bg-white p-6"
+          >
+            <h3 class="font-heading text-xl font-semibold text-primary">
+              {{ guide.title }}
+            </h3>
+            <p class="mt-3 font-body text-sm leading-relaxed text-gray-600">
+              {{ guide.excerpt }}
+            </p>
+            <router-link
+              :to="buildLocalizedRoute(`/insights/${guide.slug}`, locale)"
+              class="mt-5 inline-block text-sm font-semibold text-primary hover:underline"
+            >
+              {{ guideSectionText.readGuide }}
+            </router-link>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
         <h2 class="font-heading text-3xl font-bold text-primary sm:text-4xl">{{ $t('home.seo.regionDirTitle') }}</h2>
         <p class="mt-3 font-body text-gray-600">
           {{ $t('home.seo.regionDirDesc') }}
@@ -227,10 +267,10 @@
             class="rounded-2xl border border-gray-200 p-6"
           >
             <h3 class="font-heading text-xl font-semibold text-primary">
-              {{ article.content.title }}
+              {{ article.title }}
             </h3>
             <p class="mt-3 font-body text-sm leading-relaxed text-gray-600">
-              {{ article.content.excerpt }}
+              {{ article.excerpt }}
             </p>
             <router-link
               :to="buildLocalizedRoute(`/insights/${article.slug}`, locale)"
@@ -313,9 +353,9 @@ import { computed, onBeforeUnmount, onMounted, ref, watchEffect } from 'vue'
 import { useI18n } from 'vue-i18n'
 import HeroSection from '@/components/HeroSection.vue'
 import TramCard from '@/components/TramCard.vue'
+import { getInsightBySlug, type InsightsLocale } from '@/data/insights'
 import type { Tram, TramCategory } from '@/types/tram'
 import { getAllTramsWithTranslations } from '@/utils/tramHelper'
-import { getInsightsForLocale } from '@/data/insights'
 import { buildLocalizedRoute } from '@/utils/localeRouting'
 
 interface QuickAccessItem {
@@ -376,6 +416,33 @@ const categoryOptions = computed(() => {
   return Object.entries(labels).map(([value, label]) => ({ value: value as TramCategory, label }))
 })
 
+const guideSectionText = computed(() => {
+  if (locale.value === 'ja') {
+    return {
+      title: 'おすすめガイド',
+      subtitle: '比較検索で見つかりやすい主要テーマから、路線選びに役立つ記事を先に読めます。',
+      viewAll: '記事一覧を見る',
+      readGuide: 'ガイドを読む',
+    }
+  }
+
+  if (locale.value === 'zh-TW') {
+    return {
+      title: '精選指南',
+      subtitle: '先從最值得優先閱讀的主題文章開始，比較日本豪華列車、觀光列車與路面電車。',
+      viewAll: '查看全部文章',
+      readGuide: '閱讀指南',
+    }
+  }
+
+  return {
+    title: 'Popular Rail Guides',
+    subtitle: 'Start with the core comparison pages that help visitors choose between Japan luxury trains, sightseeing trains, and tram rides.',
+    viewAll: 'View all articles',
+    readGuide: 'Read guide',
+  }
+})
+
 const regionOrder = ['Kanto', 'Kansai', 'Kyushu', 'Chugoku', 'Chubu', 'Shikoku', 'Hokuriku', 'Hokkaido', 'Other']
 
 const regionDirectoryGroups = computed(() => {
@@ -432,7 +499,34 @@ const tramsByLocation = computed(() => {
   return groups
 })
 
-const insightsPreview = computed(() => getInsightsForLocale(locale.value).slice(0, 3))
+const featuredGuideSlugs = [
+  'best-luxury-trains-in-japan',
+  'best-sightseeing-trains-in-japan',
+  'best-tram-rides-in-japan',
+] as const
+
+interface GuidePreview {
+  slug: string
+  title: string
+  excerpt: string
+}
+
+const featuredGuides = computed<GuidePreview[]>(() =>
+  featuredGuideSlugs.flatMap((slug) => {
+    const article = getInsightBySlug(slug, locale.value as InsightsLocale)
+    if (!article) return []
+
+    return [
+      {
+        slug,
+        title: article.content.title,
+        excerpt: article.content.excerpt,
+      },
+    ]
+  }),
+)
+
+const insightsPreview = computed(() => featuredGuides.value)
 const visibleInsightsPreview = computed(() => (isMobile.value ? insightsPreview.value.slice(0, 2) : insightsPreview.value))
 const visibleRegionDirectoryGroups = computed(() => {
   if (!isMobile.value || showAllRegions.value) return regionDirectoryGroups.value

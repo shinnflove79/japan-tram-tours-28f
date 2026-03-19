@@ -45,31 +45,31 @@ export const insights: InsightArticle[] = [
       ja: {
         title: '日本でおすすめの豪華列車',
         excerpt:
-          '上質な観光列車から寝台体験まで、日本で比較したい豪華列車を実用目線で整理します。',
+          '上質な観光列車から宿泊型の体験まで、日本でまず比較したい豪華列車を実用目線で整理します。',
         intro:
-          '日本の豪華列車は、車内の上質さだけでなく、景色、食事、接客、旅の演出まで含めて魅力が決まります。日帰り向きと宿泊向きでは選び方も変わります。',
+          '日本の豪華列車は、座席の上質さだけでなく、景色、食事、接客、旅全体の演出まで含めて魅力が決まります。日帰り向けと宿泊向けでは選び方も変わります。',
         sec1Title: '豪華列車らしさを決める要素',
         sec1Body:
           '快適な座席や個室、丁寧なサービス、沿線風景、そして移動そのものを特別な体験に変える設計が重要です。単に価格が高いだけでなく、旅の印象に残るかどうかで差が出ます。',
         sec2Title: 'まず比較したい代表列車',
         sec2Items: [
-          'トワイライトエクスプレス瑞風は、夜行の上質体験を重視したい人向け。',
-          'WEST EXPRESS GINGA は、長距離移動と独自の世界観を両立したい人向け。',
-          '伊豆急リゾート21 や SAPHIR 踊り子は、景観重視の上質な日帰り旅と相性が良い。',
+          'TWILIGHT EXPRESS 瑞風は、夜行の上質な体験を重視したい人に向いています。',
+          'WEST EXPRESS GINGA は、長距離移動と独自の旅情を両立したい人向けです。',
+          '伊豆急リゾート21 やサフィール踊り子は、景色重視の上質な日帰り旅行と相性が良いです。',
         ],
         sec3Title: '選び方のコツ',
         sec3Body:
-          'まず宿泊型か日帰り型かを決め、そのうえで運行時期、予約難度、公式販売経路を確認すると選びやすくなります。',
+          'まず宿泊型か日帰り型かを決め、そのうえで運行時期、予約難易度、公式販売経路を確認すると選びやすくなります。',
       },
       'zh-TW': {
-        title: '日本最值得優先比較的豪華列車',
+        title: '日本最值得先比較的豪華列車',
         excerpt:
-          '從高級觀光列車到過夜型鐵道體驗，整理日本最值得先比較的豪華列車選項。',
+          '從高質感觀光列車到過夜型鐵道體驗，整理日本最值得優先比較的豪華列車選項。',
         intro:
-          '日本的豪華列車不只是座位更舒適，真正的差異還包括服務、餐飲、景觀與整體旅程氛圍。日間體驗和夜行體驗的選擇標準也不同。',
-        sec1Title: '什麼會讓列車更有豪華感',
+          '日本的豪華列車不只是座位更舒適，真正的差異還包括服務、餐食、景觀與整段旅程的氛圍。日間體驗和夜行體驗的選擇標準也不相同。',
+        sec1Title: '什麼讓列車更有豪華感',
         sec1Body:
-          '豪華感通常來自空間、服務、路線設計與旅程節奏。真正值得優先看的列車，會把高品質座席、風景與旅途儀式感結合在一起。',
+          '豪華感通常來自空間、服務、路線設計與旅程節奏。真正值得優先看的列車，會把高品質座席、風景與旅行儀式感結合在一起。',
         sec2Title: '最值得先比較的列車',
         sec2Items: [
           'Twilight Express MIZUKAZE 適合想體驗高端夜行列車的人。',
@@ -78,7 +78,7 @@ export const insights: InsightArticle[] = [
         ],
         sec3Title: '如何選到適合自己的列車',
         sec3Body:
-          '先決定你要的是過夜型、日歸型，還是偏景觀休閒的高級列車，再確認運行季節、預約規則與官方購票管道。',
+          '先決定你要的是過夜型、日間型，還是偏景觀休閒的高質感列車，再確認運行季節、預約規則與官方購票管道。',
       },
     },
   },
@@ -110,15 +110,15 @@ export const insights: InsightArticle[] = [
         excerpt:
           '絶景ルート、テーマ列車、ローカル色の強い路線まで、日本で比較したい観光列車をまとめます。',
         intro:
-          '日本の観光列車は、豪華さだけでなく、景色、沿線文化、車両演出、ローカルらしさで魅力が決まります。速さより体験を重視する人に向いています。',
+          '日本の観光列車は、豪華さだけではなく、景色、沿線文化、車内演出、ローカルらしさで魅力が決まります。速さより体験を重視する人に向いています。',
         sec1Title: '通常列車との違い',
         sec1Body:
           '観光列車は移動効率よりも体験価値を重視します。景色の良い区間、特徴的な座席配置、テーマ装飾、地域の物語性などが強く打ち出されるのが特徴です。',
         sec2Title: 'まず見ておきたい代表例',
         sec2Items: [
-          '嵯峨野ロマンチック列車は、京都らしい景観と観光列車らしさが分かりやすい。',
-          '江ノ電や叡山電鉄は、大規模ではないが路線の個性が強い。',
-          'パンダくろしおや Hello Kitty HARUKA は、テーマ性の強い体験を探す人に向いている。',
+          '嵯峨野トロッコ列車は、京都らしい景観と観光列車らしい雰囲気が分かりやすいです。',
+          '江ノ電や叡山電車は、大規模ではなくても路線の個性が強いです。',
+          'パンダくろしおや Hello Kitty HARUKA は、テーマ性の強い体験を探す人に向いています。',
         ],
         sec3Title: '計画するときの考え方',
         sec3Body:
@@ -129,19 +129,19 @@ export const insights: InsightArticle[] = [
         excerpt:
           '從絕景路線、主題列車到地方特色強烈的鐵道，整理日本最值得先比較的觀光列車。',
         intro:
-          '日本的觀光列車不一定都走豪華路線。很多列車的魅力來自竹林、海景、山谷、地方文化與車廂本身的旅行氛圍。',
+          '日本的觀光列車不一定都走豪華路線。很多列車的魅力來自竹林、海景、山谷、地方文化與列車本身的旅行氛圍。',
         sec1Title: '觀光列車和一般列車的差別',
         sec1Body:
-          '觀光列車重視體驗，而不是單純把人快速送到目的地。它們通常更強調沿線風景、車內配置、主題設計與地方故事。',
+          '觀光列車重視體驗，而不是單純把人快速送到目的地。它通常更強調沿線風景、車內配置、主題設計與地方故事。',
         sec2Title: '值得先比較的代表路線',
         sec2Items: [
-          'Sagano Romantic Train 很適合想體驗京都景觀列車氛圍的人。',
+          'Sagano Romantic Train 很適合想體驗京都景觀列車氣氛的人。',
           'Enoden 與 Eizan 規模不大，但路線個性非常鮮明。',
           'Panda Kuroshio 與 Hello Kitty HARUKA 適合想找主題感更強列車的人。',
         ],
         sec3Title: '規劃建議',
         sec3Body:
-          '先用地區與季節縮小範圍最有效。櫻花、新綠、紅葉與冬季光線會大幅改變同一路線的觀感。',
+          '先用地區與季節縮小範圍最有效。櫻花、新綠、紅葉與冬季光線都會大幅改變同一路線的觀感。',
       },
     },
   },
@@ -171,17 +171,17 @@ export const insights: InsightArticle[] = [
       ja: {
         title: '日本でおすすめの路面電車体験',
         excerpt:
-          '歴史ある市電から景観の良いローカル路線まで、日本で優先して見たい路面電車を路線目線で整理します。',
+          '歴史ある市電から景色の良いローカル路線まで、日本で優先して見たい路面電車をルート目線で整理します。',
         intro:
           '路面電車は観光列車ほど派手ではありませんが、街の空気や暮らしに近い場所を走るため、地域らしさを強く感じやすい移動手段です。',
         sec1Title: '路面電車を優先する価値',
         sec1Body:
-          '商店街、寺社、海辺、住宅地などに近く、歩き旅と組み合わせやすいのが強みです。長距離列車よりも、短時間で地域の雰囲気を掴みやすい傾向があります。',
-        sec2Title: 'まず見たい代表路線',
+          '商店街、寺社、海辺、住宅地などに近く、歩き旅と組み合わせやすいのが魅力です。長距離列車よりも、短時間で街の雰囲気をつかみやすい傾向があります。',
+        sec2Title: 'まず見たい代表ルート',
         sec2Items: [
-          '江ノ電は、海沿いの景色と寺社アクセスを両立した定番路線。',
-          '嵐電は、京都らしい街並みと観光の歩きやすさが魅力。',
-          '広島、長崎、都電荒川線は、歴史ある都市型路面電車文化を感じやすい。',
+          '江ノ電は、海沿いの景色と寺社アクセスを両立した定番ルートです。',
+          '嵐電は、京都らしい街並みと観光の歩きやすさが魅力です。',
+          '広島、長崎、都電荒川線では、歴史ある都市型路面電車文化を感じやすいです。',
         ],
         sec3Title: 'どんな旅行者に向いているか',
         sec3Body:
@@ -190,12 +190,12 @@ export const insights: InsightArticle[] = [
       'zh-TW': {
         title: '日本最值得優先體驗的路面電車',
         excerpt:
-          '從歷史悠久的市電到景觀與在地感兼具的地方路線，整理日本最值得先看的路面電車體驗。',
+          '從歷史悠久的市電到兼具景觀與在地感的地方路線，整理日本最值得先看的路面電車體驗。',
         intro:
-          '路面電車不像觀光列車那麼高調，但因為更貼近街區、商店街與日常生活，往往更能讓人感受到地方氣氛。',
+          '路面電車不像觀光列車那麼高調，但因為更靠近街區、商店街與日常生活，往往更能讓人感受到地方氛圍。',
         sec1Title: '為什麼路面電車值得優先安排',
         sec1Body:
-          '它們通常更靠近生活區、寺社、海邊與老街，也更適合搭配步行探索。比起長距離鐵道，路面電車更容易在短時間內看懂一座城市。',
+          '它通常更接近日常生活圈、寺社、海邊與老街，也更適合搭配步行探索。比起長距離鐵道，路面電車更容易在短時間內看懂一座城市。',
         sec2Title: '最值得先看的代表路線',
         sec2Items: [
           'Enoden 同時具備海景與寺廟散策動線，是最經典的入門選擇之一。',
@@ -218,220 +218,199 @@ export const insights: InsightArticle[] = [
           "How local tram systems evolved from daily transport into cultural symbols and travel highlights.",
         intro:
           "Japan's rail culture includes both practical city streetcars and experience-focused sightseeing trains.",
-        sec1Title: 'From Daily Transport to Cultural Landscape',
+        sec1Title: 'From Utility to Identity',
         sec1Body:
-          'Many tram systems started as essential urban transport. Over time, surviving routes became symbols of local identity and tourism.',
-        sec2Title: 'Why These Lines Still Matter',
+          'Many streetcar lines began as essential urban infrastructure. Over time, some became deeply tied to local identity as stations, neighborhoods, and tourism patterns evolved around them.',
+        sec2Title: 'What Changed Over Time',
         sec2Items: [
-          'They preserve historical vehicles and station environments.',
-          'They connect local neighborhoods often missed by fast intercity travel.',
-          'They support regional tourism through scenic and seasonal rides.',
+          'Streetcars once handled everyday city movement before cars and metros reduced their share.',
+          'Tourism later gave selected lines a second life as heritage and scenery-rich experiences.',
+          'Operators began emphasizing history, rolling stock design, and regional storytelling.',
         ],
-        sec3Title: 'Before You Visit',
+        sec3Title: 'Why This Matters for Travelers',
         sec3Body:
-          'Check official operator pages for timetable changes, reservation rules, and fare updates before your trip.',
+          'Understanding the history behind these routes makes modern rides more meaningful. Many lines still reflect the pace, geography, and culture that shaped the cities around them.',
       },
       ja: {
-        title: '日本の路面電車と観光列車の短い歴史',
+        title: '日本の路面電車と観光列車の簡単な歴史',
         excerpt:
-          '日常交通として始まった路面電車が、地域文化と観光体験の一部へと変化してきた流れを手短に整理します。',
+          '日常の交通手段だった路面電車が、どのように地域文化や観光資源として再評価されたのかを短く整理します。',
         intro:
-          '日本の鉄道文化には、実用的な都市型路面電車と、体験重視の観光列車の両方が含まれています。',
-        sec1Title: '日常の交通から地域文化へ',
+          '日本の鉄道文化には、実用的な市電と、体験を重視した観光列車の両方があります。',
+        sec1Title: '実用から地域の象徴へ',
         sec1Body:
-          '多くの路面電車は都市交通として始まりましたが、時代の変化を経て、現在では地域の象徴や観光資源としての価値も高まっています。',
-        sec2Title: '今も重要である理由',
+          '多くの路面電車は都市交通の主役として始まりましたが、時代とともに街並みや観光動線の一部として地域の個性を担う存在になりました。',
+        sec2Title: '時代とともに変わった点',
         sec2Items: [
-          '歴史ある車両や駅周辺の景観を残していること。',
-          '高速移動では見えにくい地域の日常に触れられること。',
-          '季節の風景と結びついた地域観光を支えていること。',
+          'かつては日常移動の中心でしたが、自動車や地下鉄の普及で役割が変化しました。',
+          'その後、一部の路線は歴史性や景観価値によって観光資源として再評価されました。',
+          '車両デザインや沿線の物語を前面に出す運営も増えました。',
         ],
-        sec3Title: '訪問前の確認',
+        sec3Title: '旅行者にとっての意味',
         sec3Body:
-          '時刻、予約条件、運賃は変更されることがあるため、最終判断は各運行会社の公式案内で確認してください。',
+          '歴史を知ってから乗ると、現代の路線でも街の成り立ちや地域文化がより見えやすくなります。',
       },
       'zh-TW': {
         title: '日本路面電車與觀光列車的簡短歷史',
         excerpt:
-          '快速了解日本的路面電車如何從日常交通，逐漸成為地方文化與觀光體驗的重要元素。',
+          '整理原本作為日常交通工具的路面電車，如何逐漸成為地方文化象徵與觀光亮點。',
         intro:
-          '日本的鐵道文化同時包含實用導向的城市路面電車，以及重視旅遊體驗的觀光列車。',
-        sec1Title: '從日常交通到地方文化',
+          '日本的鐵道文化同時包含務實的市電系統，以及以體驗為核心的觀光列車。',
+        sec1Title: '從實用交通到地方象徵',
         sec1Body:
-          '許多路面電車最初是城市基礎交通，隨著城市發展與路線更替，留下來的系統逐漸成為地方文化與觀光象徵。',
-        sec2Title: '為什麼現在仍然重要',
+          '許多路面電車最初是城市交通骨幹，後來隨著街區發展與旅遊動線改變，逐漸成為地方特色的一部分。',
+        sec2Title: '一路演變的關鍵變化',
         sec2Items: [
-          '保留歷史車輛、車站與街景脈絡。',
-          '補上高速交通難以覆蓋的在地生活視角。',
-          '支撐地方觀光，尤其是季節型景觀旅行。',
+          '早期的路面電車承擔大量日常移動功能。',
+          '汽車與地鐵普及後，一部分路線的角色逐漸轉向文化保存與觀光體驗。',
+          '營運方也開始強調車輛設計、歷史故事與沿線風景。',
         ],
-        sec3Title: '出發前提醒',
+        sec3Title: '這對旅客有什麼幫助',
         sec3Body:
-          '時刻、票價與預約規則可能調整，出發前請以各營運公司的官方公告為準。',
+          '先了解背景再搭乘，會更容易看見一條路線和城市發展、地方文化之間的關係。',
       },
     },
   },
   {
     slug: 'plan-a-scenic-tram-day',
-    publishedAt: '2026-03-03',
+    publishedAt: '2026-03-07',
     content: {
       en: {
         title: 'How to Plan a Scenic Tram Day in Japan',
         excerpt:
-          'A practical one-day planning method for scenic tram travel, transfers, and walking-friendly stops.',
+          'A practical framework for building a half-day or full-day itinerary around tram rides, neighborhoods, and views.',
         intro:
-          'A good tram trip balances route character, transfer convenience, and nearby walking spots.',
-        sec1Title: 'Pick One Route Theme',
+          'A scenic tram day works best when the tram is part of a wider walking route rather than the only attraction.',
+        sec1Title: 'Start with Route Shape',
         sec1Body:
-          'Choose one clear direction for the day: coastal views, historical districts, mountain scenery, or city retro streets.',
-        sec2Title: 'Simple Planning Checklist',
+          'Choose a line that naturally links scenery, neighborhoods, and a few easy stops. Coastal routes, temple corridors, and older city districts often work especially well.',
+        sec2Title: 'What to Include in the Day',
         sec2Items: [
-          'Confirm operating hours and first or last departure times.',
-          'Save major transfer stations and emergency alternatives.',
-          'Check weather and daylight hours for photo-friendly timing.',
+          'One anchor ride with the strongest visual appeal.',
+          'Two or three stops for walking, food, or local landmarks.',
+          'Enough slack in the schedule to ride twice if the light or weather improves.',
         ],
-        sec3Title: 'Best Practice',
+        sec3Title: 'Simple Planning Tips',
         sec3Body:
-          'Use this site for overview, then finalize with official operator notices to avoid outdated schedule or booking information.',
+          'Check tram frequency, payment method, and the best time of day for scenery. Morning and late afternoon usually produce the most pleasant light for slower neighborhood routes.',
       },
       ja: {
-        title: '日本で景観路面電車の一日旅を計画する方法',
+        title: '日本で景色を楽しむ路面電車の一日を計画する方法',
         excerpt:
-          'ルート選びから乗り換え確認、徒歩で立ち寄れる周辺スポットまで、一日旅の基本的な組み立て方をまとめます。',
+          '半日から一日で組める、路面電車と街歩き、景色を組み合わせた実用的な旅程の考え方です。',
         intro:
-          '満足度の高い路面電車旅は、路線の個性、乗り換えやすさ、周辺散策のしやすさのバランスで決まります。',
-        sec1Title: 'テーマを一つ決める',
+          '景色を楽しむ路面電車の日程は、電車そのものだけでなく、歩く区間や立ち寄り先を含めて考えると満足度が上がります。',
+        sec1Title: 'まずは路線の形を確認する',
         sec1Body:
-          '海沿い、歴史地区、山の景色、レトロな街並みなど、その日の軸を先に決めると行程が整理しやすくなります。',
-        sec2Title: '基本のチェックリスト',
+          '景色、街並み、途中下車しやすい停留場が自然につながる路線を選ぶのが基本です。海沿い、寺社周辺、古い市街地を走る路線は特に組みやすいです。',
+        sec2Title: '一日の中に入れたい要素',
         sec2Items: [
-          '始発と終電、運行間隔を確認する。',
-          '主要な乗換駅と代替ルートを控えておく。',
-          '天気と日没時刻を見て、撮影しやすい時間帯を決める。',
+          '景観の良いメインの乗車区間を一つ決める。',
+          '散策、食事、見学ができる途中下車ポイントを二、三か所入れる。',
+          '天気や光の変化に合わせてもう一度乗れる余裕を残す。',
         ],
-        sec3Title: '実践のコツ',
+        sec3Title: '計画のコツ',
         sec3Body:
-          'このサイトで全体像を掴み、最終的な時刻や予約情報は公式サイトで確定するのが安全です。',
+          '運行間隔、支払い方法、景色が最もきれいに見える時間帯を事前に確認しておくと動きやすくなります。',
       },
       'zh-TW': {
-        title: '如何規劃日本路面電車景觀一日行程',
+        title: '如何規劃日本的景觀路面電車一日行程',
         excerpt:
-          '從選路線、安排轉乘到安排行走與拍照節奏，一次整理適合新手的一日規劃方式。',
+          '提供從半日到一日都適用的實用框架，把路面電車、散步與沿線風景整合成順暢行程。',
         intro:
-          '要讓一整天的電車旅程更順，關鍵在於主題明確、轉乘清楚、沿線步行探索方便。',
-        sec1Title: '先決定一個主題',
+          '好的一日電車行程，不是只把車程排滿，而是讓乘車、步行與停留節奏互相配合。',
+        sec1Title: '先看路線形狀',
         sec1Body:
-          '可以從海景、歷史街區、山線景觀或復古城市街道中擇一，先定主題會讓整體安排更聚焦。',
-        sec2Title: '實用檢查清單',
+          '優先選擇能自然串連風景、街區與下車散策點的路線。海邊、寺社周邊與老城區通常最容易安排。',
+        sec2Title: '一日行程該放進哪些元素',
         sec2Items: [
-          '確認營運時段與首末班資訊。',
-          '記下主要轉乘站與備用替代路線。',
-          '依天氣與日照安排拍照時間。',
+          '先決定一段最值得搭的主軸車程。',
+          '安排兩到三個適合步行、吃飯或看景點的下車點。',
+          '保留一點彈性，讓你能依光線或天氣調整搭乘時間。',
         ],
-        sec3Title: '建議做法',
+        sec3Title: '簡單規劃技巧',
         sec3Body:
-          '先用本站做初步比較，最後仍請回到官方網站確認最新時刻、票價與預約條件。',
+          '先查班距、付款方式，以及哪個時段最適合看風景。對慢節奏的城市路線來說，早上和傍晚通常最舒服。',
       },
     },
   },
   {
     slug: 'tram-etiquette-in-japan',
-    publishedAt: '2026-03-03',
+    publishedAt: '2026-03-12',
     content: {
       en: {
-        title: 'Tram Etiquette in Japan: Practical Rules for Visitors',
+        title: 'Tram Etiquette in Japan: A Practical Guide for Visitors',
         excerpt:
-          'A clear etiquette guide for riding trams in Japan smoothly and respectfully, especially during busy hours.',
+          'Simple etiquette tips that help travelers ride Japanese trams smoothly, respectfully, and with less confusion.',
         intro:
-          'Most tram systems in Japan are calm and efficient. Following a few local etiquette rules makes your trip easier and more comfortable for everyone.',
-        sec1Title: 'Before Boarding',
+          'Japanese tram etiquette is usually straightforward, but small habits can make a noticeable difference for both locals and visitors.',
+        sec1Title: 'The Basics That Matter Most',
         sec1Body:
-          'Line up in the marked waiting area, let passengers get off first, and prepare your IC card or fare in advance to avoid blocking the entrance.',
-        sec2Title: 'Onboard Manners',
+          'Keep bags compact, avoid blocking doors, and pay attention to boarding rules because some lines separate entry and exit by door.',
+        sec2Title: 'Situations to Watch For',
         sec2Items: [
-          'Keep phone calls to a minimum and use silent mode whenever possible.',
-          'Backpacks should be carried low or held in front during crowded periods.',
-          'Offer priority seats to elderly passengers, people with disabilities, and parents with small children.',
+          'Quietly queue at stops and let passengers exit first.',
+          'Avoid loud phone calls and be mindful of crowded sections.',
+          'Check whether you pay when boarding or when leaving, as systems vary by operator.',
         ],
-        sec3Title: 'Getting Off and Paying',
+        sec3Title: 'Why Etiquette Helps',
         sec3Body:
-          'Check the payment method (front exit or rear exit differs by operator), move toward the door before your stop, and avoid rushing at the last second.',
+          'Good etiquette does more than avoid mistakes. It makes the ride smoother, lowers stress, and helps you notice how these routes fit into everyday local life.',
       },
       ja: {
         title: '日本の路面電車マナー: 旅行者向け実用ガイド',
         excerpt:
-          '混雑時でも安心して乗れるように、日本の路面電車で意識したい基本マナーをまとめます。',
+          '初めてでも迷いにくい、日本の路面電車で押さえておきたい基本マナーを簡潔にまとめます。',
         intro:
-          '日本の路面電車は静かで効率的に運行されています。基本的なマナーを守るだけで、自分も周囲も快適に移動できます。',
-        sec1Title: '乗車前のポイント',
+          '日本の路面電車で必要なマナーは難しくありませんが、小さな配慮が周囲の快適さを大きく左右します。',
+        sec1Title: 'まず押さえたい基本',
         sec1Body:
-          '待機位置の表示に沿って並び、降車客を先に通し、ICカードや運賃は事前に準備しておくとスムーズです。',
-        sec2Title: '車内での配慮',
+          '荷物はコンパクトにまとめ、ドア付近をふさがず、乗車口と降車口の違いがある路線では案内表示をよく確認しましょう。',
+        sec2Title: '特に気をつけたい場面',
         sec2Items: [
-          '通話は控え、可能な限りサイレントモードを使う。',
-          '混雑時はリュックを前に抱えるか低い位置で持つ。',
-          '優先席付近では高齢者、障害のある方、小さな子ども連れに配慮する。',
+          '停留場では静かに並び、降りる人を先に通す。',
+          '混雑時は大きな声での通話を避け、周囲に配慮する。',
+          '運賃を乗車時に払うのか降車時に払うのか、事業者ごとの違いを確認する。',
         ],
-        sec3Title: '降車と支払い',
+        sec3Title: 'マナーを知るメリット',
         sec3Body:
-          '支払い位置や降車ドアは事業者ごとに異なるため、案内表示を確認してください。降りる少し前から出口付近へ移動すると安全です。',
+          'マナーを知っていると失敗を減らせるだけでなく、移動がスムーズになり、街の暮らしの中で路面電車がどう使われているかも見えやすくなります。',
       },
       'zh-TW': {
         title: '日本搭乘電車禮儀: 旅客實用指南',
         excerpt:
-          '整理日本搭乘路面電車時最常見的基本禮儀，讓你在尖峰時段也能更從容搭乘。',
+          '用簡單明確的方式整理旅客在日本搭乘路面電車時最該注意的基本禮儀。',
         intro:
-          '日本的路面電車多半安靜且有效率。只要掌握幾個基本禮儀，就能讓自己和其他乘客都更舒適。',
-        sec1Title: '上車前要點',
+          '日本路面電車的乘車規矩其實不複雜，但一些小細節會直接影響自己與他人的搭乘體驗。',
+        sec1Title: '最重要的基本原則',
         sec1Body:
-          '依地面標示排隊，先讓下車乘客通過，並提前準備好 IC 卡或車資，避免堵住車門。',
-        sec2Title: '車內禮儀',
+          '把行李收好、不要堵住車門，並注意各路線的上下車規則，因為有些系統會區分乘車門與下車門。',
+        sec2Title: '特別需要留意的情境',
         sec2Items: [
-          '盡量避免通話，並將手機設為靜音模式。',
-          '尖峰時段背包改背前方或手提，減少佔用空間。',
-          '在博愛座附近留意高齡者、行動不便者與帶小孩的乘客需求。',
+          '在站牌安靜排隊，先讓車上乘客下車。',
+          '避免大聲講電話，尖峰時段尤其要留意周圍空間。',
+          '先確認是上車付款還是下車付款，因為不同營運商可能不同。',
         ],
-        sec3Title: '下車與付款',
+        sec3Title: '為什麼懂禮儀很重要',
         sec3Body:
-          '不同路線的上下車門與付款方式可能不同，請依車內指示操作。接近目的站時提前移動到出口，可避免臨停急走。',
+          '懂禮儀不只是避免出錯，也能讓整段乘車更順、更輕鬆，並更容易感受到路面電車在當地日常生活中的位置。',
       },
     },
   },
 ]
 
-const localeFallbackOrder: InsightsLocale[] = ['zh-TW', 'ja', 'en']
-
-const normalizeLocale = (value: string): InsightsLocale => {
-  if (value === 'ja') return 'ja'
-  if (value === 'zh-TW') return 'zh-TW'
-  return 'en'
-}
-
-export const getInsightsForLocale = (locale: string) => {
-  const normalized = normalizeLocale(locale)
-  return insights.map((article) => ({
-    slug: article.slug,
-    publishedAt: article.publishedAt,
-    content: article.content[normalized],
+export const getInsightsForLocale = (locale: InsightsLocale) =>
+  insights.map((article) => ({
+    ...article,
+    content: article.content[locale] || article.content.en,
   }))
-}
 
-export const getInsightBySlug = (slug: string, locale: string) => {
-  const article = insights.find((item) => item.slug === slug)
+export const getInsightBySlug = (slug: string, locale: InsightsLocale) => {
+  const article = insights.find((entry) => entry.slug === slug)
   if (!article) return undefined
 
-  const normalized = normalizeLocale(locale)
-  const localized =
-    article.content[normalized] ||
-    localeFallbackOrder.map((key) => article.content[key]).find(Boolean)
-
-  if (!localized) return undefined
-
   return {
-    slug: article.slug,
-    publishedAt: article.publishedAt,
-    content: localized,
+    ...article,
+    content: article.content[locale] || article.content.en,
   }
 }
-
-export const insightSlugs = insights.map((item) => item.slug)
