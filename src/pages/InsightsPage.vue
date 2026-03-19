@@ -38,16 +38,16 @@ const pageText = computed(() => {
   if (locale.value === 'ja') {
     return {
       title: 'Rail Insights',
-      subtitle: '日本の路面電車・観光列車・鉄道文化に関する読み物。',
-      readMore: '続きを読む',
+      subtitle: '日本の路面電車、観光列車、鉄道文化に関する実用記事と基礎知識。',
+      readMore: '記事を読む',
     }
   }
 
   if (locale.value === 'zh-TW') {
     return {
       title: 'Rail Insights',
-      subtitle: '關於日本路面電車、觀光列車與鐵道文化的知識文章。',
-      readMore: '閱讀全文',
+      subtitle: '關於日本路面電車、觀光列車與鐵道文化的實用文章與入門知識。',
+      readMore: '閱讀文章',
     }
   }
 

@@ -37,7 +37,10 @@
         <section class="rounded-2xl border border-gray-200 bg-white p-8 text-center">
           <h1 class="mb-3 font-heading text-3xl font-bold text-primary">{{ pageText.notFoundTitle }}</h1>
           <p class="mb-6 font-body text-gray-700">{{ pageText.notFoundDesc }}</p>
-          <router-link :to="buildLocalizedRoute('/insights', locale)" class="font-body font-semibold text-accent hover:text-accent-dark">
+          <router-link
+            :to="buildLocalizedRoute('/insights', locale)"
+            class="font-body font-semibold text-accent hover:text-accent-dark"
+          >
             {{ pageText.backToList }}
           </router-link>
         </section>
@@ -59,7 +62,7 @@ const { locale } = useI18n()
 const pageText = computed(() => {
   if (locale.value === 'ja') {
     return {
-      backToList: '一覧へ戻る',
+      backToList: '記事一覧へ戻る',
       notFoundTitle: '記事が見つかりません',
       notFoundDesc: '指定された記事は存在しないか、削除された可能性があります。',
     }
@@ -69,7 +72,7 @@ const pageText = computed(() => {
     return {
       backToList: '返回文章列表',
       notFoundTitle: '找不到文章',
-      notFoundDesc: '你開啟的文章不存在，或可能已被移除。',
+      notFoundDesc: '你要查看的文章不存在，或可能已被移除。',
     }
   }
 

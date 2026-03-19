@@ -20,6 +20,195 @@ export interface InsightArticle {
 
 export const insights: InsightArticle[] = [
   {
+    slug: 'best-luxury-trains-in-japan',
+    publishedAt: '2026-03-19',
+    content: {
+      en: {
+        title: 'Best Luxury Trains in Japan',
+        excerpt:
+          'A practical shortlist of Japan luxury trains, from premium sightseeing services to overnight rail experiences.',
+        intro:
+          'Japan luxury trains vary widely in style. Some focus on scenic windows and refined interiors, while others deliver multi-day hospitality with dining, suites, and curated regional experiences.',
+        sec1Title: 'What Makes a Train Feel Luxurious',
+        sec1Body:
+          'Luxury on Japanese railways usually comes from space, service, route design, and atmosphere. The strongest candidates combine premium seating, memorable scenery, and a clear sense of destination or occasion.',
+        sec2Title: 'Top Luxury Trains to Compare First',
+        sec2Items: [
+          'Twilight Express MIZUKAZE for premium overnight travel and signature hospitality.',
+          'WEST EXPRESS GINGA for long-distance comfort with a distinctive rail-travel identity.',
+          'Izukyu Resort 21 and SAPHIR Odoriko for scenic leisure travel with stronger sightseeing appeal.',
+        ],
+        sec3Title: 'How to Choose the Right One',
+        sec3Body:
+          'Start by deciding whether you want an overnight experience, a high-end day trip, or a scenic limited run. Then confirm route seasonality, booking rules, and official sales channels before making plans.',
+      },
+      ja: {
+        title: '日本でおすすめの豪華列車',
+        excerpt:
+          '上質な観光列車から寝台体験まで、日本で比較したい豪華列車を実用目線で整理します。',
+        intro:
+          '日本の豪華列車は、車内の上質さだけでなく、景色、食事、接客、旅の演出まで含めて魅力が決まります。日帰り向きと宿泊向きでは選び方も変わります。',
+        sec1Title: '豪華列車らしさを決める要素',
+        sec1Body:
+          '快適な座席や個室、丁寧なサービス、沿線風景、そして移動そのものを特別な体験に変える設計が重要です。単に価格が高いだけでなく、旅の印象に残るかどうかで差が出ます。',
+        sec2Title: 'まず比較したい代表列車',
+        sec2Items: [
+          'トワイライトエクスプレス瑞風は、夜行の上質体験を重視したい人向け。',
+          'WEST EXPRESS GINGA は、長距離移動と独自の世界観を両立したい人向け。',
+          '伊豆急リゾート21 や SAPHIR 踊り子は、景観重視の上質な日帰り旅と相性が良い。',
+        ],
+        sec3Title: '選び方のコツ',
+        sec3Body:
+          'まず宿泊型か日帰り型かを決め、そのうえで運行時期、予約難度、公式販売経路を確認すると選びやすくなります。',
+      },
+      'zh-TW': {
+        title: '日本最值得優先比較的豪華列車',
+        excerpt:
+          '從高級觀光列車到過夜型鐵道體驗，整理日本最值得先比較的豪華列車選項。',
+        intro:
+          '日本的豪華列車不只是座位更舒適，真正的差異還包括服務、餐飲、景觀與整體旅程氛圍。日間體驗和夜行體驗的選擇標準也不同。',
+        sec1Title: '什麼會讓列車更有豪華感',
+        sec1Body:
+          '豪華感通常來自空間、服務、路線設計與旅程節奏。真正值得優先看的列車，會把高品質座席、風景與旅途儀式感結合在一起。',
+        sec2Title: '最值得先比較的列車',
+        sec2Items: [
+          'Twilight Express MIZUKAZE 適合想體驗高端夜行列車的人。',
+          'WEST EXPRESS GINGA 適合重視長距離舒適度與整體旅行氛圍的人。',
+          'Izukyu Resort 21 與 SAPHIR Odoriko 更適合景觀導向的高品質日間旅行。',
+        ],
+        sec3Title: '如何選到適合自己的列車',
+        sec3Body:
+          '先決定你要的是過夜型、日歸型，還是偏景觀休閒的高級列車，再確認運行季節、預約規則與官方購票管道。',
+      },
+    },
+  },
+  {
+    slug: 'best-sightseeing-trains-in-japan',
+    publishedAt: '2026-03-19',
+    content: {
+      en: {
+        title: 'Best Sightseeing Trains in Japan',
+        excerpt:
+          'A simple guide to Japan sightseeing trains, including scenic day routes, themed services, and heritage-style rail experiences.',
+        intro:
+          'The best sightseeing trains in Japan are not all luxurious. Some stand out for open windows, mountain valleys, bamboo forests, coastal views, or character-filled local identity.',
+        sec1Title: 'How Sightseeing Trains Differ from Regular Trains',
+        sec1Body:
+          'Sightseeing trains are designed around experience rather than speed. They often highlight scenic sections, unusual seating layouts, themed cars, or stronger local storytelling than ordinary transport services.',
+        sec2Title: 'Strong Sightseeing Picks Across Japan',
+        sec2Items: [
+          'Sagano Romantic Train for Kyoto scenery and a classic sightseeing atmosphere.',
+          'Enoden and Eizan for smaller-scale but memorable route character near major tourism areas.',
+          'Panda Kuroshio and Hello Kitty HARUKA for themed travel with strong visual identity.',
+        ],
+        sec3Title: 'Planning Advice',
+        sec3Body:
+          'Use region and season as your main filters. Scenic value changes a lot between sakura, summer green, autumn foliage, and winter light, so route timing matters as much as the train itself.',
+      },
+      ja: {
+        title: '日本でおすすめの観光列車',
+        excerpt:
+          '絶景ルート、テーマ列車、ローカル色の強い路線まで、日本で比較したい観光列車をまとめます。',
+        intro:
+          '日本の観光列車は、豪華さだけでなく、景色、沿線文化、車両演出、ローカルらしさで魅力が決まります。速さより体験を重視する人に向いています。',
+        sec1Title: '通常列車との違い',
+        sec1Body:
+          '観光列車は移動効率よりも体験価値を重視します。景色の良い区間、特徴的な座席配置、テーマ装飾、地域の物語性などが強く打ち出されるのが特徴です。',
+        sec2Title: 'まず見ておきたい代表例',
+        sec2Items: [
+          '嵯峨野ロマンチック列車は、京都らしい景観と観光列車らしさが分かりやすい。',
+          '江ノ電や叡山電鉄は、大規模ではないが路線の個性が強い。',
+          'パンダくろしおや Hello Kitty HARUKA は、テーマ性の強い体験を探す人に向いている。',
+        ],
+        sec3Title: '計画するときの考え方',
+        sec3Body:
+          '地域と季節を先に決めると選びやすくなります。桜、新緑、紅葉、冬景色で同じ路線でも印象が大きく変わります。',
+      },
+      'zh-TW': {
+        title: '日本最值得優先看的觀光列車',
+        excerpt:
+          '從絕景路線、主題列車到地方特色強烈的鐵道，整理日本最值得先比較的觀光列車。',
+        intro:
+          '日本的觀光列車不一定都走豪華路線。很多列車的魅力來自竹林、海景、山谷、地方文化與車廂本身的旅行氛圍。',
+        sec1Title: '觀光列車和一般列車的差別',
+        sec1Body:
+          '觀光列車重視體驗，而不是單純把人快速送到目的地。它們通常更強調沿線風景、車內配置、主題設計與地方故事。',
+        sec2Title: '值得先比較的代表路線',
+        sec2Items: [
+          'Sagano Romantic Train 很適合想體驗京都景觀列車氛圍的人。',
+          'Enoden 與 Eizan 規模不大，但路線個性非常鮮明。',
+          'Panda Kuroshio 與 Hello Kitty HARUKA 適合想找主題感更強列車的人。',
+        ],
+        sec3Title: '規劃建議',
+        sec3Body:
+          '先用地區與季節縮小範圍最有效。櫻花、新綠、紅葉與冬季光線會大幅改變同一路線的觀感。',
+      },
+    },
+  },
+  {
+    slug: 'best-tram-rides-in-japan',
+    publishedAt: '2026-03-19',
+    content: {
+      en: {
+        title: 'Best Tram Rides in Japan',
+        excerpt:
+          'A route-first guide to Japan tram rides, from historic streetcars to local lines with strong scenery and neighborhood character.',
+        intro:
+          'Japan tram rides are often smaller in scale than famous sightseeing trains, but they can offer a stronger sense of place. Many of the best lines combine daily local use with memorable scenery and history.',
+        sec1Title: 'Why Tram Routes Are Worth Prioritizing',
+        sec1Body:
+          'Streetcars put you closer to neighborhoods, shopping streets, shrines, coastlines, and everyday life. They are often easier to combine with walking than long-distance rail experiences.',
+        sec2Title: 'Best Tram Routes to Start With',
+        sec2Items: [
+          'Enoden for coastal views and temple access between Enoshima and Kamakura.',
+          'Arashiyama Tram for Kyoto atmosphere, bamboo-adjacent scenery, and easy sightseeing rhythm.',
+          'Hiroshima, Nagasaki, and Toden Arakawa for historic urban tram culture with strong local identity.',
+        ],
+        sec3Title: 'Best Use Cases for Visitors',
+        sec3Body:
+          'Choose tram routes when you want flexible sightseeing, easier short stops, and a more local pace. They work especially well for half-day plans and first-time city exploration.',
+      },
+      ja: {
+        title: '日本でおすすめの路面電車体験',
+        excerpt:
+          '歴史ある市電から景観の良いローカル路線まで、日本で優先して見たい路面電車を路線目線で整理します。',
+        intro:
+          '路面電車は観光列車ほど派手ではありませんが、街の空気や暮らしに近い場所を走るため、地域らしさを強く感じやすい移動手段です。',
+        sec1Title: '路面電車を優先する価値',
+        sec1Body:
+          '商店街、寺社、海辺、住宅地などに近く、歩き旅と組み合わせやすいのが強みです。長距離列車よりも、短時間で地域の雰囲気を掴みやすい傾向があります。',
+        sec2Title: 'まず見たい代表路線',
+        sec2Items: [
+          '江ノ電は、海沿いの景色と寺社アクセスを両立した定番路線。',
+          '嵐電は、京都らしい街並みと観光の歩きやすさが魅力。',
+          '広島、長崎、都電荒川線は、歴史ある都市型路面電車文化を感じやすい。',
+        ],
+        sec3Title: 'どんな旅行者に向いているか',
+        sec3Body:
+          '柔軟に途中下車したい人、半日観光を組みたい人、街歩きとセットで楽しみたい人には路面電車が特に向いています。',
+      },
+      'zh-TW': {
+        title: '日本最值得優先體驗的路面電車',
+        excerpt:
+          '從歷史悠久的市電到景觀與在地感兼具的地方路線，整理日本最值得先看的路面電車體驗。',
+        intro:
+          '路面電車不像觀光列車那麼高調，但因為更貼近街區、商店街與日常生活，往往更能讓人感受到地方氣氛。',
+        sec1Title: '為什麼路面電車值得優先安排',
+        sec1Body:
+          '它們通常更靠近生活區、寺社、海邊與老街，也更適合搭配步行探索。比起長距離鐵道，路面電車更容易在短時間內看懂一座城市。',
+        sec2Title: '最值得先看的代表路線',
+        sec2Items: [
+          'Enoden 同時具備海景與寺廟散策動線，是最經典的入門選擇之一。',
+          'Arashiyama Tram 適合想用更輕鬆節奏體驗京都氛圍的人。',
+          '廣島、長崎與都電荒川線能更直接看見日本城市型路面電車文化。',
+        ],
+        sec3Title: '最適合哪些旅遊情境',
+        sec3Body:
+          '如果你想靈活上下車、安排半日散策，或把城市步行與鐵道體驗結合，路面電車通常比長距離列車更適合。',
+      },
+    },
+  },
+  {
     slug: 'history-of-japan-streetcars',
     publishedAt: '2026-03-03',
     content: {
