@@ -66,10 +66,13 @@ const currentLanguageName = computed(() => {
 })
 
 const setLanguage = (code: SupportedLocale) => {
+  const nextQuery = { ...route.query }
+  delete nextQuery.lang
+
   localStorage.setItem('app-language', code)
   void router.push({
     path: buildLocalizedPath(stripLocalePrefix(route.path).basePath, code),
-    query: route.query,
+    query: nextQuery,
     hash: route.hash,
   })
   showDropdown.value = false

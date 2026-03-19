@@ -4,10 +4,23 @@ const LOCALE_QUERY_TO_PATH = {
   'zh-TW': 'zh-tw',
 }
 
+const normalizeLocaleQuery = (value) => {
+  if (typeof value !== 'string') return null
+
+  const normalized = value.trim().toLowerCase()
+  if (normalized === 'en') return 'en'
+  if (normalized === 'ja') return 'ja'
+  if (normalized === 'zh-tw') return 'zh-TW'
+
+  return null
+}
+
 const normalizePath = (pathname) => {
   if (!pathname || pathname === '/') return '/'
   return pathname.endsWith('/') ? pathname.slice(0, -1) || '/' : pathname
 }
+
+const shouldAddTrailingSlash = (pathname) => pathname !== '/' && !pathname.endsWith('/') && !/\/[^/]+\.[^/]+$/.test(pathname)
 
 const stripLocalePrefix = (pathname) => {
   const normalized = normalizePath(pathname)
@@ -29,9 +42,9 @@ const buildLocalizedPath = (pathname, locale) => {
 
 export async function onRequest(context) {
   const url = new URL(context.request.url)
-  const queryLocale = url.searchParams.get('lang')
+  const queryLocale = normalizeLocaleQuery(url.searchParams.get('lang'))
 
-  if (queryLocale && Object.hasOwn(LOCALE_QUERY_TO_PATH, queryLocale)) {
+  if (queryLocale) {
     url.pathname = buildLocalizedPath(url.pathname, queryLocale)
     url.searchParams.delete('lang')
     return Response.redirect(url.toString(), 301)
@@ -39,6 +52,11 @@ export async function onRequest(context) {
 
   if (/^\/en(?:\/|$)/i.test(url.pathname)) {
     url.pathname = stripLocalePrefix(url.pathname)
+    return Response.redirect(url.toString(), 301)
+  }
+
+  if (shouldAddTrailingSlash(url.pathname)) {
+    url.pathname = `${url.pathname}/`
     return Response.redirect(url.toString(), 301)
   }
 
