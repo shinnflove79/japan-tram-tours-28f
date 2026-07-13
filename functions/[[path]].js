@@ -35,7 +35,10 @@ const buildLocalizedPath = (pathname, locale) => {
   const basePath = stripLocalePrefix(pathname)
   const segment = LOCALE_QUERY_TO_PATH[locale] || ''
 
-  return !segment ? basePath : basePath === '/' ? `/${segment}` : `/${segment}${basePath}`
+  const localizedPath = !segment ? basePath : basePath === '/' ? `/${segment}` : `/${segment}${basePath}`
+
+  if (localizedPath === '/') return localizedPath
+  return `${localizedPath}/`
 }
 
 export async function onRequest(context) {
@@ -54,8 +57,8 @@ export async function onRequest(context) {
     return Response.redirect(url.toString(), 301)
   }
 
-  if (url.pathname !== normalizedPath && !hasFileExtension(url.pathname)) {
-    url.pathname = normalizedPath
+  if (!hasFileExtension(normalizedPath) && normalizedPath !== '/' && url.pathname !== `${normalizedPath}/`) {
+    url.pathname = `${normalizedPath}/`
     return Response.redirect(url.toString(), 301)
   }
 

@@ -39,7 +39,8 @@ const buildLocalizedUrl = (path, lang) => {
   const segment = localeToPathSegment[lang]
   const localizedPath =
     !segment ? normalizedPath : normalizedPath === '/' ? `/${segment}` : `/${segment}${normalizedPath}`
-  const url = new URL(localizedPath, SITE_URL)
+  const finalPath = localizedPath === '/' ? localizedPath : `${localizedPath}/`
+  const url = new URL(finalPath, SITE_URL)
   return url.toString()
 }
 
