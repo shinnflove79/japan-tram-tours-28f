@@ -38,7 +38,7 @@ export const pathSegmentToLocale = (value: unknown): SupportedLocale | null => {
   return PATH_SEGMENT_TO_LOCALE[raw.toLowerCase()] || null
 }
 
-const normalizeBasePath = (path: string) => {
+export const normalizeBasePath = (path: string) => {
   const normalized = path.startsWith('/') ? path : `/${path}`
   if (normalized === '/') return normalized
   return normalized.replace(/\/+$/, '')
@@ -71,11 +71,16 @@ export const buildLocalizedPath = (path: string, locale: unknown) => {
   const supportedLocale = asSupportedLocale(locale) || DEFAULT_LOCALE
   const segment = localeToPathSegment(supportedLocale)
 
-  const localizedPath =
-    !segment ? normalizedPath : normalizedPath === '/' ? `/${segment}` : `/${segment}${normalizedPath}`
+  return !segment
+    ? normalizedPath
+    : normalizedPath === '/'
+    ? `/${segment}`
+    : `/${segment}${normalizedPath}`
+}
 
-  if (localizedPath === '/') return localizedPath
-  return `${localizedPath}/`
+export const buildCanonicalPath = (path: string, locale: unknown) => {
+  const basePath = stripLocalePrefix(path).basePath
+  return buildLocalizedPath(basePath, locale)
 }
 
 export const buildLocalizedRoute = (path: string, locale: unknown) => ({

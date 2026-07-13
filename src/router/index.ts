@@ -10,6 +10,7 @@ import {
   DEFAULT_LOCALE,
   SUPPORTED_LOCALES,
   asSupportedLocale,
+  buildCanonicalPath,
   buildLocalizedPath,
   stripLocalePrefix,
   type SupportedLocale,
@@ -108,6 +109,18 @@ const router = createRouter({
 })
 
 router.beforeEach((to) => {
+  const routeLocale = (to.meta.locale as SupportedLocale | undefined) || stripLocalePrefix(to.path).locale
+  const canonicalPath = buildCanonicalPath(to.path, routeLocale)
+
+  if (to.path !== canonicalPath) {
+    return {
+      path: canonicalPath,
+      query: to.query,
+      hash: to.hash,
+      replace: true,
+    }
+  }
+
   const queryLocale = asSupportedLocale(to.query.lang)
 
   if (queryLocale) {
@@ -115,7 +128,7 @@ router.beforeEach((to) => {
     delete nextQuery.lang
 
     return {
-      path: buildLocalizedPath(stripLocalePrefix(to.path).basePath, queryLocale),
+      path: buildLocalizedPath(stripLocalePrefix(canonicalPath).basePath, queryLocale),
       query: nextQuery,
       hash: to.hash,
       replace: true,

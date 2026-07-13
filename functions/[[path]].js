@@ -17,10 +17,11 @@ const normalizeLocaleQuery = (value) => {
 
 const normalizePath = (pathname) => {
   if (!pathname || pathname === '/') return '/'
-  return pathname.endsWith('/') ? pathname.slice(0, -1) || '/' : pathname
+  const collapsed = pathname.replace(/\/{2,}/g, '/')
+  return collapsed.endsWith('/') ? collapsed.slice(0, -1) || '/' : collapsed
 }
 
-const shouldAddTrailingSlash = (pathname) => pathname !== '/' && !pathname.endsWith('/') && !/\/[^/]+\.[^/]+$/.test(pathname)
+const hasFileExtension = (pathname) => /\/[^/]+\.[^/]+$/.test(pathname)
 
 const stripLocalePrefix = (pathname) => {
   const normalized = normalizePath(pathname)
@@ -34,29 +35,27 @@ const buildLocalizedPath = (pathname, locale) => {
   const basePath = stripLocalePrefix(pathname)
   const segment = LOCALE_QUERY_TO_PATH[locale] || ''
 
-  const localizedPath = !segment ? basePath : basePath === '/' ? `/${segment}` : `/${segment}${basePath}`
-
-  if (localizedPath === '/') return localizedPath
-  return `${localizedPath}/`
+  return !segment ? basePath : basePath === '/' ? `/${segment}` : `/${segment}${basePath}`
 }
 
 export async function onRequest(context) {
   const url = new URL(context.request.url)
+  const normalizedPath = normalizePath(url.pathname)
   const queryLocale = normalizeLocaleQuery(url.searchParams.get('lang'))
 
   if (queryLocale) {
-    url.pathname = buildLocalizedPath(url.pathname, queryLocale)
+    url.pathname = buildLocalizedPath(normalizedPath, queryLocale)
     url.searchParams.delete('lang')
     return Response.redirect(url.toString(), 301)
   }
 
-  if (/^\/en(?:\/|$)/i.test(url.pathname)) {
-    url.pathname = stripLocalePrefix(url.pathname)
+  if (/^\/en(?:\/|$)/i.test(normalizedPath)) {
+    url.pathname = stripLocalePrefix(normalizedPath)
     return Response.redirect(url.toString(), 301)
   }
 
-  if (shouldAddTrailingSlash(url.pathname)) {
-    url.pathname = `${url.pathname}/`
+  if (url.pathname !== normalizedPath && !hasFileExtension(url.pathname)) {
+    url.pathname = normalizedPath
     return Response.redirect(url.toString(), 301)
   }
 
