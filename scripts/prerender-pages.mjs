@@ -178,8 +178,7 @@ const buildLocalizedPath = (path, locale) => {
     ? `/${segment}`
     : `/${segment}${normalizedPath}`
 
-  if (localizedPath === '/') return localizedPath
-  return `${localizedPath}/`
+  return localizedPath
 }
 
 const buildAbsoluteUrl = (path, locale) => new URL(buildLocalizedPath(path, locale), SITE_URL).toString()

@@ -21,16 +21,16 @@ describe('localeRouting', () => {
     })
   })
 
-  it('builds localized paths with trailing slashes for non-root pages', () => {
-    expect(buildLocalizedPath('/about/', 'en')).toBe('/about/')
-    expect(buildLocalizedPath('/about/', 'ja')).toBe('/ja/about/')
-    expect(buildLocalizedPath('/insights/article-slug/', 'zh-TW')).toBe('/zh-tw/insights/article-slug/')
-    expect(buildLocalizedPath('/', 'ja')).toBe('/ja/')
+  it('builds localized paths without trailing slashes', () => {
+    expect(buildLocalizedPath('/about/', 'en')).toBe('/about')
+    expect(buildLocalizedPath('/about/', 'ja')).toBe('/ja/about')
+    expect(buildLocalizedPath('/insights/article-slug/', 'zh-TW')).toBe('/zh-tw/insights/article-slug')
+    expect(buildLocalizedPath('/', 'ja')).toBe('/ja')
   })
 
   it('builds canonical localized paths from legacy variants', () => {
-    expect(buildCanonicalPath('/about/', 'en')).toBe('/about/')
-    expect(buildCanonicalPath('/ja/about/', 'ja')).toBe('/ja/about/')
-    expect(buildCanonicalPath('/zh-tw/', 'zh-TW')).toBe('/zh-tw/')
+    expect(buildCanonicalPath('/about/', 'en')).toBe('/about')
+    expect(buildCanonicalPath('/ja/about/', 'ja')).toBe('/ja/about')
+    expect(buildCanonicalPath('/zh-tw/', 'zh-TW')).toBe('/zh-tw')
   })
 })

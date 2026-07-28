@@ -77,8 +77,7 @@ export const buildLocalizedPath = (path: string, locale: unknown) => {
     ? `/${segment}`
     : `/${segment}${normalizedPath}`
 
-  if (localizedPath === '/') return localizedPath
-  return `${localizedPath}/`
+  return localizedPath
 }
 
 export const buildCanonicalPath = (path: string, locale: unknown) => {
