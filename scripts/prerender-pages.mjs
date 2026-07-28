@@ -291,7 +291,7 @@ const buildHeadMarkup = (path, locale) => {
 const writePrerenderedPage = (path, locale) => {
   const localizedPath = buildLocalizedPath(path, locale)
   const outputPath =
-    localizedPath === '/' ? resolve(distDir, 'index.html') : resolve(distDir, localizedPath.slice(1), 'index.html')
+    localizedPath === '/' ? resolve(distDir, 'index.html') : resolve(distDir, `${localizedPath.slice(1)}.html`)
   const headMarkup = buildHeadMarkup(path, locale)
   const htmlLang = LOCALE_TO_HTML_LANG[locale]
 
